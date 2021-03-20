@@ -1,10 +1,11 @@
 import React from 'react';
 import ae from '../assets/ae.jpeg';
+import styled from 'styled-components';
 
 
 const AboutSection = () => {
     return (
-        <div>
+        <StyledAbout>
             <div className = "description">
                 <div className = "title">
                     <div className = "hide">
@@ -23,8 +24,18 @@ const AboutSection = () => {
             <div className = "image">
                 <img src = {ae} alt = "my face" width = "250" height = "250"/>
             </div>
-        </div>
+        </StyledAbout>
     );
 };
+
+const StyledAbout = styled.div`
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5rem 10rem;
+    color: whitesmoke;
+    
+`
 
 export default AboutSection;

@@ -12,10 +12,11 @@ import redux from '../assets/redux.svg';
 import sass from '../assets/sass.svg';
 import terminal from '../assets/terminal.svg';
 import vscode from '../assets/vscode.svg';
+import styled from 'styled-components';
 
 const SkillsSection = () => {
     return (
-        <div className = "services">
+        <Skills className = "services">
             <div className = 'description'>
                 <h2>Skills</h2>
                 <div className = "cards">
@@ -54,8 +55,19 @@ const SkillsSection = () => {
                 </div>
             </div>
 
-        </div>
+        </Skills>
     )
 }
+
+
+const Skills = styled.div`
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 10rem;
+    
+    
+`
 
 export default SkillsSection;
