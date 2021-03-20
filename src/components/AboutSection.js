@@ -1,5 +1,5 @@
 import React from 'react';
-import ae from './assets/ae.jpeg';
+import ae from '../assets/ae.jpeg';
 
 
 const AboutSection = () => {
@@ -17,7 +17,7 @@ const AboutSection = () => {
                         <h2><span>Web Developer</span></h2>
                     </div>
                 </div>
-                    <p>I'm very -insert adj here- by everything that has to do with front-end development but I'm also very fascinated by how things work behind the scenes in the back-end </p>
+                    <p>I'm very -insert adj here- by everything that has to do with front-end development but I'm also very fascinated by how things work behind the scenes in the back-end</p>
                     <button>Resume</button>
                 </div>
             <div className = "image">
