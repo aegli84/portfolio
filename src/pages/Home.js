@@ -1,10 +1,14 @@
 import Slider from '../components/Slider';
-import Footer from '../components/Footer';
+
 import AboutSection from '../components/AboutSection';
+import HomeContactIcons from '../components/HomeContactIcons';
 
 const Home = () => {
     return (
+        <>
         <AboutSection/>
+        <HomeContactIcons/>
+        </>
     )
 }
 

@@ -21,7 +21,7 @@ const AboutSection = () => {
                     <button>Resume</button>
                 </div>
             <div className = "image">
-                <img src = {ae} alt = "my face"/>
+                <img src = {ae} alt = "my face" width = "250" height = "250"/>
             </div>
         </div>
     );
