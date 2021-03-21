@@ -16,10 +16,10 @@ import styled from 'styled-components';
 
 const SkillsSection = () => {
     return (
-        <Skills className = "services">
+        
             <div className = 'description'>
                 <h2>Skills</h2>
-                <div className = "cards">
+                <Skills className = "cards">
                     <div className = "card">
                         <div className = "icon">
                             <img src={html} alt="html" width = "50" height = "50"/>
@@ -52,19 +52,19 @@ const SkillsSection = () => {
 
                     </div>
 
-                </div>
+                </Skills>
             </div>
 
-        </Skills>
+        
     )
 }
 
 
 const Skills = styled.div`
-    min-height: 90vh;
-    display: flex;
+   
+    display: grid;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     padding: 5rem 10rem;
     
     

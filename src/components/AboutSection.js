@@ -1,5 +1,5 @@
 import React from 'react';
-import ae from '../assets/ae.jpeg';
+import ae from '../assets/ae.jpg';
 import styled from 'styled-components';
 
 
@@ -9,33 +9,68 @@ const AboutSection = () => {
             <div className = "description">
                 <div className = "title">
                     <div className = "hide">
-                        <h2>My name is Andreea</h2>
+                        <h2>My name is <StyledA>Andreea</StyledA></h2>
                     </div>
                     <div className = "hide">
-                        <h2><span>and I'm a</span></h2>
+                        <h2><span>and I'm an aspiring</span></h2>
                     </div>
                     <div className = "hide">
-                        <h2><span>Web Developer</span></h2>
+                        <StyledH2><span>Web Developer.</span></StyledH2>
                     </div>
                 </div>
-                    <p>I'm very -insert adj here- by everything that has to do with front-end development but I'm also very fascinated by how things work behind the scenes in the back-end</p>
+                    <StyledP>I'm very ----insert adjective here--- by everything that has to do with front-end development but I'm also very fascinated by how things work behind the scenes in the back-end</StyledP>
                     <button>Resume</button>
                 </div>
             <div className = "image">
-                <img src = {ae} alt = "my face" width = "250" height = "250"/>
+                <StyledImg src = {ae} alt = "my face" width = "300" height = "300"/>
             </div>
         </StyledAbout>
     );
 };
 
 const StyledAbout = styled.div`
-    min-height: 90vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 5rem 10rem;
     color: whitesmoke;
+    /* border-radius: 5px; */
+    /* box-shadow: 20px 20px 60px #313131,
+                -20px -20px 60px #b4b2b26c;
+    width: 150vmin; */
     
 `
+const StyledP = styled.p`
+    margin-top: 1rem;
+    font-weight: 200;
+    padding-right: 8rem;
+`
+
+const StyledH2 = styled.h2`
+    font-weight: 900;
+    color: lightgreen;
+`
+const StyledA = styled.a `
+    color: lightgreen;
+    font-weight: 900;
+`
+const StyledImg = styled.img`
+    border: 3px solid #465050;
+    border-radius: 20px;
+    margin-right: 2rem;
+    
+`
+// const StyledButton = styled.button `
+// background: #495057;
+// border-radius: 5%;
+// box-shadow: inset 9.91px 9.91px 15px #495057
+// , inset -9.91px -9.91px 15px #495057;
+
+// `
+
+
+
+
 
 export default AboutSection;
