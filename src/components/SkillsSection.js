@@ -16,57 +16,70 @@ import styled from 'styled-components';
 
 const SkillsSection = () => {
     return (
-        
-            <div className = 'description'>
-                <h2>Skills</h2>
-                <Skills className = "cards">
-                    <div className = "card">
-                        <div className = "icon">
+            <>
+                <StyledH2>Tech & tools</StyledH2>
+                    <Skills>
                             <img src={html} alt="html" width = "50" height = "50"/>
-                            <h4>HTML</h4>
+                            <StyledH4>HTML</StyledH4>
                             <img src={css} alt="css" width = "50" height = "50"/>
-                            <h4>CSS</h4>
+                            <StyledH4>CSS</StyledH4>
                             <img src={bootstrap} alt="bootstrap" width = "50" height = "50"/>
-                            <h4>BOOTSTRAP</h4>
+                            <StyledH4>BOOTSTRAP</StyledH4>
                             <img src={sass} alt="sass" width = "50" height = "50"/>
-                            <h4>SASS</h4>
+                            <StyledH4>SASS</StyledH4>
                             <img src={js} alt="js" width = "50" height = "50"/>
-                            <h4>JAVASCRIPT</h4>
+                            <StyledH4>JAVASCRIPT</StyledH4>
                             <img src={react} alt="react" width = "50" height = "50"/>
-                            <h4>REACT</h4>
+                            <StyledH4>REACT</StyledH4>
                             <img src={mongodb} alt="mongodb" width = "60" height = "60"/>
-                            <h4>MONGODB</h4> 
+                            <StyledH4>MONGODB</StyledH4> 
                             <img src={redux} alt="redux" width = "50" height = "50"/>
-                            <h4>REDUX</h4>
+                            <StyledH4>REDUX</StyledH4>
                             <img src={git} alt="git" width = "50" height = "50"/>
-                            <h4>GIT</h4>
+                            <StyledH4>GIT</StyledH4>
                             <img src={github} alt="github" width = "50" height = "50"/>
-                            <h4>GITHUB</h4>
+                            <StyledH4>GITHUB</StyledH4>
                             <img src={terminal} alt="terminal" width = "50" height = "50"/>
-                            <h4>TERMINAL</h4>
+                            <StyledH4>TERMINAL</StyledH4>
                             <img src={vscode} alt="vscode" width = "70" height = "70"/>
-                            <h4>VS CODE</h4>
+                            <StyledH4>VS CODE</StyledH4>
                             <img src={figma} alt="figma" width = "50" height = "50"/>
-                            <h4>FIGMA</h4>
-                        </div>
-
-                    </div>
-
-                </Skills>
-            </div>
-
-        
+                            <StyledH4>FIGMA</StyledH4>
+                        </Skills>
+            </>
     )
 }
 
 
 const Skills = styled.div`
-    display: flex;
-    align-items: center;
+    height: 60vh;
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px 100px 100px 100px 100px ;
+    grid-template-rows: 50px; 
+    column-gap: 10px;
+    row-gap: 10px;
+    justify-items: center;
     justify-content: space-evenly;
-    padding: 5rem 10rem;
-    
-    
+    align-items: center;
+    align-content: space-around;
+    margin-bottom: 10vh;
+    margin-left: 20px;
+    margin-right: 20px;
+    box-shadow: 0px 7px 7px -5px black;
 `
 
+const StyledH2 = styled.h2`
+    margin-left: 80vh;
+    margin-bottom: 7vh;
+    font-weight: 600;
+    color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+`
+const StyledH4 = styled.h4`
+    font-weight: 400;
+    color: whitesmoke;
+    
+`
 export default SkillsSection;
