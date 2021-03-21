@@ -61,10 +61,9 @@ const SkillsSection = () => {
 
 
 const Skills = styled.div`
-   
-    display: grid;
+    display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     padding: 5rem 10rem;
     
     

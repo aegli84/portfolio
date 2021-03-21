@@ -8,15 +8,15 @@ const AboutSection = () => {
         <StyledAbout>
             <div className = "description">
                 <div className = "title">
-                    <div className = "hide">
+                    <StyledAllBigText>
                         <h2>My name is <StyledA>Andreea</StyledA></h2>
-                    </div>
-                    <div className = "hide">
+                    </StyledAllBigText>
+                    <StyledAllBigText>
                         <h2><span>and I'm an aspiring</span></h2>
-                    </div>
-                    <div className = "hide">
+                    </StyledAllBigText>
+                    <StyledAllBigText>
                         <StyledH2><span>Web Developer.</span></StyledH2>
-                    </div>
+                    </StyledAllBigText>
                 </div>
                     <StyledP>I'm very ----insert adjective here--- by everything that has to do with front-end development but I'm also very fascinated by how things work behind the scenes in the back-end</StyledP>
                     <button>Resume</button>
@@ -56,9 +56,17 @@ const StyledA = styled.a `
     font-weight: 900;
 `
 const StyledImg = styled.img`
-    border: 3px solid #465050;
-    border-radius: 20px;
-    margin-right: 2rem;
+    /* border: 3px solid #465050; */
+    /* border-top-left-radius: 80px;
+    border-bottom-right-radius: 80px; */
+    margin-right: 5rem;
+    position: relative;
+    border-radius: 7px; 
+    box-shadow: 0 8px 6px -6px black;
+    overflow: hidden;
+    /* width: 120%; */
+    /* height: 40vh;
+    object-fit: cover; */
     
 `
 // const StyledButton = styled.button `
@@ -69,7 +77,9 @@ const StyledImg = styled.img`
 
 // `
 
-
+const StyledAllBigText = styled.div `
+    overflow: hidden;
+`
 
 
 
