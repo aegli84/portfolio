@@ -46,7 +46,7 @@ p {
         font-weight: lighter;
         font-size: 1.4rem;
         line-height: 150%;
-    }
+}
 `;
 
 export default GlobalStyle;

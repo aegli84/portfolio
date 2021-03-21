@@ -1,23 +1,24 @@
 import styled from 'styled-components';
+import {Link} from 'react-router-dom';
 
 const NavbarPages = () => {
     return (
         <StyledNavContainer className = "container">
             <h1>
-                <a id = "logo" href="#" >AE</a>
+                <Link id = "logo" to="/" >AE</Link>
             </h1>
             <ul>
-                <li className = "about-me">
-                    <a href = "#">About me</a>
+                <li>
+                    <Link to="/">About me</Link>
                 </li>
                 <li>
-                    <a href = "#">Skills</a>
+                    <Link to="/skills">Skills</Link>
                 </li>
                 <li>
-                    <a href = "#">Projects</a>
+                    <Link to="/projects">Projects</Link>
                 </li>
                 <li>
-                    <a href = "#">Contact</a>
+                    <Link to="/contact">Contact</Link>
                 </li>
             </ul>
         </StyledNavContainer>
@@ -33,9 +34,10 @@ const StyledNavContainer = styled.nav`
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    overflow: hidden;
+    /* overflow: hidden; */
     padding: 1rem 10rem;
     box-shadow:  0 8px 6px -6px black;
+    /* background: #495057; */
     
     a {
         font-weight: 700;

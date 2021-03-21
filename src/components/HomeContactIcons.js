@@ -3,6 +3,8 @@ import github from '../assets/github.svg';
 import linkedin1 from '../assets/linkedin1.svg';
 import email from '../assets/email.svg';
 import styled from 'styled-components';
+import {Link} from 'react-router-dom';
+
 
 const HomeContactIcons = () => {
     return (
@@ -15,17 +17,22 @@ const HomeContactIcons = () => {
                         <div> - - /// - - </div>
                     </StyledLine>
                     <li>
+                        <Link to = {{pathname:"https://github.com/aegli84"}} target={"_blank"} rel="noopener noreferrer">
                         <StyledImg src={github} alt="html" width = "20" height = "20"/>
-                        <a href = "https://github.com/aegli84" target = "_blank" rel="noreferrer"  />
+                        </Link>
                     </li>
                     <li>
-                        <StyledImg src={linkedin1} alt="html"  width = "20" height = "20"/>
-                        <a href = "https://www.linkedin.com/in/andreeaegli/" target = "_blank" rel="noreferrer" />
+                        <Link to = {{pathname: "https://www.linkedin.com/in/andreeaegli/"}} target={"_blank"} rel="noopener noreferrer">
+                            <StyledImg src={linkedin1} alt="html"  width = "20" height = "20"/>
+                        </Link>
                     </li>
+
                     <li>
-                        <StyledImg src={email} alt="html"  width = "20" height = "20"/>
-                        <a href = "https://github.com/aegli84" target = "_blank" rel="noreferrer" />
+                        <Link to = {{pathname:"https://github.com/aegli84"}} target={"_blank"} rel="noopener noreferrer">
+                            <StyledImg src={email} alt="html"  width = "20" height = "20"/>
+                        </Link>
                     </li>
+
                     </StyledLiImg>
                 </div>
             </div>
@@ -50,9 +57,14 @@ const StyledLi1 = styled.li`
     list-style: none;
     margin-left: 0.2.rem;
     
+    
 `
 const StyledLiImg = styled.ul`
     list-style: none;
+    &:hover {
+        color: lightgreen;
+            transition: all 0.5s ease;
+    }
     
 `
 
@@ -64,6 +76,7 @@ const StyledLine = styled.li`
 `
 const StyledImg = styled.img `
     filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+    
 `
 export default HomeContactIcons;
 
