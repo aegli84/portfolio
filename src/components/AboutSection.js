@@ -64,7 +64,7 @@ const AboutSection = () => {
 };
 
 const StyledAbout = styled.div`
-    min-height: 95vh;
+    min-height: 110vh;
     display: flex;
     align-items: center;
     justify-content: space-around;

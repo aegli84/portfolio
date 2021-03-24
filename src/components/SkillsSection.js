@@ -62,7 +62,7 @@ const Skills = styled.div`
     justify-content: space-evenly;
     align-items: center;
     align-content: space-around;
-    margin-bottom: 10vh;
+    margin-bottom: 5vh;
     margin-left: 20px;
     margin-right: 20px;
     box-shadow: 0px 7px 7px -5px black;
@@ -71,7 +71,7 @@ const Skills = styled.div`
 const StyledH2 = styled.h2`
     margin-left: 80vh;
     margin-bottom: 7vh;
-    font-weight: 600;
+    font-weight: 900;
     color: whitesmoke;
     display: flex;
     align-items: center;

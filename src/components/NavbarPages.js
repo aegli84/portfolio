@@ -13,17 +13,17 @@ const NavbarPages = () => {
         <StyledNavContainer>
         
             <h1>
-                <Link id = "logo" to="/" smooth = {true} duration = {700} spy = {true}  offset={-150}  >AE</Link>
+                <Link id = "logo" to="/" smooth = {true} duration = {700} spy = {true}  offset={-225}  >AE</Link>
             </h1>
             <ul>
                 <li>
-                    <Link to="/" smooth = {true} duration = {700} spy = {true}  offset={-150}  >About me</Link>
+                    <Link to="/" smooth = {true} duration = {700} spy = {true}  offset={-225}  >About me</Link>
                 </li>
                 <li>
                     <Link to="skills" smooth = {true} duration = {700} spy = {true}  offset={-110} >Skills</Link>
                 </li>
                 <li>
-                    <Link  to="projects" smooth = {true} duration = {700} spy = {true} offset={-65}>Projects</Link>
+                    <Link  to="projects" smooth = {true} duration = {700} spy = {true} offset={-115}>Projects</Link>
                 </li>
                 <li>
                     <Link  to="contact" smooth = {true} duration = {700} spy = {true} offset={-200}>Contact</Link>
@@ -50,6 +50,7 @@ const StyledNavContainer = styled.nav`
     position: fixed;
     top: 0;
   width: 100%;
+  animation: moveDown 0.7s ease-in-out;
     
     a {
         font-weight: 700;
