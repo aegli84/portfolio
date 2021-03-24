@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {Link} from 'react-router-dom';
+//import {Link} from 'react-router-dom';
 //import{ animateScroll as scroll } from "react-scroll";
 import * as Scroll from 'react-scroll';
 
@@ -13,20 +13,20 @@ const NavbarPages = () => {
         <StyledNavContainer>
         
             <h1>
-                <Link id = "logo" to="/"  >AE</Link>
+                <Link id = "logo" to="/" smooth = {true} duration = {700} spy = {true}  offset={-150}  >AE</Link>
             </h1>
             <ul>
                 <li>
-                    <Link to="/" smooth = {true} duration = {500} spy = {true} exact = 'true' >About me</Link>
+                    <Link to="/" smooth = {true} duration = {700} spy = {true}  offset={-150}  >About me</Link>
                 </li>
                 <li>
-                    <Link to="skills" smooth = {true} duration = {500} spy = {true}  >Skills</Link>
+                    <Link to="skills" smooth = {true} duration = {700} spy = {true}  offset={-110} >Skills</Link>
                 </li>
                 <li>
-                    <Link  to="projects" smooth = {true} duration = {500} spy = {true} >Projects</Link>
+                    <Link  to="projects" smooth = {true} duration = {700} spy = {true} offset={-65}>Projects</Link>
                 </li>
                 <li>
-                    <Link  to="contact" smooth = {true} duration = {500} spy = {true}>Contact</Link>
+                    <Link  to="contact" smooth = {true} duration = {700} spy = {true} offset={-200}>Contact</Link>
                 </li>
             </ul>
             
@@ -43,13 +43,14 @@ const StyledNavContainer = styled.nav`
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    /* overflow: hidden; */
+    overflow: hidden; 
     padding: 1rem 10rem;
     box-shadow:  0 8px 6px -6px black;
     /* background: #495057; */
-    &.active {
-        border-bottom: 2px solid lightgreen;
-    }
+    position: fixed;
+    top: 0;
+  width: 100%;
+    
     a {
         font-weight: 700;
         color: whitesmoke;
@@ -72,6 +73,9 @@ const StyledNavContainer = styled.nav`
     li{
         padding-left: 4rem;
         position: relative;
+        &.active {
+        border-bottom: 2px solid lightgreen;
+    }
         
     }
     
