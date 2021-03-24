@@ -1,6 +1,6 @@
 const ProjectsSection = () => {
     return (
-        <div className = "cards">
+        <div className = "cards" id="projects" >
             <div className = "card">
             <h2>Projects</h2>
                 <h3>Project 1</h3>

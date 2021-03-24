@@ -1,30 +1,39 @@
 import styled from 'styled-components';
 import {Link} from 'react-router-dom';
+//import{ animateScroll as scroll } from "react-scroll";
+import * as Scroll from 'react-scroll';
+
+
 
 const NavbarPages = () => {
+    
+    let Link = Scroll.Link;
+    
     return (
-        <StyledNavContainer className = "container">
+        <StyledNavContainer>
+        
             <h1>
-                <Link id = "logo" to="/" >AE</Link>
+                <Link id = "logo" to="/"  >AE</Link>
             </h1>
             <ul>
                 <li>
-                    <Link to="/">About me</Link>
+                    <Link to="/" smooth = {true} duration = {500} spy = {true} exact = 'true' >About me</Link>
                 </li>
                 <li>
-                    <Link to="/skills">Skills</Link>
+                    <Link to="skills" smooth = {true} duration = {500} spy = {true}  >Skills</Link>
                 </li>
                 <li>
-                    <Link to="/projects">Projects</Link>
+                    <Link  to="projects" smooth = {true} duration = {500} spy = {true} >Projects</Link>
                 </li>
                 <li>
-                    <Link to="/contact">Contact</Link>
+                    <Link  to="contact" smooth = {true} duration = {500} spy = {true}>Contact</Link>
                 </li>
             </ul>
+            
         </StyledNavContainer>
-    )
+        
+)
 }
-
 
 const StyledNavContainer = styled.nav`
     /* margin-top: 35px;
@@ -38,7 +47,9 @@ const StyledNavContainer = styled.nav`
     padding: 1rem 10rem;
     box-shadow:  0 8px 6px -6px black;
     /* background: #495057; */
-    
+    &.active {
+        border-bottom: 2px solid lightgreen;
+    }
     a {
         font-weight: 700;
         color: whitesmoke;
@@ -76,3 +87,4 @@ const StyledNavContainer = styled.nav`
 //     }
 // `
 export default NavbarPages;
+

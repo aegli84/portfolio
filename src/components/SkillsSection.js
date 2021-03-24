@@ -16,7 +16,7 @@ import styled from 'styled-components';
 
 const SkillsSection = () => {
     return (
-            <>
+            <div id="skills">
                 <StyledH2>Tech & tools</StyledH2>
                     <Skills>
                             <img src={html} alt="html" width = "50" height = "50"/>
@@ -46,7 +46,7 @@ const SkillsSection = () => {
                             <img src={figma} alt="figma" width = "50" height = "50"/>
                             <StyledH4>FIGMA</StyledH4>
                         </Skills>
-            </>
+            </div>
     )
 }
 

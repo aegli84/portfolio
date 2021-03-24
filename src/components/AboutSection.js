@@ -1,12 +1,16 @@
 import React from 'react';
 import ae from '../assets/ae.jpg';
 import styled from 'styled-components';
-
+import github from '../assets/github.svg';
+import linkedin1 from '../assets/linkedin1.svg';
+import email from '../assets/email.svg';
+import {Link} from 'react-router-dom';
 
 const AboutSection = () => {
     return (
-        <StyledAbout>
-            <div className = "description">
+        <>
+        <StyledAbout >
+            <div className = "description" id="/">
                 <div className = "title">
                     <StyledAllBigText>
                         <h2>My name is <StyledA>Andreea</StyledA></h2>
@@ -25,6 +29,37 @@ const AboutSection = () => {
                 <StyledImg src = {ae} alt = "my face" width = "300" height = "300"/>
             </div>
         </StyledAbout>
+
+        <StyledDivFirst className = "home">
+            <div className = "contact">
+                <div className = "icon">
+                    <StyledLiImg>
+                        <StyledLi1>Let's connect</StyledLi1>
+                    <StyledLine>
+                        <div> - - /// - - </div>
+                    </StyledLine>
+                    <li>
+                        <Link to = {{pathname:"https://github.com/aegli84"}} target={"_blank"} rel="noopener noreferrer">
+                        <StyledImg2 src={github} alt="html" width = "20" height = "20"/>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to = {{pathname: "https://www.linkedin.com/in/andreeaegli/"}} target={"_blank"} rel="noopener noreferrer">
+                            <StyledImg2 src={linkedin1} alt="html"  width = "20" height = "20"/>
+                        </Link>
+                    </li>
+
+                    <li>
+                        <Link to = {{pathname:"https://github.com/aegli84"}} target={"_blank"} rel="noopener noreferrer">
+                            <StyledImg2 src={email} alt="html"  width = "20" height = "20"/>
+                        </Link>
+                    </li>
+
+                    </StyledLiImg>
+                </div>
+            </div>
+        </StyledDivFirst>
+        </>
     );
 };
 
@@ -84,3 +119,43 @@ const StyledAllBigText = styled.div `
 
 
 export default AboutSection;
+
+
+const StyledDivFirst = styled.div`
+    margin-top: -53vh;
+    display: flex;
+    float: right;
+    align-items: flex-end;
+    justify-content: space-around;
+    line-height: 2rem;
+    list-style: none;
+`
+const StyledLi1 = styled.li`
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    color: whitesmoke;
+    margin-right: 4.5rem;
+    list-style: none;
+    margin-left: 0.2.rem;
+    
+    
+`
+const StyledLiImg = styled.ul`
+    list-style: none;
+    &:hover {
+        color: lightgreen;
+            transition: all 0.5s ease;
+    }
+    
+`
+
+const StyledLine = styled.li`
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+`
+const StyledImg2 = styled.img `
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+    
+`

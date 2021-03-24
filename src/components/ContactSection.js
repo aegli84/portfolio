@@ -1,8 +1,8 @@
 //import styled from 'styled-components';
 
-const ContactForm = () => {
+const ContactSection = () => {
     return(
-        <div className = "form">
+        <div className = "form" id="contact">
             <h2>Contact me</h2>
             <form >
             <h4>First name</h4>
@@ -20,4 +20,4 @@ const ContactForm = () => {
     )
 }
 
-export default ContactForm;
+export default ContactSection;

@@ -1,11 +1,12 @@
-import About from './pages/About';
-import Skills from './pages/Skills';
-import Projects from './pages/Projects'
-import Contact from './pages/Contact'
+import AboutSection from './components/AboutSection';
+import SkillsSection from './components/SkillsSection';
+import ProjectsSection from './components/ProjectsSection';
+import ContactSection from './components/ContactSection';
 import React from 'react';
-import GlobalStyle from './components/GlobalStyled';
-import {Switch, Route} from 'react-router-dom';
+import GlobalStyle from './components/GlobalStyles';
+//import {Switch, Route} from 'react-router-dom';
 import NavbarPages from './components/NavbarPages';
+
 
 function App() {
   return (
@@ -13,25 +14,10 @@ function App() {
     <div className="App">
       <GlobalStyle/>
       <NavbarPages/>
-      
-      <Switch>
-        <Route path ="/" exact>
-          <About/>
-        </Route>
-
-        <Route path = "/skills">
-          <Skills/>
-        </Route>
-
-        <Route path = "/projects">
-          <Projects/>
-        </Route>
-
-        <Route path = "/contact">
-          <Contact/>
-        </Route>
-
-      </Switch>
+      <AboutSection/>
+      <SkillsSection/>
+      <ProjectsSection/>
+      <ContactSection/>
     </div>
   );
 }
