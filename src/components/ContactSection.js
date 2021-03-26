@@ -6,15 +6,15 @@ const ContactSection = () => {
         <StyledH2Contact>Contact me</StyledH2Contact>
         <div className = "form" id="contact">
             <form >
-            <h4>First name</h4>
+            {/* <h4>First name</h4> */}
                 <input name = "first-name" type = "name" placeholder ="First name" />
-                <h4>Last name</h4>
+                {/* <h4>Last name</h4> */}
                 <input name = "last-name" type = "name" placeholder ="Last name" />
-                <h4>E-mail</h4>
+                {/* <h4>E-mail</h4> */}
                 <input name = "email" type = "name" placeholder ="Email" />
             </form>
             {/* <h4>Message</h4> */}
-            <textarea type="text" name="message" id="exp" cols="25" rows="6" placeholder="Your message here"></textarea>
+            <textarea type="text" name="message" id="exp" cols="25" rows="7" placeholder="Your message here"></textarea>
             <br/>
             <button id = "submit" type = "submit" value = "submit">Send</button>
         </div>
@@ -23,9 +23,10 @@ const ContactSection = () => {
 }
 
 const StyledFormWrapper = styled.div `
-    padding: 5rem ;
+    padding: 4rem ;
     margin-bottom: 4vh;
     text-align: left;
+    
     form, textarea, button {
         display: inline-block;
         margin-left: 25%;
@@ -35,24 +36,48 @@ const StyledFormWrapper = styled.div `
     h4 {
         font-weight: 400;
         color: white;
+        margin-left: 13rem;
         padding: 1vh 1vh;
     }
     input{
-        background: #495057;
+        background: #343a40;
+        width: 58%;
+        margin-left: 9.5rem;
+        margin-top: 3vh;
+        padding-top: 2rem;
+        border: none;
+        border-bottom: 1px solid lightgreen;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        outline:none;
     }
+
     textarea {
-        background: #495057;
+        background: #343a40;
         cursor: pointer;
-        margin-top: 2vh;
-        
+        margin-top: 8vh;
+        margin-left: 31rem;
+        width: 30%;
+        border-left: 1.5px solid #495059;
+        border-right: 1.5px solid #495059;
+        border-top: 1.5px solid #495059;
+        border-radius: 5px;
+        border-bottom: 1px solid lightgreen;
+        outline:none; 
     }
+
     button {
-        margin-bottom: 4vh;
+        /* margin-bottom: 3vh; */
+        width: 8%;
+        height: 7vh;
+        margin-left: 31.5rem;
     }
 `
 
 const StyledH2Contact = styled.h2 `
     margin-left: 70vh;
+    margin-top: 5vh;
+    margin-bottom: 3vh;
     /* margin-top: 2vh; */
     /* margin-bottom: -7vh; */
     font-weight: 900;
