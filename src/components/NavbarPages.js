@@ -26,7 +26,7 @@ const NavbarPages = () => {
                     <Link  to="projects" smooth = {true} duration = {700} spy = {true} offset={-115}>Projects</Link>
                 </li>
                 <li>
-                    <Link  to="contact" smooth = {true} duration = {700} spy = {true} offset={-200}>Contact</Link>
+                    <Link  to="contact" smooth = {true} duration = {700} spy = {true} offset={-80}>Contact</Link>
                 </li>
             </ul>
             

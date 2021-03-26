@@ -62,9 +62,15 @@ const StyledH2Top = styled.h2`
 const StyledDivCard = styled.div `
     width: 35vh;
     height: 35vh;
-   
     box-shadow: 0px 7px 7px -5px black;
-    
+    &:hover {
+        transform: translate3D(0,-1px,0) scale(1.10) ;
+        transition: all .5s ease ; 
+        cursor: pointer;
+        /* zoom: 1;
+        filter: alpha(opacity=50);
+        opacity: 0.5; */
+    }
 `
 
 export default ProjectsSection;
