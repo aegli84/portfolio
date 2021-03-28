@@ -14,10 +14,12 @@ import terminal from '../assets/terminal.svg';
 import vscode from '../assets/vscode.svg';
 import styledc from '../assets/styledc.png'
 import styled from 'styled-components';
+import {motion} from 'framer-motion'
+import {pageAnimation} from '../animation'
 
 const SkillsSection = () => {
     return (
-            <div id="skills">
+            <motion.div id="skills">
                 <StyledH2>Tech & tools</StyledH2>
                     <Skills>
                             <img src={html} alt="html" />
@@ -49,7 +51,7 @@ const SkillsSection = () => {
                             <img src={figma} alt="figma" />
                             
                         </Skills>
-            </div>
+            </motion.div>
     )
 }
 

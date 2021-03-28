@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import {motion} from 'framer-motion'
+import {pageAnimation} from '../animation'
 
 const ProjectsSection = () => {
     return (

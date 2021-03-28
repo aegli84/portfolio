@@ -1,8 +1,10 @@
 import styled from 'styled-components';
+import {motion} from 'framer-motion'
+import {pageAnimation} from '../animation'
 
 const ContactSection = () => {
     return(
-        <StyledFormWrapper>
+    <StyledFormWrapper variants = {pageAnimation} initial = "hidden" animate = "show" exit = "exit">
         <StyledH2Contact>Contact me</StyledH2Contact>
         <div className = "form" id="contact">
             <form >
@@ -17,11 +19,11 @@ const ContactSection = () => {
             <textarea type="text" name="message" id="exp" cols="25" rows="7" placeholder="Your message here"></textarea>
             <button id = "submit" type = "submit" value = "submit">Send</button>
         </div>
-        </StyledFormWrapper>
+    </StyledFormWrapper>
     )
 }
 
-const StyledFormWrapper = styled.div `
+const StyledFormWrapper = styled(motion.div) `
     padding: 4rem ;
     margin-bottom: 4vh;
     text-align: left;
@@ -77,9 +79,8 @@ const StyledFormWrapper = styled.div `
     }
 
     button {
-        /* margin-bottom: 3vh; */
         width: 8%;
-        height: 7vh;
+        height: 6vh;
         margin-left: 31.5rem;
     }
 `
@@ -88,8 +89,6 @@ const StyledH2Contact = styled.h2 `
     margin-left: 70vh;
     margin-top: 5vh;
     margin-bottom: 3vh;
-    /* margin-top: 2vh; */
-    /* margin-bottom: -7vh; */
     font-weight: 900;
     color: whitesmoke;
 `
