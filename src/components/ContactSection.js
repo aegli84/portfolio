@@ -64,7 +64,7 @@ const StyledFormWrapper = styled(motion.div) `
         color: whitesmoke;
         cursor: pointer;
         margin-top: 8vh;
-        margin-left: 31rem;
+        margin-left: 30rem;
         width: 30%;
         border-left: 1.5px solid #495059;
         border-right: 1.5px solid #495059;

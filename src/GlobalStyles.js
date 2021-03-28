@@ -12,6 +12,9 @@ body {
     background: #343a40;
     font-family: 'Montserrat', sans-serif;
 }
+${'' /* img {
+    overflow: hidden;
+} */}
 
 button {
     font-weight: bold;

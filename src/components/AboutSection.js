@@ -7,6 +7,8 @@ import email from '../assets/email.svg';
 import {Link} from 'react-router-dom';
 import {motion} from 'framer-motion'
 import {pageAnimation} from '../animation'
+import {titleAnimation, fade, photoAnimation} from '../animation'
+
 
 const AboutSection = () => {
 
@@ -18,29 +20,30 @@ const AboutSection = () => {
     // }
 
     return (
-        <motion.div variants = {pageAnimation} initial = "hidden" animate = "show" exit = "exit">
+        <motion.div variants = {pageAnimation} initial = "hidden" animate = "show" >
         <StyledAbout>
             <div className = "description" id="/">
                 <div className = "title">
                     <StyledAllBigText>
-                        <motion.h2>My name is <StyledA>Andreea</StyledA></motion.h2>
+                        <motion.h2 variants = {titleAnimation}>My name is <StyledA>Andreea</StyledA>
+                        </motion.h2>
                     </StyledAllBigText>
                     <StyledAllBigText>
-                        <motion.h2><span>and I'm an aspiring</span></motion.h2>
+                        <motion.h2 variants = {titleAnimation} ><span>and I'm an aspiring</span></motion.h2>
                     </StyledAllBigText>
                     <StyledAllBigText>
-                        <StyledH2><motion.span>Web Developer.</motion.span></StyledH2>
+                        <StyledH2 variants = {titleAnimation}><span>Web Developer.</span></StyledH2>
                     </StyledAllBigText>
                 </div>
-                    <StyledP>I'm very ----insert adjective here--- by everything that has to do with front-end development but I'm also very fascinated by how things work behind the scenes in the back-end</StyledP>
-                    <button>Resume</button>
+                    <StyledP variants = {fade}>I'm very ----insert adjective here--- by everything that has to do with front-end development but I'm also very fascinated by how things work behind the scenes in the back-end</StyledP>
+                    <motion.button variants = {fade}>Resume</motion.button>
                 </div>
 
-            <div className = "image">
+            <motion.div variants = {photoAnimation} className = "image">
                 <StyledImg 
                     src = {ae} 
                     alt = "andreea egli" />
-            </div>
+            </motion.div>
         </StyledAbout>
 
         <StyledDivFirst className = "home">
@@ -105,13 +108,13 @@ const StyledAbout = styled.div`
     color: whitesmoke;
     
 `
-const StyledP = styled.p`
+const StyledP = styled(motion.p)`
     margin-top: 1rem;
     font-weight: 200;
     padding-right: 8rem;
 `
 
-const StyledH2 = styled.h2`
+const StyledH2 = styled(motion.h2)`
     font-weight: 900;
     color: lightgreen;
 `
@@ -173,7 +176,7 @@ const StyledLine = styled.li`
     margin-bottom: 1rem;
 `
 const StyledImg2 = styled(motion.img) `
-width: 20px;
+    width: 20px;
     height: 20px;
     filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
     
