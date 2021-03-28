@@ -11,11 +11,10 @@ const ContactSection = () => {
                 {/* <h4>Last name</h4> */}
                 <input name = "last-name" type = "name" placeholder ="Last name" />
                 {/* <h4>E-mail</h4> */}
-                <input name = "email" type = "name" placeholder ="Email" />
+                <input name = "email" type = "name" placeholder ="you@email.com" />
             </form>
             {/* <h4>Message</h4> */}
             <textarea type="text" name="message" id="exp" cols="25" rows="7" placeholder="Your message here"></textarea>
-            <br/>
             <button id = "submit" type = "submit" value = "submit">Send</button>
         </div>
         </StyledFormWrapper>
@@ -45,15 +44,22 @@ const StyledFormWrapper = styled.div `
         margin-left: 9.5rem;
         margin-top: 3vh;
         padding-top: 2rem;
+        color: whitesmoke;
+        font-size: 0.9rem;
         border: none;
         border-bottom: 1px solid lightgreen;
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
         outline:none;
+        &:placeholder-shown {
+            padding: 0.5rem 0.5rem;
+            
+        } 
     }
 
     textarea {
         background: #343a40;
+        color: whitesmoke;
         cursor: pointer;
         margin-top: 8vh;
         margin-left: 31rem;
@@ -64,6 +70,10 @@ const StyledFormWrapper = styled.div `
         border-radius: 5px;
         border-bottom: 1px solid lightgreen;
         outline:none; 
+        &:placeholder-shown {
+            padding: 0.5rem 0.5rem;
+            
+        } 
     }
 
     button {

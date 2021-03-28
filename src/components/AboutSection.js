@@ -5,6 +5,7 @@ import github from '../assets/github.svg';
 import linkedin1 from '../assets/linkedin1.svg';
 import email from '../assets/email.svg';
 import {Link} from 'react-router-dom';
+import {motion} from 'framer-motion'
 
 const AboutSection = () => {
     return (
