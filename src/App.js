@@ -9,8 +9,9 @@ import {useLocation} from 'react-router-dom';
 import NavbarPages from './components/NavbarPages';
 import {motion} from 'framer-motion'
 import {AnimatePresence} from 'framer-motion'
-import {useInView} from 'react-intersection-observer'
 import {useAnimation} from 'framer-motion'
+import {useInView} from 'react-intersection-observer'
+
 
 function App() {
 //const location = useLocation(); //framer motion test

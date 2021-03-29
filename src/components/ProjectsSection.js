@@ -4,7 +4,7 @@ import {pageAnimation} from '../animation'
 
 const ProjectsSection = () => {
     return (
-        <>
+        <div>
         <StyledH2Top>Projects</StyledH2Top>
         <StyledDivCards className = "cards" id="projects" >
         
@@ -34,7 +34,7 @@ const ProjectsSection = () => {
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, delectus.</p> */}
             </StyledDivCard>
         </StyledDivCards>
-        </>
+        </div>
     )
 }
 

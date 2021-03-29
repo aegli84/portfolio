@@ -10,17 +10,18 @@ import {pageAnimation} from '../animation'
 import {titleAnimation, fade, photoAnimation} from '../animation'
 
 
+
 const AboutSection = () => {
-
-        //framer motion test
-
-    // const titleAnimation = {
-    //     hidden: {opacity: 0},
-    //     show: {opacity: 1, transition: {duration: 2}}
-    // }
-
+    
     return (
+        <>
+        
         <motion.div variants = {pageAnimation} initial = "hidden" animate = "show" >
+
+        {/* <motion.div variants={sliderContainer}>
+            <Frame  ></Frame>
+        </motion.div> */}
+        
         <StyledAbout>
             <div className = "description" id="/">
                 <div className = "title">
@@ -35,9 +36,11 @@ const AboutSection = () => {
                         <StyledH2 variants = {titleAnimation}><span>Web Developer.</span></StyledH2>
                     </StyledAllBigText>
                 </div>
-                    <StyledP variants = {fade}>I'm very ----insert adjective here--- by everything that has to do with front-end development but I'm also very fascinated by how things work behind the scenes in the back-end</StyledP>
+
+                    <StyledP variants = {fade}>I'm very ----insert adjective here--- by everything that has to do with front-end development but I'm also very fascinated by how things work behind the scenes in the back-end
+                    </StyledP>
                     <motion.button variants = {fade}>Resume</motion.button>
-                </div>
+            </div>
 
             <motion.div variants = {photoAnimation} className = "image">
                 <StyledImg 
@@ -96,11 +99,13 @@ const AboutSection = () => {
             </div>
         </StyledDivFirst>
         </motion.div>
+        </>
     );
 };
 
 const StyledAbout = styled.div`
-    min-height: 110vh;
+    min-height: 100vh;
+    margin-top: 8vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -179,5 +184,14 @@ const StyledImg2 = styled(motion.img) `
     width: 20px;
     height: 20px;
     filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
-    
 `
+
+// const Frame = styled(motion.div)`
+//     position: fixed;
+//     right: 0;
+//     top: 0%;
+//     width: 100%;
+//     height: 100vh;
+//     background: whitesmoke;
+//     z-index: 2;
+// `
