@@ -2,10 +2,14 @@ import styled from 'styled-components';
 import {motion} from 'framer-motion'
 import {pageAnimation} from '../animation'
 
+
 const ContactSection = () => {
     return(
+        
     <StyledFormWrapper variants = {pageAnimation} initial = "hidden" animate = "show" exit = "exit">
+        
         <StyledH2Contact>Contact me</StyledH2Contact>
+        
         <div className = "form" id="contact">
             <form >
             {/* <h4>First name</h4> */}
@@ -19,6 +23,7 @@ const ContactSection = () => {
             <textarea type="text" name="message" id="exp" cols="25" rows="7" placeholder="Your message here"></textarea>
             <button id = "submit" type = "submit" value = "submit">Send</button>
         </div>
+        
     </StyledFormWrapper>
     )
 }

@@ -45,6 +45,7 @@ button {
     border: 1px solid darkgrey;
     color: darkgrey;
     transition: all 0.5s ease;
+    outline: none;
     &:hover {
         background-color: #343a40 ;
         color: lightgreen;

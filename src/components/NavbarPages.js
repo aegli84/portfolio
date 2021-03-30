@@ -2,42 +2,85 @@ import styled from 'styled-components';
 //import {Link} from 'react-router-dom';
 //import{ animateScroll as scroll } from "react-scroll";
 import * as Scroll from 'react-scroll';
-
+import {motion} from 'framer-motion'
+import {useLocation} from 'react-router-dom'
 
 
 const NavbarPages = () => {
-    
+    const {active} = useLocation();
     let Link = Scroll.Link;
     
     return (
         <StyledNavContainer>
         
             <h1>
-                <Link id = "logo" to="/" smooth = {true} duration = {700} spy = {true}  offset={-225}  >AE</Link>
+                <Link 
+                    id = "logo" 
+                    to="/" 
+                    smooth = {true} 
+                    duration = {700} 
+                    spy = {true}  
+                    offset={-350}  
+                >AE
+                </Link>
             </h1>
             <ul>
-                <li>
-                    <Link to="/" smooth = {true} duration = {700} spy = {true}  offset={-225}  >About me</Link>
+                <li >
+                    <Link 
+                        to="/" 
+                        smooth = {true} 
+                        duration = {700} 
+                        spy = {true}  
+                        offset={-225}>About me
+                    </Link>
+                        <NavLine 
+                            transition= {{ duration:0.75 }} 
+                            initial =  {{ width: "0%" }} 
+                            animate = {{ width: active === '/' ? "65%" : '0%'}} />
                 </li>
                 <li>
-                    <Link to="skills" smooth = {true} duration = {700} spy = {true}  offset={-110} >Skills</Link>
+                    <Link 
+                        to="skills" 
+                        smooth = {true} 
+                        duration = {700} 
+                        spy = {true}  
+                        offset={-110} 
+                        >Skills
+                    </Link>
+                        <NavLine 
+                            transition= {{ duration:0.75 }} 
+                            initial =  {{ width: "0%" }} 
+                            animate = {{ width: active === 'skills' ? "65%" : '0%'}} />
+                </li>
+                <li >
+                    <Link 
+                        to="projects" 
+                        smooth = {true} 
+                        duration = {700} 
+                        spy = {true} 
+                        offset={-115}
+                        >Projects
+                    </Link>
+                    
                 </li>
                 <li>
-                    <Link  to="projects" smooth = {true} duration = {700} spy = {true} offset={-115}>Projects</Link>
-                </li>
-                <li>
-                    <Link  to="contact" smooth = {true} duration = {700} spy = {true} offset={-60}>Contact</Link>
+                    <Link  activeClassName="underline"
+                        to="contact" 
+                        smooth = {true} 
+                        duration = {700} 
+                        spy = {true} 
+                        offset={-60}
+                        >Contact
+                    </Link>
+                    
                 </li>
             </ul>
             
         </StyledNavContainer>
-        
-)
+    )
 }
 
 const StyledNavContainer = styled.nav`
-    /* margin-top: 35px;
-    margin-left: 110vh; */
     min-height: 10vh;
     margin: auto;
     display: flex;
@@ -46,20 +89,15 @@ const StyledNavContainer = styled.nav`
     overflow: hidden; 
     padding: 1rem 10rem;
     box-shadow:  0 8px 6px -6px black;
-    /* background: #495057; */
     position: fixed;
     top: 0;
-  width: 100%;
-  animation: moveDown 0.7s ease-in-out;
-    
+    width: 100%;
+
     a {
         font-weight: 700;
         color: whitesmoke;
         text-decoration: none;
-        &:hover {
-            color: lightgreen;
-            transition: all 0.5s ease;
-        }
+        
     }
     ul {
         display: flex;
@@ -69,27 +107,30 @@ const StyledNavContainer = styled.nav`
     #logo {
         font-size: 900;
         font-weight: lighter;
-        /* font-family: "Lobster", cursive; */
     }
-    li{
+    li {
         padding-left: 4rem;
         position: relative;
         &.active {
         border-bottom: 2px solid lightgreen;
     }
-        
+    .underline {
+        height: 0.3rem;
+    background: #D96ED4;
+    width: 0%;
+    position: absolute;
+    bottom: -80%;
+    left: 40%;
     }
-    
+}
 `
-
-
-// const StyledH3 = styled.h3`
-//     font-size: lighter;
-//     font-weight: 500;
-//     &:hover {
-//         color: lightgreen;
-//         transition: all 0.5s ease;
-//     }
-// `
+const NavLine = styled(motion.div)`
+    height: 0.3rem;
+    background: #D96ED4;
+    width: 0%;
+    position: absolute;
+    bottom: -80%;
+    left: 40%;
+`
 export default NavbarPages;
 

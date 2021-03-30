@@ -8,21 +8,19 @@ import {Link} from 'react-router-dom';
 import {motion} from 'framer-motion'
 import {pageAnimation} from '../animation'
 import {titleAnimation, fade, photoAnimation} from '../animation'
+import Curly from './Curly' 
 
 
 
 const AboutSection = () => {
     
+
     return (
         <>
-        
         <motion.div variants = {pageAnimation} initial = "hidden" animate = "show" >
-
-        {/* <motion.div variants={sliderContainer}>
-            <Frame  ></Frame>
-        </motion.div> */}
         
         <StyledAbout>
+        
             <div className = "description" id="/">
                 <div className = "title">
                     <StyledAllBigText>
@@ -39,7 +37,9 @@ const AboutSection = () => {
 
                     <StyledP variants = {fade}>I'm very ----insert adjective here--- by everything that has to do with front-end development but I'm also very fascinated by how things work behind the scenes in the back-end
                     </StyledP>
-                    <motion.button variants = {fade}>Resume</motion.button>
+                    <motion.div>
+                        <motion.button variants = {fade}>Resume</motion.button>
+                    </motion.div>
             </div>
 
             <motion.div variants = {photoAnimation} className = "image">
@@ -57,18 +57,18 @@ const AboutSection = () => {
                     <StyledLine>
                         <div> - - /// - - </div>
                     </StyledLine>
-                    <li >
+                    <motion.li >
                         <Link 
                             to = {{pathname:"https://github.com/aegli84"}} 
                             target={"_blank"} 
                             rel="noopener noreferrer">
                             <StyledImg2 
                                 animate={{ rotate: 360 }}
-                                transition={{ duration: 2 }} 
+                                transition={{duration: 3}}
                                 src={github} 
                                 alt="github"/>
                         </Link>
-                    </li>
+                    </motion.li>
                     <li>
                         <Link 
                             to = {{pathname: "https://www.linkedin.com/in/andreeaegli/"}} 
@@ -76,7 +76,7 @@ const AboutSection = () => {
                             rel="noopener noreferrer">
                             <StyledImg2 
                                 animate={{ rotate: 360 }}
-                                transition={{ duration: 2 }} 
+                                transition={{duration: 3}}
                                 src={linkedin1} 
                                 alt="linkedin" />
                         </Link>
@@ -88,7 +88,7 @@ const AboutSection = () => {
                             rel="noopener noreferrer">
                             <StyledImg2 
                                 animate={{ rotate: 360 }}
-                                transition={{ duration: 2 }} 
+                                transition={{duration: 3 }}
                                 src={email} 
                                 alt="email"/>
                         </Link>
@@ -96,18 +96,22 @@ const AboutSection = () => {
 
                     </StyledLiImg>
                 </div>
+                
             </div>
+            <Curly/>
         </StyledDivFirst>
+        
         </motion.div>
         </>
     );
 };
 
 const StyledAbout = styled.div`
-    min-height: 100vh;
+    min-height: 95vh;
     margin-top: 8vh;
     display: flex;
     align-items: center;
+    
     justify-content: space-around;
     padding: 5rem 10rem;
     color: whitesmoke;
@@ -117,6 +121,7 @@ const StyledP = styled(motion.p)`
     margin-top: 1rem;
     font-weight: 200;
     padding-right: 8rem;
+    
 `
 
 const StyledH2 = styled(motion.h2)`
@@ -135,6 +140,7 @@ const StyledImg = styled.img`
     border-radius: 7px; 
     box-shadow: 0 8px 6px -6px black;
     overflow: hidden;
+    
 `
 
 const StyledAllBigText = styled.div `
@@ -185,13 +191,3 @@ const StyledImg2 = styled(motion.img) `
     height: 20px;
     filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
 `
-
-// const Frame = styled(motion.div)`
-//     position: fixed;
-//     right: 0;
-//     top: 0%;
-//     width: 100%;
-//     height: 100vh;
-//     background: whitesmoke;
-//     z-index: 2;
-// `
