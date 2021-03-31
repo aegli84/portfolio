@@ -1,20 +1,26 @@
 import styled from 'styled-components';
-//import {Link} from 'react-router-dom';
-//import{ animateScroll as scroll } from "react-scroll";
 import * as Scroll from 'react-scroll';
-import {motion} from 'framer-motion'
+import {motion, AnimatePresence} from 'framer-motion'
 import {useLocation} from 'react-router-dom'
-
+import {useState, useEffect} from 'react'
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css';
 
 const NavbarPages = () => {
-    const {active} = useLocation();
-    let Link = Scroll.Link;
+    // const {pathname} = window.location;
+    const [activeLine, setActiveLine] = useState();
+
+    const defaultState = {
+        opacity: 0,
+    };
+
+    let Tabs = Scroll.Link;
     
     return (
         <StyledNavContainer>
         
             <h1>
-                <Link 
+                <Tabs 
                     id = "logo" 
                     to="/" 
                     smooth = {true} 
@@ -22,56 +28,62 @@ const NavbarPages = () => {
                     spy = {true}  
                     offset={-350}  
                 >AE
-                </Link>
+                </Tabs>
             </h1>
             <ul>
                 <li >
-                    <Link 
+    
+                    <Tabs onClick = {() =>setActiveLine(!activeLine)}
                         to="/" 
                         smooth = {true} 
                         duration = {700} 
                         spy = {true}  
                         offset={-225}>About me
-                    </Link>
+                    </Tabs>
                         <NavLine 
+                            // initial={defaultState}
+                            // exit={defaultState}
                             transition= {{ duration:0.75 }} 
-                            initial =  {{ width: "0%" }} 
-                            animate = {{ width: active === '/' ? "65%" : '0%'}} />
+                            initial={{defaultState}}
+                            exit={{defaultState}}
+                            animate={{ width: activeLine ? "65%" : "0" }}
+                            />
                 </li>
                 <li>
-                    <Link 
+                    <Tabs onClick = {() =>setActiveLine(!activeLine)}
                         to="skills" 
                         smooth = {true} 
                         duration = {700} 
                         spy = {true}  
                         offset={-110} 
                         >Skills
-                    </Link>
+                    </Tabs>
                         <NavLine 
                             transition= {{ duration:0.75 }} 
                             initial =  {{ width: "0%" }} 
-                            animate = {{ width: active === 'skills' ? "65%" : '0%'}} />
+                            animate={{ width: activeLine ? "65%" : "0" }}
+                            />
                 </li>
                 <li >
-                    <Link 
+                    <Tabs 
                         to="projects" 
                         smooth = {true} 
                         duration = {700} 
                         spy = {true} 
                         offset={-115}
                         >Projects
-                    </Link>
+                    </Tabs>
                     
                 </li>
                 <li>
-                    <Link  activeClassName="underline"
+                    <Tabs  
                         to="contact" 
                         smooth = {true} 
                         duration = {700} 
                         spy = {true} 
                         offset={-60}
                         >Contact
-                    </Link>
+                    </Tabs>
                     
                 </li>
             </ul>
@@ -92,6 +104,7 @@ const StyledNavContainer = styled.nav`
     position: fixed;
     top: 0;
     width: 100%;
+    
 
     a {
         font-weight: 700;
@@ -111,26 +124,28 @@ const StyledNavContainer = styled.nav`
     li {
         padding-left: 4rem;
         position: relative;
-        &.active {
-        border-bottom: 2px solid lightgreen;
-    }
-    .underline {
-        height: 0.3rem;
-    background: #D96ED4;
-    width: 0%;
-    position: absolute;
-    bottom: -80%;
-    left: 40%;
-    }
+        
+        
+    
 }
 `
 const NavLine = styled(motion.div)`
-    height: 0.3rem;
+    height: 0.2rem;
     background: #D96ED4;
+    opacity: 0.6;
     width: 0%;
     position: absolute;
-    bottom: -80%;
+    bottom: -30%;
     left: 40%;
+    &:hover {
+        height: 0.2rem;
+    background: #D96ED4;
+    opacity: 0.6;
+    width: 0%;
+    position: absolute;
+    bottom: -30%;
+    left: 40%;
+    }
 `
 export default NavbarPages;
 

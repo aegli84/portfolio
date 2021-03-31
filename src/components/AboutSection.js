@@ -12,9 +12,10 @@ import Curly from './Curly'
 
 
 
+
 const AboutSection = () => {
     
-
+    
     return (
         <>
         <motion.div variants = {pageAnimation} initial = "hidden" animate = "show" >

@@ -17,6 +17,7 @@
     "react-scripts": "4.0.3",
     "react-scroll": "^1.8.2",
     "react-scroll-into-view": "^1.8.2",
+    "react-tabs": "^3.2.1",
     "redux": "^4.0.5",
     "styled-components": "^5.2.1",
     "swiper": "^6.5.0",
