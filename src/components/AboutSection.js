@@ -20,9 +20,9 @@ const AboutSection = () => {
         <>
         <motion.div variants = {pageAnimation} initial = "hidden" animate = "show" >
         
-        <StyledAbout>
+        <StyledAbout >
         
-            <div className = "description" id="/">
+            <div className = "description" id="about">
                 <div className = "title">
                     <StyledAllBigText>
                         <motion.h2 variants = {titleAnimation}>My name is <StyledA>Andreea</StyledA>

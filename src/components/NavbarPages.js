@@ -1,100 +1,110 @@
 import styled from 'styled-components';
 import * as Scroll from 'react-scroll';
-import {motion, AnimatePresence} from 'framer-motion'
+import {motion} from 'framer-motion'
 import {useLocation} from 'react-router-dom'
 import {useState, useEffect} from 'react'
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import 'react-tabs/style/react-tabs.css';
+import { NavHashLink } from "react-router-hash-link";
+// import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import ScrollIntoView from 'react-scroll-into-view'
 
 const NavbarPages = () => {
-    // const {pathname} = window.location;
-    const [activeLine, setActiveLine] = useState();
+    
+    const { pathname } = useLocation();
+    //const NavHashLink = Scroll.Link;
 
-    const defaultState = {
-        opacity: 0,
-    };
-
-    let Tabs = Scroll.Link;
     
     return (
         <StyledNavContainer>
         
             <h1>
-                <Tabs 
+            <ScrollIntoView selector = "#about">
+                <NavHashLink 
                     id = "logo" 
-                    to="/" 
-                    smooth = {true} 
-                    duration = {700} 
-                    spy = {true}  
-                    offset={-350}  
+                    to= "/about" 
                 >AE
-                </Tabs>
+                </NavHashLink>
+                </ScrollIntoView>
             </h1>
             <ul>
-                <li >
-    
-                    <Tabs onClick = {() =>setActiveLine(!activeLine)}
-                        to="/" 
-                        smooth = {true} 
-                        duration = {700} 
-                        spy = {true}  
-                        offset={-225}>About me
-                    </Tabs>
+                <li>
+                <ScrollIntoView selector = "#about"
+                >
+                    <NavHashLink 
+                        to="/about"
+                        // smooth = {true} 
+                        // duration = {700} 
+                        // spy = {true}  
+                        // offset={-225}
+                        > About me
+                    </NavHashLink>
+                    </ScrollIntoView>
                         <NavLine 
-                            // initial={defaultState}
-                            // exit={defaultState}
                             transition= {{ duration:0.75 }} 
-                            initial={{defaultState}}
-                            exit={{defaultState}}
-                            animate={{ width: activeLine ? "65%" : "0" }}
-                            />
+                            initial =  {{ width: '0%' }}
+                            animate={{ width: pathname === '/about' ? '65%' : "0" }}
+                            /> 
                 </li>
                 <li>
-                    <Tabs onClick = {() =>setActiveLine(!activeLine)}
-                        to="skills" 
-                        smooth = {true} 
-                        duration = {700} 
-                        spy = {true}  
-                        offset={-110} 
+                <ScrollIntoView selector = "#skills">
+                    <NavHashLink 
+                
+                        to="/skills" 
+                        // smooth = {true} 
+                        // duration = {700} 
+                        // spy = {true}  
+                        // offset={-110} 
                         >Skills
-                    </Tabs>
+                    </NavHashLink>
+                    </ScrollIntoView>
                         <NavLine 
                             transition= {{ duration:0.75 }} 
-                            initial =  {{ width: "0%" }} 
-                            animate={{ width: activeLine ? "65%" : "0" }}
-                            />
+                            initial =  {{ width: '0%' }}
+                            animate={{ width: pathname === '/skills' ? '75%' : "0" }}
+                            /> 
+                            
                 </li>
                 <li >
-                    <Tabs 
-                        to="projects" 
-                        smooth = {true} 
-                        duration = {700} 
-                        spy = {true} 
-                        offset={-115}
+                <ScrollIntoView selector = "#projects">
+                    <NavHashLink 
+                        to="/projects" 
+                        // smooth = {true} 
+                        // duration = {700} 
+                        // spy = {true} 
+                        // offset={-115}
                         >Projects
-                    </Tabs>
-                    
+                    </NavHashLink>
+                    </ScrollIntoView>
+                        <NavLine 
+                            transition= {{ duration:0.75 }} 
+                            initial =  {{ width: '0%' }}
+                            animate={{ width: pathname === '/projects' ? '65%' : "0" }}
+                            /> 
                 </li>
                 <li>
-                    <Tabs  
-                        to="contact" 
-                        smooth = {true} 
-                        duration = {700} 
-                        spy = {true} 
-                        offset={-60}
+                <ScrollIntoView selector = "#contact">
+                    <NavHashLink  
+                        to="/contact" 
+                        // smooth = {true} 
+                        // duration = {700} 
+                        // spy = {true} 
+                        // offset={-60}
                         >Contact
-                    </Tabs>
-                    
+                    </NavHashLink>
+                    </ScrollIntoView>
+                    <NavLine 
+                            transition= {{ duration:0.75 }} 
+                            initial =  {{ width: '0%' }}
+                            animate={{ width: pathname === '/contact' ? '65%' : "0" }}
+                            /> 
                 </li>
             </ul>
-            
         </StyledNavContainer>
     )
 }
 
 const StyledNavContainer = styled.nav`
     min-height: 10vh;
-    margin: auto;
+    /* margin: auto; */
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
@@ -131,21 +141,13 @@ const StyledNavContainer = styled.nav`
 `
 const NavLine = styled(motion.div)`
     height: 0.2rem;
-    background: #D96ED4;
+    background: #D96ED4; 
     opacity: 0.6;
     width: 0%;
     position: absolute;
     bottom: -30%;
     left: 40%;
-    &:hover {
-        height: 0.2rem;
-    background: #D96ED4;
-    opacity: 0.6;
-    width: 0%;
-    position: absolute;
-    bottom: -30%;
-    left: 40%;
-    }
+    
 `
 export default NavbarPages;
 
