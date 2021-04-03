@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import {motion} from 'framer-motion'
 import {pageAnimation} from '../animation'
-import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+
 
 
 const ContactSection = () => {
@@ -30,6 +30,7 @@ const ContactSection = () => {
 }
 
 const StyledFormWrapper = styled(motion.div) `
+    
     padding: 4rem ;
     margin-bottom: 4vh;
     text-align: left;

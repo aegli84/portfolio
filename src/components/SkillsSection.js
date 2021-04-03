@@ -57,7 +57,7 @@ const SkillsSection = () => {
 
 
 const Skills = styled.div`
-    height: 60vh;
+    height: 100vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
     grid-template-rows: 7px;  

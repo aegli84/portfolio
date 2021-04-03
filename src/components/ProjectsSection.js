@@ -37,7 +37,9 @@ const ProjectsSection = () => {
         </div>
     )
 }
-
+const StyledDivSection = styled.div`
+min-height: 100vh;
+`
 const StyledDivCards = styled.div `
     padding: 5rem ;
     margin-bottom: 7vh;

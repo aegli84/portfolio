@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-brands-svg-icons": "^5.15.3",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/react-fontawesome": "^0.1.14",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.1",
@@ -17,6 +21,7 @@
     "react-scripts": "4.0.3",
     "react-scroll": "^1.8.2",
     "react-scroll-into-view": "^1.8.2",
+    "react-scroll-to": "^3.0.0-beta.6",
     "react-tabs": "^3.2.1",
     "react-transition-group": "^4.4.1",
     "redux": "^4.0.5",

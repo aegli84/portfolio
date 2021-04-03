@@ -29,6 +29,7 @@ const CurlySvg = styled.svg `
     width: 197.5vh;
     z-index: -1;
     left: 0;
+    
 
 `;
 export default Curly;

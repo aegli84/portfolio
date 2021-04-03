@@ -6,6 +6,7 @@ import ContactSection from './components/ContactSection';
 import FooterSection from './components/FooterSection';
 import GlobalStyle from './GlobalStyles';
 import NavbarPages from './components/NavbarPages';
+
 // import {motion} from 'framer-motion'
 // import {AnimatePresence} from 'framer-motion'
 // import {useAnimation} from 'framer-motion'

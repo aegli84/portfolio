@@ -1,42 +1,46 @@
 import styled from 'styled-components';
-import * as Scroll from 'react-scroll';
+//import * as Scroll from 'react-scroll';
 import {motion} from 'framer-motion'
 import {useLocation} from 'react-router-dom'
-import {useState, useEffect} from 'react'
-import { NavHashLink } from "react-router-hash-link";
-// import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { NavHashLink as Link } from "react-router-hash-link";
 import ScrollIntoView from 'react-scroll-into-view'
+import useScroll from './useScroll'
 
 const NavbarPages = () => {
     
     const { pathname } = useLocation();
-    //const NavHashLink = Scroll.Link;
-
     
+
     return (
         <StyledNavContainer>
         
             <h1>
-            <ScrollIntoView selector = "#about">
-                <NavHashLink 
+            <ScrollIntoView selector= "#">
+                <Link 
                     id = "logo" 
-                    to= "/about" 
+                    to= "/" 
+                    
+                        smooth = {true} 
+                        duration = {700} 
+                        spy = {true}  
+                        offset={0}
                 >AE
-                </NavHashLink>
+                </Link>
                 </ScrollIntoView>
             </h1>
             <ul>
-                <li>
-                <ScrollIntoView selector = "#about"
-                >
-                    <NavHashLink 
+                <li >
+                <ScrollIntoView selector= "#about">
+                    <Link 
+                    
                         to="/about"
-                        // smooth = {true} 
-                        // duration = {700} 
-                        // spy = {true}  
-                        // offset={-225}
+                        smooth = {true} 
+                        duration = {700} 
+                        spy = {true}  
+                        offset={0}
+                        
                         > About me
-                    </NavHashLink>
+                    </Link>
                     </ScrollIntoView>
                         <NavLine 
                             transition= {{ duration:0.75 }} 
@@ -45,16 +49,17 @@ const NavbarPages = () => {
                             /> 
                 </li>
                 <li>
-                <ScrollIntoView selector = "#skills">
-                    <NavHashLink 
+                <ScrollIntoView selector= "#skills">
+                    <Link 
                 
                         to="/skills" 
-                        // smooth = {true} 
-                        // duration = {700} 
-                        // spy = {true}  
-                        // offset={-110} 
+                        smooth = {true} 
+                        duration = {700} 
+                        spy = {true}  
+                        offset={0} 
+                        
                         >Skills
-                    </NavHashLink>
+                    </Link>
                     </ScrollIntoView>
                         <NavLine 
                             transition= {{ duration:0.75 }} 
@@ -64,15 +69,17 @@ const NavbarPages = () => {
                             
                 </li>
                 <li >
-                <ScrollIntoView selector = "#projects">
-                    <NavHashLink 
+                <ScrollIntoView selector= "#projects">
+                    <Link 
+                    
                         to="/projects" 
-                        // smooth = {true} 
-                        // duration = {700} 
-                        // spy = {true} 
-                        // offset={-115}
+                        smooth = {true} 
+                        duration = {700} 
+                        spy = {true} 
+                        offset={0}
+                        
                         >Projects
-                    </NavHashLink>
+                    </Link>
                     </ScrollIntoView>
                         <NavLine 
                             transition= {{ duration:0.75 }} 
@@ -81,15 +88,17 @@ const NavbarPages = () => {
                             /> 
                 </li>
                 <li>
-                <ScrollIntoView selector = "#contact">
-                    <NavHashLink  
+                <ScrollIntoView selector= "#contact">
+                    <Link  
+                    
                         to="/contact" 
-                        // smooth = {true} 
-                        // duration = {700} 
-                        // spy = {true} 
-                        // offset={-60}
+                        smooth = {true} 
+                        duration = {700} 
+                        spy = {true} 
+                        offset={0}
+                        
                         >Contact
-                    </NavHashLink>
+                    </Link>
                     </ScrollIntoView>
                     <NavLine 
                             transition= {{ duration:0.75 }} 
@@ -104,7 +113,7 @@ const NavbarPages = () => {
 
 const StyledNavContainer = styled.nav`
     min-height: 10vh;
-    /* margin: auto; */
+    margin: auto;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
