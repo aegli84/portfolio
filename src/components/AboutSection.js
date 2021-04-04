@@ -68,7 +68,6 @@ const StyledAbout = styled.div`
     padding: 5rem 10rem;
     color: whitesmoke;
     margin-bottom: 20vh;
-    /* background: lightsalmon; */
 `
 const StyledP = styled(motion.p)`
     margin-top: 1rem;

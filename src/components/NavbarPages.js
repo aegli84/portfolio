@@ -19,11 +19,6 @@ const NavbarPages = () => {
                 <Link 
                     id = "logo" 
                     to= "/about" 
-                    
-                        smooth = {true} 
-                        duration = {700} 
-                        spy = {true}  
-                        offset={0}
                 >AE
                 </Link>
                 </ScrollIntoView>
@@ -32,13 +27,7 @@ const NavbarPages = () => {
                 <li >
                 <ScrollIntoView selector= "#about">
                     <Link 
-                    
                         to="/about"
-                        smooth = {true} 
-                        duration = {700} 
-                        spy = {true}  
-                        offset={0}
-                        
                         > About me
                     </Link>
                     </ScrollIntoView>
@@ -53,10 +42,7 @@ const NavbarPages = () => {
                     <Link 
                 
                         to="/skills" 
-                        smooth = {true} 
-                        duration = {700} 
-                        spy = {true}  
-                        offset={0} 
+                    
                         
                         >Skills
                     </Link>
@@ -64,7 +50,7 @@ const NavbarPages = () => {
                         <NavLine 
                             transition= {{ duration:0.75 }} 
                             initial =  {{ width: '0%' }}
-                            animate={{ width: pathname === '/skills' ? '75%' : "0" }}
+                            animate={{ width: pathname === '/skills' ? '77%' : "0" }}
                             /> 
                             
                 </li>
@@ -73,18 +59,13 @@ const NavbarPages = () => {
                     <Link 
                     
                         to="/projects" 
-                        smooth = {true} 
-                        duration = {700} 
-                        spy = {true} 
-                        offset={0}
-                        
                         >Projects
                     </Link>
                     </ScrollIntoView>
                         <NavLine 
                             transition= {{ duration:0.75 }} 
                             initial =  {{ width: '0%' }}
-                            animate={{ width: pathname === '/projects' ? '65%' : "0" }}
+                            animate={{ width: pathname === '/projects' ? '70%' : "0" }}
                             /> 
                 </li>
                 <li>
@@ -92,10 +73,8 @@ const NavbarPages = () => {
                     <Link  
                     
                         to="/contact" 
-                        smooth = {true} 
-                        duration = {700} 
-                        spy = {true} 
-                        offset={0}
+                        
+                        
                         
                         >Contact
                     </Link>
@@ -103,7 +82,7 @@ const NavbarPages = () => {
                     <NavLine 
                             transition= {{ duration:0.75 }} 
                             initial =  {{ width: '0%' }}
-                            animate={{ width: pathname === '/contact' ? '65%' : "0" }}
+                            animate={{ width: pathname === '/contact' ? '70%' : "0" }}
                             /> 
                 </li>
             </ul>
@@ -123,7 +102,7 @@ const StyledNavContainer = styled.nav`
     top: 0;
     width: 100%;
     
-  
+
 
     a {
         font-weight: 700;
@@ -154,7 +133,7 @@ const NavLine = styled(motion.div)`
     opacity: 0.6;
     width: 0%;
     position: absolute;
-    bottom: -30%;
+    bottom: -35%;
     left: 40%;
     
 `

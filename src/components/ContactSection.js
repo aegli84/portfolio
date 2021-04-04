@@ -7,7 +7,7 @@ import {pageAnimation} from '../animation'
 const ContactSection = () => {
     return(
         
-    <StyledFormWrapper variants = {pageAnimation} initial = "hidden" animate = "show" exit = "exit">
+    <StyledFormWrapper  initial = "hidden" animate = "show" exit = "exit">
         
         <StyledH2Contact>Contact me</StyledH2Contact>
         
@@ -30,7 +30,6 @@ const ContactSection = () => {
 }
 
 const StyledFormWrapper = styled(motion.div) `
-    
     padding: 4rem ;
     margin-bottom: 4vh;
     text-align: left;
