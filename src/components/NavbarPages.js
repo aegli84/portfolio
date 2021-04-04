@@ -15,10 +15,10 @@ const NavbarPages = () => {
         <StyledNavContainer>
         
             <h1>
-            <ScrollIntoView selector= "#">
+            <ScrollIntoView selector= "#about">
                 <Link 
                     id = "logo" 
-                    to= "/" 
+                    to= "/about" 
                     
                         smooth = {true} 
                         duration = {700} 
@@ -113,7 +113,6 @@ const NavbarPages = () => {
 
 const StyledNavContainer = styled.nav`
     min-height: 10vh;
-    margin: auto;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
@@ -124,6 +123,7 @@ const StyledNavContainer = styled.nav`
     top: 0;
     width: 100%;
     
+  
 
     a {
         font-weight: 700;

@@ -60,15 +60,15 @@ const AboutSection = () => {
 };
 
 const StyledAbout = styled.div`
-    min-height: 95vh;
-    margin-top: 8vh;
+    min-height: 90vh;
+    margin-top: 5vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    
     padding: 5rem 10rem;
     color: whitesmoke;
-    
+    margin-bottom: 20vh;
+    /* background: lightsalmon; */
 `
 const StyledP = styled(motion.p)`
     margin-top: 1rem;
@@ -93,11 +93,12 @@ const StyledImg = styled.img`
     border-radius: 7px; 
     box-shadow: 0 8px 6px -6px black;
     overflow: hidden;
-    
+    /* background: lightcyan; */
 `
 
 const StyledAllBigText = styled.div `
     overflow: hidden;
+    /* background: lightcyan; */
 `
 export default AboutSection;
 

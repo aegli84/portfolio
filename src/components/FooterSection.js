@@ -2,9 +2,11 @@ import styled from 'styled-components'
 
 const FooterSection = () => {
     return (
+        
         <StyledDiv>
             <StyledH4>Made with ❤️ by Andreea Egli 2021</StyledH4>
         </StyledDiv>
+    
     )
 }
 

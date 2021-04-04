@@ -6,7 +6,8 @@ const GlobalStyle = createGlobalStyle `
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        
+        scroll-margin-top: 25vh;
+       
     ${'' /* ::-webkit-scrollbar {
         width: 15px;
     }
@@ -31,6 +32,7 @@ const GlobalStyle = createGlobalStyle `
 body {
     background: #343a40;
     font-family: 'Montserrat', sans-serif;
+
 }
 
 

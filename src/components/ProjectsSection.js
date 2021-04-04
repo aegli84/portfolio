@@ -8,19 +8,7 @@ const ProjectsSection = () => {
         <StyledH2Top>Projects</StyledH2Top>
         <StyledDivCards className = "cards" id="projects" >
         
-            <StyledDivCard className = "card">
             
-                {/* <h3>Project 1</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, delectus.</p> */}
-            </StyledDivCard>
-            <StyledDivCard  className = "card">
-                {/* <h3>Project 2</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, delectus.</p> */}
-            </StyledDivCard>
-            <StyledDivCard  className = "card">
-                {/* <h3>Project 3</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, delectus.</p> */}
-            </StyledDivCard>
             <StyledDivCard  className = "card">
                 {/* <h3>Project 4</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, delectus.</p> */}
@@ -64,8 +52,8 @@ const StyledH2Top = styled.h2`
 `
 
 const StyledDivCard = styled.div `
-    width: 35vh;
-    height: 35vh;
+    width: 45vh;
+    height: 45vh;
     box-shadow: 0px 7px 7px -5px black;
     &:hover {
         transform: translate3D(0,-1px,0) scale(1.10) ;

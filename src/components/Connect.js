@@ -94,7 +94,7 @@ const Connect = () => {
 };
     
 const StyledDivWrapper = styled.div`
-margin-top: -53vh;
+margin-top: -65vh;
 margin-right: 1rem;
 display: flex;
 float: right;
