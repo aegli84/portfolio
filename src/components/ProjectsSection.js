@@ -191,7 +191,7 @@ const ProjectsSection = () => {
                 <StyledDivCard  
                         className = "card" 
                         whileHover={{scale: 1.1}}> 
-                    <img src={comingsoon} alt="todo"/>
+                    <img className = "colorize" src={comingsoon} alt="todo"/>
                     <StyledH3>Project undefined</StyledH3>
                         <Link 
                             to = {{pathname:"https://github.com/aegli84/Todo-list"}} 
@@ -253,23 +253,32 @@ const StyledDivCard = styled(motion.div) `
     margin-top: 6vh;
     background: rgba(245, 245, 245, 0.829); 
     overflow: hidden;
+    
+    
     &:hover {
         border: 2px solid rgba(245, 245, 245, 0.829);
+        
     }
     img {
         width: 45vh;
         height: 47%;
+        /* filter: grayscale(100%);
+        &:hover {
+            filter: grayscale(0%);
+        
+        }  */
         /* border-top-left-radius: 8px;  */
         /* border-top-right-radius: 8px; */
         
     }
 `
 const StyledH2Top = styled.h2`
-    margin-left: 85vh;
+    margin-left: 2vh;
     margin-top: 12vh;
     margin-bottom: -1vh;
     font-weight: 900;
     color: whitesmoke;
+    text-align: center;
 `
 const StyledH3 = styled.h3`
     margin-top: 1rem;

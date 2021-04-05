@@ -87,7 +87,7 @@ const StyledNavContainer = styled.nav`
         list-style: none;
     }
     #logo {
-        font-weight: bolder;
+        font-weight: 800;
         font-size: 2.5rem;
     } 
     li {

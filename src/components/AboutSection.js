@@ -67,12 +67,44 @@ const StyledAbout = styled.div`
     padding: 5rem 10rem;
     color: whitesmoke;
     margin-bottom: 20vh;
+    @media (max-width: 1300px){
+            display: block;
+            text-align: center;
+            padding: 2rem 2rem;
+            margin-top: 7rem;
+        }
+
+    button {
+        font-weight: bold;
+        font-size: 1rem;
+        padding: 1rem 2rem;
+        margin-top: 5vh;
+        cursor: pointer;
+        border: 1px solid darkgrey;
+        color: darkgrey;
+        transition: all 0.5s ease;
+        outline: none;
+        background: #495057;
+    border-radius: 5%;
+    &:hover {
+        background-color: #343a40 ;
+        color: lightgreen;
+    }
+    @media (max-width: 1300px){
+            margin-right: 20rem;
+            
+        }
+}
 `
 const StyledP = styled(motion.p)`
     margin-top: 1rem;
     font-weight: 200;
     padding-right: 8rem;
-    
+    @media (max-width: 1300px){
+            display: block;
+            text-align: center;
+            padding: 2rem 2rem;
+        }
 `
 
 const StyledH2 = styled(motion.h2)`
@@ -91,7 +123,12 @@ const StyledImg = styled.img`
     border-radius: 7px; 
     box-shadow: 0 8px 6px -6px black;
     overflow: hidden;
-    /* background: lightcyan; */
+    @media (max-width: 1300px){
+            margin: 0 rem 7rem 9rem;
+            width: 20vh;
+            height: 20vh;
+            position: absolute;
+        }
 `
 
 const StyledAllBigText = styled.div `

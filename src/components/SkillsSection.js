@@ -51,13 +51,11 @@ const StyledDivWrapper = styled.div `
     margin-bottom: 17vh;
 `
     const StyledText = styled.h2`
-    margin-left: 70vh;
+    margin-left: 2vh;
     margin-bottom: 15vh; 
     font-weight: 900;
     color: whitesmoke;
-    display: flex;
-    align-items: center;
-    justify-items: center;
+    text-align: center;
 `
 
 const SkillsIcons = styled.div`
