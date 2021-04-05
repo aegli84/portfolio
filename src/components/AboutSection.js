@@ -1,7 +1,6 @@
 import React from 'react';
 import ae from '../assets/ae.jpg';
 import styled from 'styled-components';
-import {Link} from 'react-router-dom';
 import {motion} from 'framer-motion'
 import {pageAnimation} from '../animation'
 import {titleAnimation, fade, photoAnimation} from '../animation'

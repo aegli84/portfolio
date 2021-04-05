@@ -1,10 +1,9 @@
 import styled from 'styled-components';
-//import * as Scroll from 'react-scroll';
 import {motion} from 'framer-motion'
 import {useLocation} from 'react-router-dom'
 import { NavHashLink as Link } from "react-router-hash-link";
 import ScrollIntoView from 'react-scroll-into-view'
-import useScroll from './useScroll'
+
 
 const NavbarPages = () => {
     
@@ -15,21 +14,14 @@ const NavbarPages = () => {
         <StyledNavContainer>
         
             <h1>
-            <ScrollIntoView selector= "#about">
-                <Link 
-                    id = "logo" 
-                    to= "/about" 
-                >AE
-                </Link>
+                <ScrollIntoView selector= "#about">
+                    <Link id = "logo" to= "/about">ae</Link>
                 </ScrollIntoView>
             </h1>
             <ul>
-                <li >
+                <li>
                 <ScrollIntoView selector= "#about">
-                    <Link 
-                        to="/about"
-                        > About me
-                    </Link>
+                    <Link to="/about">About me</Link>
                     </ScrollIntoView>
                         <NavLine 
                             transition= {{ duration:0.75 }} 
@@ -39,13 +31,7 @@ const NavbarPages = () => {
                 </li>
                 <li>
                 <ScrollIntoView selector= "#skills">
-                    <Link 
-                
-                        to="/skills" 
-                    
-                        
-                        >Skills
-                    </Link>
+                    <Link to="/skills">Skills</Link>
                     </ScrollIntoView>
                         <NavLine 
                             transition= {{ duration:0.75 }} 
@@ -54,13 +40,9 @@ const NavbarPages = () => {
                             /> 
                             
                 </li>
-                <li >
+                <li>
                 <ScrollIntoView selector= "#projects">
-                    <Link 
-                    
-                        to="/projects" 
-                        >Projects
-                    </Link>
+                    <Link to="/projects">Projects</Link>
                     </ScrollIntoView>
                         <NavLine 
                             transition= {{ duration:0.75 }} 
@@ -70,14 +52,7 @@ const NavbarPages = () => {
                 </li>
                 <li>
                 <ScrollIntoView selector= "#contact">
-                    <Link  
-                    
-                        to="/contact" 
-                        
-                        
-                        
-                        >Contact
-                    </Link>
+                    <Link to="/contact">Contact</Link>
                     </ScrollIntoView>
                     <NavLine 
                             transition= {{ duration:0.75 }} 
@@ -95,36 +70,30 @@ const StyledNavContainer = styled.nav`
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+    background: transparent;
     overflow: hidden; 
     padding: 1rem 10rem;
     box-shadow:  0 8px 6px -6px black;
     position: fixed;
     top: 0;
     width: 100%;
-    
-
-
     a {
         font-weight: 700;
         color: whitesmoke;
         text-decoration: none;
-        
     }
     ul {
         display: flex;
         list-style: none;
-        
     }
     #logo {
-        font-size: 900;
-        font-weight: lighter;
-    }
+        font-weight: bolder;
+        font-size: 2.5rem;
+    } 
     li {
+        margin-bottom: 0.5rem;
         padding-left: 4rem;
         position: relative;
-        
-        
-    
 }
 `
 const NavLine = styled(motion.div)`

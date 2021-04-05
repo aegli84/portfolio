@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import {motion} from 'framer-motion'
-import {pageAnimation} from '../animation'
+
 
 
 
@@ -31,6 +31,7 @@ const ContactSection = () => {
 
 const StyledFormWrapper = styled(motion.div) `
     padding: 4rem ;
+    margin-top: 37vh;
     margin-bottom: 4vh;
     text-align: left;
     

@@ -14,8 +14,7 @@ import terminal from '../assets/terminal.svg';
 import vscode from '../assets/vscode.svg';
 import styledc from '../assets/styledc.png'
 import styled from 'styled-components';
-import {motion} from 'framer-motion'
-import {pageAnimation} from '../animation'
+
 
 const SkillsSection = () => {
     return (
