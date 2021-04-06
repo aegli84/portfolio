@@ -43,26 +43,26 @@ const ContactSection = () => {
 const StyledFormWrapper = styled(motion.div) `
     height: 95vh;
     padding: 6rem;
-    margin-top: 37vh;
+    margin-top: 47vh;
     text-align: center;
     align-items: center;
-    
+    display: block;
+    justify-content: center;
+    @media (max-width: 1300px){
+            margin-top: 300vh;  
+            padding: 7rem 2rem;
+            
+        }
+/*     
     form {
-        /* display: inline-block; */
-        margin-left: 36vh;
-        width: 50%;
-        align-items: center;
-    }
-    /* h4 {
-        font-weight: 400;
-        color: white;
-        margin-left: 13rem;
-        padding: 1vh 1vh;
-    } */
+        margin-top: 5rem;
+        
+    }   */
+    
     input{
         background: #343a40;
-        width: 58%;
-        margin-left: 17vh;
+        width: 55vh;
+        margin-left: 61vh;
         margin-top: 3vh;
         padding-top: 2vh;
         color: whitesmoke;
@@ -73,10 +73,17 @@ const StyledFormWrapper = styled(motion.div) `
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
         outline:none;
+        display: block;
+        justify-content: center;
         &:placeholder-shown {
             padding: 0.5rem 0.5rem;
-            
         } 
+        @media (max-width: 1300px){
+            margin-left: 6vh; 
+            margin-top: 6vh;
+            width: 50vh; 
+        }
+        
     }
 
     textarea {
@@ -95,14 +102,18 @@ const StyledFormWrapper = styled(motion.div) `
         outline:none; 
         &:placeholder-shown {
             padding: 0.5rem 0.5rem;
-            
+        @media (max-width: 1300px){
+            margin-left: 2vh; 
+            margin-top: 6vh;
+            width: 50vh; 
+        }
         } 
     }
 
     button {
         font-weight: bold;
         font-size: 1rem;
-        padding: 0.5rem 2rem;
+        padding: 1rem 3rem;
         margin-top: 5vh;
         margin-right: 30vh;
         cursor: pointer;
@@ -116,13 +127,15 @@ const StyledFormWrapper = styled(motion.div) `
         background-color: #343a40 ;
         color: lightgreen;
     }
-    
-    
+    @media (max-width: 1300px){
+            margin-left: -1.5vh; 
+            padding: 1.5rem 4rem 1.5rem 4rem;
+        }
     } 
 `
 
 const StyledH2Contact = styled.h2 `
-    margin-left: 2vh;
+    justify-content: center;
     margin-top: 5vh;
     margin-bottom: 3vh;
     font-weight: 900;

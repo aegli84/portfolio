@@ -70,13 +70,13 @@ const StyledNavContainer = styled.nav`
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    background: transparent;
     overflow: hidden; 
     padding: 1rem 10rem;
     box-shadow:  0 8px 6px -6px black;
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 1;
     a {
         font-weight: 700;
         color: whitesmoke;

@@ -71,7 +71,8 @@ const StyledAbout = styled.div`
             display: block;
             text-align: center;
             padding: 2rem 2rem;
-            margin-top: 7rem;
+            margin-top: 8rem;
+        
         }
 
     button {
@@ -85,14 +86,13 @@ const StyledAbout = styled.div`
         transition: all 0.5s ease;
         outline: none;
         background: #495057;
-    border-radius: 5%;
-    &:hover {
-        background-color: #343a40 ;
-        color: lightgreen;
-    }
-    @media (max-width: 1300px){
-            margin-right: 20rem;
-            
+        border-radius: 5%;
+        &:hover {
+            background-color: #343a40 ;
+            color: lightgreen;
+        }
+        @media (max-width: 1300px){
+            margin: 0.5rem 1rem 3rem 1rem;   
         }
 }
 `
@@ -103,7 +103,7 @@ const StyledP = styled(motion.p)`
     @media (max-width: 1300px){
             display: block;
             text-align: center;
-            padding: 2rem 2rem;
+            padding: 2rem 2rem 2rem 2rem;
         }
 `
 
@@ -124,16 +124,15 @@ const StyledImg = styled.img`
     box-shadow: 0 8px 6px -6px black;
     overflow: hidden;
     @media (max-width: 1300px){
-            margin: 0 rem 7rem 9rem;
-            width: 20vh;
-            height: 20vh;
-            position: absolute;
-        }
+        margin: 1rem 12rem 5rem 0rem; 
+        width: 20vh;
+        height: 20vh;
+    }
 `
 
 const StyledAllBigText = styled.div `
     overflow: hidden;
-    /* background: lightcyan; */
+    
 `
 export default AboutSection;
 

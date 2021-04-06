@@ -101,30 +101,49 @@ float: right;
 align-items: flex-end;
 justify-content: space-around;
 line-height: 2rem;
+@media (max-width: 1300px){
+    writing-mode: horizontal-tb;
+    padding: 10rem 3rem;
+    }
 `
 const StyledText = styled.li`
 writing-mode: vertical-rl;
 text-orientation: mixed;
 color: whitesmoke;
-margin-right: 3.5rem;
+margin-right: 3.5rem;               /*OK*/
 list-style: none;
+@media (max-width: 1300px){
+    writing-mode: horizontal-tb;
+    font-size: 1.5rem;
+
+    }
 `
 const StyledUl = styled.ul`
 list-style: none;
 &:hover {
     color: lightgreen;
         transition: all 0.7s ease;
-}
+    }
 `
 const StyledLine = styled.li`
 writing-mode: vertical-rl;
 text-orientation: mixed;
 margin-top: 1rem;
 margin-bottom: 1rem;
+@media (max-width: 1300px){
+    writing-mode: horizontal-tb;
+    padding: 0 3.5rem;
+    }
 `
 
 const StyledIcons = styled.li`
-margin: 0.3rem 0.2rem;
-
+    margin: 0.3rem 0.2rem;
+@media (max-width: 1300px){
+    writing-mode: horizontal-tb;
+    text-orientation: mixed;
+    /* padding: 0 1rem 1rem 0.5rem; */
+    display: inline-block;
+    margin: 0 1.5rem 0 0.5rem ;
+    } 
 `
 export default Connect;

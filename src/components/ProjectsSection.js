@@ -234,17 +234,20 @@ const StyledProjectsWrapper = styled.div`
 `
 
 const StyledDivCards = styled.div`
-    padding: 1rem;
+    padding: 2rem;
     margin-bottom: 7vh;
     display: grid;
-    grid-template-columns: 2fr 2fr 2fr;
-    justify-items: center;
-    justify-content: space-around;
-    
+    justify-items: center; 
+    grid-template-columns: repeat(auto-fill, minmax(50vh, 1fr));
+    grid-auto-rows: minmax(17vh, auto);
+    grid-gap: 3.5em;
+    @media (max-width: 1300px){
+        padding: 1rem 4rem 1rem 4rem;
+    } 
 `
 
 const StyledDivCard = styled(motion.div) `
-    width: 45vh;
+    width: 50vh;
     height: 57vh;
     box-shadow: 1px 3px 32px -7px black;
     border-radius:10px;
@@ -253,36 +256,45 @@ const StyledDivCard = styled(motion.div) `
     margin-top: 6vh;
     background: rgba(245, 245, 245, 0.829); 
     overflow: hidden;
-    
-    
+    @media (max-width: 1300px){
+        width: 55vh;
+        height: 52vh;
+        
+    } 
     &:hover {
         border: 2px solid rgba(245, 245, 245, 0.829);
-        
     }
     img {
-        width: 45vh;
+        width: 50vh;
         height: 47%;
+        @media (max-width: 1300px){
+            width: 55vh;
+            height: 55%;
+    }
         /* filter: grayscale(100%);
         &:hover {
             filter: grayscale(0%);
-        
         }  */
         /* border-top-left-radius: 8px;  */
         /* border-top-right-radius: 8px; */
-        
     }
 `
 const StyledH2Top = styled.h2`
-    margin-left: 2vh;
     margin-top: 12vh;
     margin-bottom: -1vh;
     font-weight: 900;
     color: whitesmoke;
     text-align: center;
+    @media (max-width: 1300px){
+        margin-top: 3vh;
+    }
 `
 const StyledH3 = styled.h3`
     margin-top: 1rem;
     color: #343a40;
+    @media (max-width: 1300px){
+        font-size: 2.7vh;
+    }
 `
 const StyledH6 = styled.h6`
     margin-top: 0.8rem;
@@ -292,6 +304,9 @@ const StyledH6 = styled.h6`
     font-weight: bolder;
     font-size: 0.7rem;
     color: #343a40;
+    @media (max-width: 1300px){
+        font-size: 1.5vh;
+    }
 `
 const StyledPara = styled.p`
     font-weight: 400;
@@ -300,5 +315,8 @@ const StyledPara = styled.p`
     margin-left: 0.9rem;
     margin-right: 0.9rem;
     color: #343a40;
+    @media (max-width: 1300px){
+        font-size: 1.9vh;
+    }
 `
 export default ProjectsSection;

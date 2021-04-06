@@ -44,18 +44,25 @@ const SkillsSection = () => {
 };
 
 const StyledDivWrapper = styled.div `
-
+    min-height: 90vh;
     margin-left: 60px; 
     margin-right: 60px;
     padding-top: 1vh;
     margin-bottom: 17vh;
+    @media (max-width: 1300px){
+            padding: 0.5rem 0.5rem;
+            
+        } 
 `
     const StyledText = styled.h2`
-    margin-left: 2vh;
     margin-bottom: 15vh; 
     font-weight: 900;
     color: whitesmoke;
     text-align: center;
+    @media (max-width: 1300px){
+            margin-top: -8vh;  
+            margin-bottom: 10vh; 
+        }
 `
 
 const SkillsIcons = styled.div`
@@ -69,5 +76,17 @@ const SkillsIcons = styled.div`
         margin-top: 15vh;
         width: 35%;
     }
+    @media (max-width: 1300px){
+        grid-template-columns: 70px 70px 70px 70px;
+        grid-template-rows: 19%; 
+        column-gap: 15px;
+        justify-content: space-between;
+        row-gap: 55px;
+        img {
+            margin-top: -1vh;
+            width: 75%;
+            
+    }
+        }
 `
 export default SkillsSection;
