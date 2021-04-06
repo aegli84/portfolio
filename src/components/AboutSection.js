@@ -26,7 +26,7 @@ const AboutSection = () => {
                         <motion.h2 variants = {titleAnimation} ><span>and I'm an aspiring</span></motion.h2>
                     </StyledAllBigText>
                     <StyledAllBigText>
-                        <StyledH2 variants = {titleAnimation}><span>Web Developer.</span></StyledH2>
+                        <StyledH2  variants = {titleAnimation}><span>Web Developer.</span></StyledH2>
                     </StyledAllBigText>
                 </div>
                 
@@ -43,8 +43,9 @@ const AboutSection = () => {
             </div>
         
             
-            <motion.div variants = {photoAnimation} className = "image">
+            <motion.div  variants = {photoAnimation} className = "image">
                 <StyledImg 
+                whileHover={{ scale: 1.1 }}
                     src = {ae} 
                     alt = "andreea egli" />
             </motion.div>
@@ -115,7 +116,7 @@ const StyledA = styled.a `
     color: lightgreen;
     font-weight: 900;
 `
-const StyledImg = styled.img`
+const StyledImg = styled(motion.img)`
     width: 35vh;
     height: 35vh;
     margin-right: 5rem;
