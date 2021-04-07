@@ -75,6 +75,11 @@ const StyledAbout = styled.div`
             margin-top: 8rem;
         
         }
+        @media (max-width: 500px){
+            padding: 1rem 1rem;
+            
+        
+        }
 
     button {
         font-weight: bold;
@@ -93,7 +98,7 @@ const StyledAbout = styled.div`
             color: lightgreen;
         }
         @media (max-width: 1024px){
-            margin: 0.5rem 1rem 3rem 1rem;   
+            margin: 0 1rem 3rem 1rem;   
         }
 }
 `
@@ -106,11 +111,18 @@ const StyledP = styled(motion.p)`
             text-align: center;
             padding: 2rem 2rem 2rem 2rem;
         }
+        @media (max-width: 500px){
+            display: block;
+            text-align: center;
+            padding: 2rem 1rem 2rem 1rem;
+            margin-top: 0;
+        }
 `
 
 const StyledH2 = styled(motion.h2)`
     font-weight: 900;
     color: lightgreen;
+    
 `
 const StyledA = styled.a `
     color: lightgreen;
@@ -128,7 +140,12 @@ const StyledImg = styled(motion.img)`
         margin: 1rem 12rem 5rem 0rem; 
         width: 20vh;
         height: 20vh;
-    }
+        }
+        @media (max-width: 500px){
+            text-align: center;
+            width: 15vh;
+            height: 15vh;
+        }
 `
 
 const StyledAllBigText = styled.div `
