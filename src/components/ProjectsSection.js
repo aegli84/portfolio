@@ -12,9 +12,9 @@ import comingsoon from '../assets/comingsoon.jpg'
 const ProjectsSection = () => {
     
     return (
-        <StyledProjectsWrapper>
+        <>
             <StyledH2Top>Projects</StyledH2Top>
-                <StyledDivCards className = "cards" id="projects" > 
+                <StyledDivCardsWrapper className = "cards" id="projects" > 
                     <StyledDivCard  
                         className = "card" 
                         whileHover={{scale: 1.1}}> 
@@ -222,20 +222,14 @@ const ProjectsSection = () => {
                     <StyledH6>CSS</StyledH6>
                     <StyledH6>JAVASCRIPT</StyledH6>
                 </StyledDivCard> 
-                
-            </StyledDivCards>
-        </StyledProjectsWrapper>
+            </StyledDivCardsWrapper>
+        </>
     )
 }
 
-const StyledProjectsWrapper = styled.div`
-    padding-top: -1rem;
-    height: 100vh;
-`
-
-const StyledDivCards = styled.div`
+const StyledDivCardsWrapper = styled.div`
+    min-height: 90vh;
     padding: 2rem;
-    margin-bottom: 7vh;
     display: grid;
     justify-items: center; 
     grid-template-columns: repeat(auto-fill, minmax(50vh, 1fr));
@@ -280,8 +274,6 @@ const StyledDivCard = styled(motion.div) `
     }
 `
 const StyledH2Top = styled.h2`
-    margin-top: 12vh;
-    margin-bottom: -1vh;
     font-weight: 900;
     color: whitesmoke;
     text-align: center;

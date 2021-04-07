@@ -41,15 +41,15 @@ const ContactSection = () => {
 }
 
 const StyledFormWrapper = styled(motion.div) `
-    height: 95vh;
+    min-height: 95vh;
     padding: 6rem;
-    margin-top: 47vh;
+    margin-top: 2vh;
     text-align: center;
     align-items: center;
     display: block;
     justify-content: center;
     @media (max-width: 1300px){
-            margin-top: 300vh;  
+            margin-top: 30vh;  
             padding: 7rem 2rem;
             
         }

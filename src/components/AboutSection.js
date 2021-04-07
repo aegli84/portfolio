@@ -68,7 +68,7 @@ const StyledAbout = styled.div`
     padding: 5rem 10rem;
     color: whitesmoke;
     margin-bottom: 20vh;
-    @media (max-width: 1300px){
+    @media (max-width: 1024px){
             display: block;
             text-align: center;
             padding: 2rem 2rem;
@@ -92,7 +92,7 @@ const StyledAbout = styled.div`
             background-color: #343a40 ;
             color: lightgreen;
         }
-        @media (max-width: 1300px){
+        @media (max-width: 1024px){
             margin: 0.5rem 1rem 3rem 1rem;   
         }
 }
@@ -101,7 +101,7 @@ const StyledP = styled(motion.p)`
     margin-top: 1rem;
     font-weight: 200;
     padding-right: 8rem;
-    @media (max-width: 1300px){
+    @media (max-width: 1024px){
             display: block;
             text-align: center;
             padding: 2rem 2rem 2rem 2rem;
@@ -124,7 +124,7 @@ const StyledImg = styled(motion.img)`
     border-radius: 7px; 
     box-shadow: 0 8px 6px -6px black;
     overflow: hidden;
-    @media (max-width: 1300px){
+    @media (max-width: 1024px){
         margin: 1rem 12rem 5rem 0rem; 
         width: 20vh;
         height: 20vh;
