@@ -109,7 +109,7 @@ const StyledDivWrapper = styled.div`
 @media (max-width: 500px){
     writing-mode: horizontal-tb;
     line-height: 1rem;
-    padding: 15rem 0;
+    padding: 13rem 0;
     }
 `
 const StyledText = styled.li`

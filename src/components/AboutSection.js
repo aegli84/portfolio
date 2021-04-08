@@ -148,8 +148,8 @@ const StyledImg = styled(motion.img)`
     }
 @media (max-width: 500px){
     text-align: center;
-    width: 15vh;
-    height: 15vh;
+    width: 17vh;
+    height: 17vh;
     /* display: none; */
     }
 `

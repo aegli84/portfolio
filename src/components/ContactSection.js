@@ -53,6 +53,7 @@ const StyledFormWrapper = styled(motion.div) `
     }
 @media (max-width: 500px){
     margin-top: 0;
+    padding-bottom: 0;
     }
 /*     
     form {
@@ -86,7 +87,7 @@ const StyledFormWrapper = styled(motion.div) `
         }
     @media (max-width: 500px){
         margin-left: 2rem; 
-        margin-top: 2rem;
+        margin-top: 2.5rem;
         width: 75vw;
         }
         
@@ -138,8 +139,8 @@ const StyledFormWrapper = styled(motion.div) `
             padding: 1.5rem 4rem 1.5rem 4rem;
         }
     @media (max-width: 500px){
-        margin-left: 2rem;
-        width: 45vw;
+        margin-left: 2.5rem;
+        width: 38vw;
         font-size: 1.3rem;
         }
     } 
@@ -153,7 +154,7 @@ const StyledH2Contact = styled.h2 `
     color: whitesmoke;
 @media (max-width: 500px){
         margin-top: 1vh;
-        
+        padding-bottom: 3vh;
         }
 `
 export default ContactSection;

@@ -35,7 +35,8 @@ const CurlySvg = styled.svg `
     }
 @media (max-width: 500px){
     height: 57vh;
-    width: 100vw; 
+    width: 100vw;  
+    
     }
 `;
 export default Curly;

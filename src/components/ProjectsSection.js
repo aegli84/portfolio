@@ -240,6 +240,8 @@ const StyledDivCardsWrapper = styled.div`
     } 
 @media (max-width: 500px){
     grid-gap: 1em;
+    padding-left: 2rem;
+    padding-right: 2rem;
     } 
 `
 
@@ -261,9 +263,9 @@ const StyledDivCard = styled(motion.div) `
     height: 52vh;
     } 
 @media (max-width: 500px){
-    width: 35vh;
+    width: 40vh;
     height: 45vh;
-    @media (max-width: 500px){
+@media (max-width: 500px){
         font-size: 1vh;
     }
     } 
@@ -277,7 +279,7 @@ const StyledDivCard = styled(motion.div) `
         height: 55vh;
     }
     @media (max-width: 500px){
-        width: 35vh;
+        width: 40vh;
         height: 19vh;
     }
         /* filter: grayscale(100%);
@@ -295,6 +297,10 @@ const StyledH2Top = styled.h2`
 @media (max-width: 1024px){
         margin-top: 3vh;
     }
+@media (max-width: 500px){
+        margin-top: 25vh;
+    }
+    
 `
 const StyledH3 = styled.h3`
     margin-top: 1rem;
@@ -303,6 +309,7 @@ const StyledH3 = styled.h3`
         font-size: 2.7vh;
     }
 @media (max-width: 500px){
+    
         font-size: 2vh;
     }
     
