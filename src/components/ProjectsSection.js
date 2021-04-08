@@ -240,8 +240,8 @@ const StyledDivCardsWrapper = styled.div`
     } 
 @media (max-width: 500px){
     grid-gap: 0.5em;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 2.5rem;
+    padding-right: 1rem;
     } 
 `
 
@@ -263,7 +263,7 @@ const StyledDivCard = styled(motion.div) `
     height: 52vh;
     } 
 @media (max-width: 500px){
-    width: 80%;
+    width: 85vw;
     height: 45vh;
     font-size: 1vh;
 
@@ -274,11 +274,11 @@ const StyledDivCard = styled(motion.div) `
         height: 27vh;
 
     @media (max-width: 1024px){
-        width: 55vh;
+        width: 55vw;
         height: 55vh;
     }
     @media (max-width: 500px){
-        width: 40vh;
+        width: 85vw;
         height: 19vh;
     }
         /* filter: grayscale(100%);
