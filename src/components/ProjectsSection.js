@@ -264,9 +264,8 @@ const StyledDivCard = styled(motion.div) `
     } 
 @media (max-width: 500px){
     width: 85vw;
-    height: 45vh;
-    font-size: 1vh;
-
+    height: 48vh;
+    font-size: 1rem;
     } 
     
     img {
@@ -288,6 +287,14 @@ const StyledDivCard = styled(motion.div) `
         /* border-top-left-radius: 8px;  */
         /* border-top-right-radius: 8px; */
     }
+    .github,
+    .desktop {
+        @media (max-width: 500px){
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    }
+    
 `
 const StyledH2Top = styled.h2`
     font-weight: 900;
@@ -296,9 +303,7 @@ const StyledH2Top = styled.h2`
 @media (max-width: 1024px){
         margin-top: 3vh;
     }
-@media (max-width: 500px){
-        margin-top: 25vh;
-    }
+
     
 `
 const StyledH3 = styled.h3`
@@ -308,8 +313,7 @@ const StyledH3 = styled.h3`
         font-size: 2.7vh;
     }
 @media (max-width: 500px){
-    
-        font-size: 2vh;
+        font-size: 2.5vh;
     }
     
 `

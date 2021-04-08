@@ -55,7 +55,7 @@ const StyledDivWrapper = styled.div `
     } 
 @media (max-width: 500px){
     margin-left: 3vh; 
-    margin-right: 5vh;
+    margin-right: 3vh;
     margin-bottom: -45vh;
     padding-top: 12vh;
     padding-left: 1rem;
@@ -76,7 +76,6 @@ const StyledText = styled.h2`
 @media (max-width: 500px){
     margin-top: -22vh;
     margin-bottom: 7vh;
-    padding-left: 1rem;
     } 
 `
 
