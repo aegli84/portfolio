@@ -239,7 +239,7 @@ const StyledDivCardsWrapper = styled.div`
     padding: 1rem 4rem 1rem 4rem;
     } 
 @media (max-width: 500px){
-    grid-gap: 1em;
+    grid-gap: 0.5em;
     padding-left: 2rem;
     padding-right: 2rem;
     } 
@@ -263,11 +263,10 @@ const StyledDivCard = styled(motion.div) `
     height: 52vh;
     } 
 @media (max-width: 500px){
-    width: 40vh;
+    width: 80%;
     height: 45vh;
-@media (max-width: 500px){
-        font-size: 1vh;
-    }
+    font-size: 1vh;
+
     } 
     
     img {
