@@ -68,18 +68,17 @@ const StyledAbout = styled.div`
     padding: 5rem 10rem;
     color: whitesmoke;
     margin-bottom: 20vh;
-    @media (max-width: 1024px){
-            display: block;
-            text-align: center;
-            padding: 2rem 2rem;
-            margin-top: 8rem;
-        
-        }
-        @media (max-width: 500px){
-            padding: 1rem 1rem;
-            
-        
-        }
+
+@media (max-width: 1024px){
+    display: block;
+    text-align: center;
+    padding: 2rem 2rem;
+    margin-top: 8rem;
+    }
+@media (max-width: 500px){
+    padding: 1rem 1rem;
+    
+    }
 
     button {
         font-weight: bold;
@@ -97,28 +96,33 @@ const StyledAbout = styled.div`
             background-color: #343a40 ;
             color: lightgreen;
         }
-        @media (max-width: 1024px){
-            margin: 0 1rem 3rem 1rem;   
+    @media (max-width: 1024px){
+        margin: 0 1rem 3rem 1rem;   
         }
-}
+        @media (max-width: 500px){
+        margin: 1rem 1rem 5rem 1rem;  
+        padding: 1.5rem 3rem; 
+        font-size: 1.4rem;
+        }
+    }
 `
 const StyledP = styled(motion.p)`
     margin-top: 1rem;
     font-weight: 200;
     padding-right: 8rem;
-    @media (max-width: 1024px){
-            display: block;
-            text-align: center;
-            padding: 2rem 2rem 2rem 2rem;
-        }
-        @media (max-width: 500px){
-            display: block;
-            text-align: center;
-            padding: 2rem 1rem 2rem 1rem;
-            margin-top: 0;
-        }
-`
 
+@media (max-width: 1024px){
+    display: block;
+    text-align: center;
+    padding: 2rem 2rem 2rem 2rem;
+    }
+@media (max-width: 500px){
+    display: block;
+    text-align: center;
+    padding: 2rem 1rem 2rem 1rem;
+    margin-top: 0;
+    }
+`
 const StyledH2 = styled(motion.h2)`
     font-weight: 900;
     color: lightgreen;
@@ -136,21 +140,21 @@ const StyledImg = styled(motion.img)`
     border-radius: 7px; 
     box-shadow: 0 8px 6px -6px black;
     overflow: hidden;
-    @media (max-width: 1024px){
-        margin: 1rem 12rem 5rem 0rem; 
-        width: 20vh;
-        height: 20vh;
-        }
-        @media (max-width: 500px){
-            text-align: center;
-            width: 15vh;
-            height: 15vh;
-        }
-`
 
+@media (max-width: 1024px){
+    margin: 1rem 12rem 5rem 0rem; 
+    width: 20vh;
+    height: 20vh;
+    }
+@media (max-width: 500px){
+    text-align: center;
+    width: 15vh;
+    height: 15vh;
+    /* display: none; */
+    }
+`
 const StyledAllBigText = styled.div `
     overflow: hidden;
-    
 `
 export default AboutSection;
 

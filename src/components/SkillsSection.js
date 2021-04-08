@@ -45,48 +45,62 @@ const SkillsSection = () => {
 
 const StyledDivWrapper = styled.div `
     min-height: 90vh;
-    margin-left: 60px; 
-    margin-right: 60px;
-    padding-top: 1vh;
+    margin-left: 15vh; 
+    margin-right: 15vh;
     margin-bottom: 17vh;
-    @media (max-width: 1300px){
-            padding: 0.5rem 0.5rem;
-            
-        } 
+    text-align: center;
+
+@media (max-width: 1024px){
+    padding: 0.5rem 0.5rem;
+    } 
+@media (max-width: 500px){
+    margin-left: 3vh; 
+    margin-right: 5vh;
+    margin-bottom: -45vh;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    }  
 `
-    const StyledText = styled.h2`
+const StyledText = styled.h2`
     margin-bottom: 15vh; 
     font-weight: 900;
     color: whitesmoke;
     text-align: center;
-    @media (max-width: 1300px){
-            margin-top: -8vh;  
-            margin-bottom: 10vh; 
-        }
+
+@media (max-width: 1024px){
+    margin-top: -8vh;  
+    margin-bottom: 10vh; 
+    }
+@media (max-width: 500px){
+    margin-top: -22vh;
+    margin-bottom: 7vh;
+    padding-left: 1rem;
+    } 
 `
 
 const SkillsIcons = styled.div`
     height: 40vh;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
-    grid-template-rows: 2px;  
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 1em; 
+    row-gap: 4rem;
     justify-items: center;
     align-items: center;
     img {
-        margin-top: 15vh;
+        margin-top: 1vh;
         width: 35%;
     }
-    @media (max-width: 1300px){
-        grid-template-columns: 70px 70px 70px 70px;
-        grid-template-rows: 19%; 
-        column-gap: 15px;
-        justify-content: space-between;
-        row-gap: 55px;
-        img {
-            margin-top: -1vh;
-            width: 75%;
+    
+@media (max-width: 500px){
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem; 
+    row-gap: 1rem;
+    img {
+        margin-top: -1vh;
+        padding: 1rem 2rem;
+        width: 25vw;
             
-    }
-        }
+    } 
+}
 `
 export default SkillsSection;

@@ -42,17 +42,18 @@ const ContactSection = () => {
 
 const StyledFormWrapper = styled(motion.div) `
     min-height: 95vh;
-    padding: 6rem;
-    margin-top: 2vh;
+    margin-top: 12vh;
     text-align: center;
     align-items: center;
     display: block;
     justify-content: center;
-    @media (max-width: 1300px){
-            margin-top: 30vh;  
-            padding: 7rem 2rem;
-            
-        }
+@media (max-width: 1024px){
+    margin-top: 30vh;  
+    padding: 7rem 2rem;
+    }
+@media (max-width: 500px){
+    margin-top: 0;
+    }
 /*     
     form {
         margin-top: 5rem;
@@ -78,10 +79,15 @@ const StyledFormWrapper = styled(motion.div) `
         &:placeholder-shown {
             padding: 0.5rem 0.5rem;
         } 
-        @media (max-width: 1300px){
-            margin-left: 6vh; 
-            margin-top: 6vh;
-            width: 50vh; 
+    @media (max-width: 1024px){
+        margin-left: 6vh; 
+        margin-top: 6vh;
+        width: 50vh; 
+        }
+    @media (max-width: 500px){
+        margin-left: 2rem; 
+        margin-top: 2rem;
+        width: 75vw;
         }
         
     }
@@ -102,12 +108,12 @@ const StyledFormWrapper = styled(motion.div) `
         outline:none; 
         &:placeholder-shown {
             padding: 0.5rem 0.5rem;
-        @media (max-width: 1300px){
-            margin-left: 2vh; 
-            margin-top: 6vh;
-            width: 50vh; 
-        }
         } 
+    @media (max-width: 500px){
+        margin-left: 0.5rem; 
+        margin-top: 2rem;
+        width: 75vw;
+        }
     }
 
     button {
@@ -127,9 +133,14 @@ const StyledFormWrapper = styled(motion.div) `
         background-color: #343a40 ;
         color: lightgreen;
     }
-    @media (max-width: 1300px){
+    @media (max-width: 1024px){
             margin-left: -1.5vh; 
             padding: 1.5rem 4rem 1.5rem 4rem;
+        }
+    @media (max-width: 500px){
+        margin-left: 2rem;
+        width: 45vw;
+        font-size: 1.3rem;
         }
     } 
 `
@@ -140,5 +151,9 @@ const StyledH2Contact = styled.h2 `
     margin-bottom: 3vh;
     font-weight: 900;
     color: whitesmoke;
+@media (max-width: 500px){
+        margin-top: 1vh;
+        
+        }
 `
 export default ContactSection;

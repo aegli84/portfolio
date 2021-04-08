@@ -94,20 +94,22 @@ const Connect = () => {
 };
     
 const StyledDivWrapper = styled.div`
-margin-top: -65vh;
-margin-right: 1rem;
-display: flex;
-float: right;
-align-items: flex-end;
-justify-content: space-around;
-line-height: 2rem;
+    margin-top: -65vh;
+    margin-right: 1rem;
+    display: flex;
+    float: right;
+    align-items: flex-end;
+    justify-content: space-around;
+    line-height: 2rem;
+
 @media (max-width: 1024px){
     writing-mode: horizontal-tb;
     padding: 10rem 3rem;
     }
-    @media (max-width: 500px){
+@media (max-width: 500px){
     writing-mode: horizontal-tb;
-    padding: 12rem 0;
+    line-height: 1rem;
+    padding: 15rem 0;
     }
 `
 const StyledText = styled.li`
@@ -116,13 +118,14 @@ const StyledText = styled.li`
     color: whitesmoke;
     margin-right: 3.5rem;               
     list-style: none;
+
 @media (max-width: 1024px){
     writing-mode: horizontal-tb;
     font-size: 1.5rem;
     }
 @media (max-width: 500px){
     font-size: 1.3rem;
-    padding: 0 0 0 0.5rem;
+    padding: 0 0 0 0.4rem;
     }
 `
 const StyledUl = styled.ul`
@@ -137,17 +140,18 @@ const StyledLine = styled.li`
     text-orientation: mixed;
     margin-top: 1rem;
     margin-bottom: 1rem;
+
 @media (max-width: 1024px){
     writing-mode: horizontal-tb;
     padding: 0 3.5rem;
     }
-    @media (max-width: 500px){
+@media (max-width: 500px){
         padding: 0 3rem;
     }
 `
-
 const StyledIcons = styled.li`
     margin: 0.3rem 0.2rem;
+    
 @media (max-width: 1024px){
     writing-mode: horizontal-tb;
     text-orientation: mixed;

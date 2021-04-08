@@ -24,15 +24,18 @@ const Curly = () => {
 
 const CurlySvg = styled.svg `
     position: absolute;
-    height: 87vh;
-    margin-top: -7vh; 
-    width: 198.9vh;
+    height: 90vh;
+    margin-top: -5vh;
+    width: 99vw;
     z-index: -1;
     left: 0;
-    @media (max-width: 1300px){
-            
-            width: 66vh; 
-        }
 
+@media (max-width: 1024px){
+    width: 102vw; 
+    }
+@media (max-width: 500px){
+    height: 57vh;
+    width: 100vw; 
+    }
 `;
 export default Curly;
