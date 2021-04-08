@@ -279,7 +279,7 @@ const StyledDivCard = styled(motion.div) `
     }
     @media (max-width: 500px){
         width: 85vw;
-        height: 19vh;
+        height: 22vh;
     }
         /* filter: grayscale(100%);
         &:hover {
