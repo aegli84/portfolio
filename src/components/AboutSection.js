@@ -6,13 +6,15 @@ import {pageAnimation} from '../animation'
 import {titleAnimation, fade, photoAnimation} from '../animation'
 import Curly from './Curly' 
 import Connect from './Connect'
+import NavBurgerMenu from './NavBurgerMenu'
 
 const AboutSection = () => {
     
     return (
         <>
+    <NavBurgerMenu/>
         <Curly/>
-        <motion.div variants = {pageAnimation} initial = "hidden" animate = "show" >
+        <motion.div  variants = {pageAnimation} initial = "hidden" animate = "show" >
         
         <StyledAbout >
     
@@ -77,8 +79,10 @@ const StyledAbout = styled.div`
     }
 @media (max-width: 500px){
     padding: 1rem 1rem;
-    
+    margin-top: 0;
+    padding-top: 4rem;
     }
+
 
     button {
         font-weight: bold;

@@ -5,17 +5,10 @@ import { NavHashLink as Link } from "react-router-hash-link";
 import ScrollIntoView from 'react-scroll-into-view'
 
 
-
-
 const NavbarPages = () => {
-    // const variants = {
-    //     open: { opacity: 1, x: 0 },
-    //     closed: { opacity: 0, x: "-100%" },
-    //   }
-    // const [isOpen, setIsOpen] = useState(false)
+    
     const { pathname } = useLocation();
     
-
     return (
         <StyledNavContainer>
         
@@ -25,10 +18,6 @@ const NavbarPages = () => {
                 </ScrollIntoView>
             </h1>
             <ul>
-    {/* //         animate={isOpen ? "open" : "closed"}
-    //   variants={variants}
-    // 
-    // <Toggle onClick={() => setIsOpen(!isOpen)} /> */}
                 <li>
                 <ScrollIntoView selector= "#about">
                     <Link to="/about">About me</Link>
@@ -71,6 +60,7 @@ const NavbarPages = () => {
                             /> 
                 </li>
             </ul>
+            
         </StyledNavContainer>
     )
 }
@@ -87,6 +77,9 @@ const StyledNavContainer = styled.nav`
     top: 0;
     width: 100%;
     z-index: 1;
+    @media (max-width: 500px){
+        display: none;
+    }
     a {
         font-weight: 700;
         color: whitesmoke;
@@ -100,11 +93,13 @@ const StyledNavContainer = styled.nav`
         font-weight: 800;
         font-size: 2.5rem;
     } 
+
     li {
         margin-bottom: 0.5rem;
         padding-left: 4rem;
         position: relative;
 }
+    
 `
 const NavLine = styled(motion.div)`
     height: 0.2rem;
