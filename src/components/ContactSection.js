@@ -59,15 +59,19 @@ const StyledFormWrapper = styled(motion.div) `
 
     form {
         margin-top: 8vh;
-        margin-left: 73vh;
-        margin-right: 6vh;
+        margin-left: 35rem;
+        margin-right: 6rem;
         width: 40vw;
+    @media (max-width: 500px){
+        margin-left: .4rem; 
+        margin-top: 2.5rem;
+        width: 20vw;
+        }
     }    
     
     input{
         background: #343a40;
         margin-top: 3vh;
-
         width: 27vw;
         padding-top: 2vh;
         align-items: center;
@@ -92,8 +96,8 @@ const StyledFormWrapper = styled(motion.div) `
         }
     @media (max-width: 500px){
         margin-left: 2rem; 
-        margin-top: 2.5rem;
-        width: 75vw;
+        margin-top: 2.2rem;
+        width: 74vw;
         }
         
     }
@@ -146,9 +150,10 @@ const StyledFormWrapper = styled(motion.div) `
             padding: 1.5rem 4rem 1.5rem 4rem;
         }
     @media (max-width: 500px){
-        margin-left: 2.5rem;
-        width: 38vw;
+        margin-left: 2.2rem;
+        width: 35vw;
         font-size: 1.3rem;
+        padding: 1rem;
         }
     } 
 `
@@ -160,6 +165,7 @@ const StyledH2Contact = styled.h2 `
     color: whitesmoke;
 @media (max-width: 500px){
         margin-top: 1vh;
+        padding-top: 2rem;
         padding-bottom: 3vh;
         }
 `
