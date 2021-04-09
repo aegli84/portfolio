@@ -1,8 +1,5 @@
 import styled from 'styled-components';
-import {useLocation} from 'react-router-dom'
 import { useState } from "react"
-// import NavbarPages from './NavbarPages';
-import {motion} from 'framer-motion'
 import { NavHashLink as Link } from "react-router-hash-link";
 import ScrollIntoView from 'react-scroll-into-view'
 
