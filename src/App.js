@@ -6,7 +6,7 @@ import ContactSection from './components/ContactSection';
 import FooterSection from './components/FooterSection';
 import GlobalStyle from './GlobalStyles';
 import NavbarPages from './components/NavbarPages';
-
+import NavBurgerMenu from './components/NavBurgerMenu'
 
 function App() {
 
@@ -15,6 +15,8 @@ function App() {
     <div className="App">
       <GlobalStyle/>
       <NavbarPages/>
+      
+      <NavBurgerMenu/>
       <AboutSection/>
       <SkillsSection/>
       <ProjectsSection/>

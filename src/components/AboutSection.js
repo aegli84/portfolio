@@ -6,13 +6,13 @@ import {pageAnimation} from '../animation'
 import {titleAnimation, fade, photoAnimation} from '../animation'
 import Curly from './Curly' 
 import Connect from './Connect'
-import NavBurgerMenu from './NavBurgerMenu'
+
 
 const AboutSection = () => {
     
     return (
         <>
-    <NavBurgerMenu/>
+    
         <Curly/>
         <motion.div  variants = {pageAnimation} initial = "hidden" animate = "show" >
         
