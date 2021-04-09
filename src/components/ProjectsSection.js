@@ -67,7 +67,7 @@ const ProjectsSection = () => {
                                 icon = {faGithub}/>
                             </Link>
                         <Link 
-                            to = {{pathname:"https://portfolio-andreea-egli.herokuapp.com/"}} 
+                            to = {{pathname:"https://portfolio-andreea-egli-760d4eup8-aegli84.vercel.app/"}} 
                             target={"_blank"} 
                             rel="noopener noreferrer">
                             <FontAwesomeIcon 
