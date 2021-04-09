@@ -3,11 +3,11 @@ import { useState } from "react"
 import { NavHashLink as Link } from "react-router-hash-link";
 import ScrollIntoView from 'react-scroll-into-view'
 
+
 const RightNav = ({ open }) => {
     
     const [closeSideNav, setCloseSideNav] = useState(false)
-
-
+    
     const openHandler = () => {
             if (!closeSideNav) {
                 setCloseSideNav(true);
@@ -23,20 +23,16 @@ const RightNav = ({ open }) => {
                 <ScrollIntoView  selector= "#about">
                     <Link  to="/about"  onClick={openHandler}>About me</Link>
                     </ScrollIntoView>
-                        
                 </li>
                 <li>
                 <ScrollIntoView selector= "#skills">
                     <Link to="/skills">Skills</Link>
                     </ScrollIntoView>
-                        
-                            
                 </li>
                 <li>
                 <ScrollIntoView selector= "#projects">
                     <Link to="/projects">Projects</Link>
                     </ScrollIntoView>
-                        
                 </li>
                 <li>
                 <ScrollIntoView selector= "#contact">
@@ -54,34 +50,42 @@ const Ul = styled.ul`
     flex-flow: row nowrap; */
     li {
         display: none;
-    @media (max-width: 500px) {
+    @media (max-width: 500px){
         display: block;
-        padding: 3rem 12rem 2rem 1rem;
+        padding-left: 5rem;
+        }
     }
-    }
-
 @media (max-width: 500px) {
-    flex-flow: column nowrap;
-    background-color: black;
-    opacity: 0.98;
+    background-color: #08090af1;
+    opacity: 1;
     position: fixed;
     transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
     top: 0;
     right: 0;
     height: 100vh;
     width: 100vw;
-    padding-top: 3.5rem;
+    padding-top: 10rem;
     transition: transform 0.3s ease-in-out;
     z-index: 1;
-    li {
-        color: #fff;
-    
-    }
     a {
-        font-weight: 700;
+        font-weight: 900;
+        font-size: 3rem;
         color: whitesmoke;
-        text-decoration: none;
+        text-decoration: underline;
+        text-decoration-color: #d96ed4a6;
+        line-height: 5rem;
+        height: 4rem;
     }
+    
 }`
+// const NavLine = styled.div`
 
+//     height: 0.7rem;
+//     background: #d96ed4bb; 
+//     opacity: 0.7;
+//     width: 0%;
+//     position: absolute;
+//     bottom: -35%;
+//     z-index: 1;
+// `
 export default RightNav;

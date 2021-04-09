@@ -22,15 +22,13 @@ const BurgerMenu = () => {
 
 const StyledBurger = styled.div`
     display: none;
-    /* box-shadow: 1px 3px 32px -7px black;
-    border-radius: 5px;
-    border: 1px solid rgba(245, 245, 245, 0.829); */
+    
 @media (max-width: 500px) {
     width: 4rem;
     height: 2rem;
     position: fixed;
     top: 7vh;
-    right: 25px;
+    right: 5vh;
     z-index: 20;
     display: flex;
     justify-content: space-around;
@@ -39,8 +37,8 @@ const StyledBurger = styled.div`
     div {
         width: 3rem;
         height: 0.27rem;
-        background-color: ${({ open }) => open ? '#fff' : '#001'};
-        opacity: 0.7;
+        background-color: ${({ open }) => open ? 'lightgreen' : '#d96ed4bb'};
+        opacity: 0.6;
         border-radius: 15px;
         transform-origin: 1px;
         transition: all 0.3s linear;

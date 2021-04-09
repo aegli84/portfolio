@@ -105,8 +105,8 @@ const StyledAbout = styled.div`
         }
         @media (max-width: 500px){
         margin: 1rem 1rem 5rem 1rem;  
-        padding: 1.5rem 3rem; 
-        font-size: 1.4rem;
+        padding: 1.3rem 2rem; 
+        font-size: 1.2rem;
         }
     }
 `
@@ -118,7 +118,7 @@ const StyledP = styled(motion.p)`
 @media (max-width: 1024px){
     display: block;
     text-align: center;
-    padding: 2rem 2rem 2rem 2rem;
+    padding: 2rem;
     }
 @media (max-width: 500px){
     display: block;

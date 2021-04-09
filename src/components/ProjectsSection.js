@@ -229,7 +229,7 @@ const ProjectsSection = () => {
 
 const StyledDivCardsWrapper = styled.div`
     min-height: 90vh;
-    padding: 2rem;
+    padding: 2rem 7rem;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(50vh, 1fr));
     grid-auto-rows: minmax(17vh, auto);
@@ -246,7 +246,7 @@ const StyledDivCardsWrapper = styled.div`
 `
 
 const StyledDivCard = styled(motion.div) `
-    width: 50vh;
+    width: 26vw;
     height: 57vh;
     box-shadow: 1px 3px 32px -7px black;
     border-radius:10px;
@@ -259,18 +259,18 @@ const StyledDivCard = styled(motion.div) `
         border: 2px solid rgba(245, 245, 245, 0.829);
     }
 @media (max-width: 1024px){
-    width: 55vh;
     height: 52vh;
+    width: 55vh;
     } 
 @media (max-width: 500px){
-    width: 85vw;
     height: 48vh;
+    width: 85vw;
     font-size: 1rem;
     } 
     
     img {
-        width: 50vh;
-        height: 27vh;
+        height: 28vh;
+        width: 26vw;
 
     @media (max-width: 1024px){
         width: 55vw;

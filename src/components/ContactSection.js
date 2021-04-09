@@ -26,13 +26,13 @@ const ContactSection = () => {
                 placeholder= "Your message here">
             </textarea>
             <div>
-            <button 
-                className = "button"
-                id = "submit" 
-                type = "submit" 
-                value = "submit"
-                >Send
-            </button>
+                <button 
+                    className = "button"
+                    id = "submit" 
+                    type = "submit" 
+                    value = "submit"
+                    >Send
+                </button>
             </div>
         </div>
         
@@ -41,8 +41,9 @@ const ContactSection = () => {
 }
 
 const StyledFormWrapper = styled(motion.div) `
-    min-height: 95vh;
-    margin-top: 12vh;
+    min-height: 90vh;
+    margin-top: 10vh;
+    padding-top: 2rem;
     text-align: center;
     align-items: center;
     display: block;
@@ -55,18 +56,23 @@ const StyledFormWrapper = styled(motion.div) `
     margin-top: 0;
     padding-bottom: 0;
     }
-/*     
+
     form {
-        margin-top: 5rem;
-        
-    }   */
+        margin-top: 8vh;
+        margin-left: 73vh;
+        margin-right: 6vh;
+        width: 40vw;
+    }    
     
     input{
         background: #343a40;
-        width: 55vh;
-        margin-left: 61vh;
         margin-top: 3vh;
+
+        width: 27vw;
         padding-top: 2vh;
+        align-items: center;
+        display: block;
+        justify-content: center;
         color: whitesmoke;
         font-size: 0.9rem;
         align-items: center;
@@ -75,8 +81,7 @@ const StyledFormWrapper = styled(motion.div) `
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
         outline:none;
-        display: block;
-        justify-content: center;
+        
         &:placeholder-shown {
             padding: 0.5rem 0.5rem;
         } 
@@ -95,12 +100,14 @@ const StyledFormWrapper = styled(motion.div) `
 
     textarea {
         background: #343a40;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 0.9rem;
         color: whitesmoke;
         cursor: pointer;
         margin-top: 5vh; 
         margin-left: 2vh;
         align-items: center;
-        width: 30%;
+        width: 30vw;
         border-left: 1.5px solid #495059;
         border-right: 1.5px solid #495059;
         border-top: 1.5px solid #495059;
@@ -120,9 +127,9 @@ const StyledFormWrapper = styled(motion.div) `
     button {
         font-weight: bold;
         font-size: 1rem;
-        padding: 1rem 3rem;
+        padding: 1rem 2.5rem;
         margin-top: 5vh;
-        margin-right: 30vh;
+        margin-right: 35vh;
         cursor: pointer;
         border: 1px solid darkgrey;
         color: darkgrey;
@@ -148,8 +155,7 @@ const StyledFormWrapper = styled(motion.div) `
 
 const StyledH2Contact = styled.h2 `
     justify-content: center;
-    margin-top: 5vh;
-    margin-bottom: 3vh;
+    padding-top: 5vh;
     font-weight: 900;
     color: whitesmoke;
 @media (max-width: 500px){
