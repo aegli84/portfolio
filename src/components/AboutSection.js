@@ -79,8 +79,8 @@ const StyledAbout = styled.div`
     }
 @media (max-width: 500px){
     padding: 1rem 1rem;
-    margin-top: 0;
-    padding-top: 6rem;
+    margin-top: 1.5rem;
+    padding-top: 4rem;
     }
 
 
@@ -103,7 +103,7 @@ const StyledAbout = styled.div`
     @media (max-width: 1024px){
         margin: 0 1rem 3rem 1rem;   
         }
-        @media (max-width: 500px){
+    @media (max-width: 500px){
         margin: 1rem 1rem 5rem 1rem;  
         padding: 1.3rem 2rem; 
         font-size: 1.2rem;
