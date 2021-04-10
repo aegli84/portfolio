@@ -79,7 +79,7 @@ const StyledAbout = styled.div`
     }
 @media (max-width: 500px){
     padding: 4rem 1rem;
-    margin-top: 1.5rem;
+    margin-top: 1.7rem;
     
     }
 

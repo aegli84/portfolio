@@ -303,7 +303,7 @@ const StyledH2Top = styled.h2`
     color: whitesmoke;
     text-align: center;
 @media (max-width: 1024px){
-        padding-top: 10vh;
+        padding-top: 14vh;
         margin-top: 12vh;
     }
 

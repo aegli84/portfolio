@@ -58,10 +58,9 @@ const StyledDivWrapper = styled.div `
     margin-right: 3vh;
     margin-bottom: -25vh;
     margin-top: 23vh;
-    padding-top: 20vh;
+    padding-top: 23vh;
     padding-left: 1rem;
     padding-right: 1rem;
-
     }  
 `
 const StyledText = styled.h2`
