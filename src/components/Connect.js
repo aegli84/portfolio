@@ -123,7 +123,7 @@ const StyledText = styled.li`
     writing-mode: horizontal-tb;
     font-size: 1.5rem;
     }
-@media (max-width: 500px){
+@media (min-width: 500px){
     font-size: 1.3rem;
     padding: 0 0 0 0.4rem;
     }

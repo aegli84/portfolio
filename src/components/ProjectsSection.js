@@ -236,7 +236,14 @@ const StyledDivCardsWrapper = styled.div`
     grid-gap: 3.5em;
 
 @media (max-width: 1024px){
-    padding: 1rem 4rem 1rem 4rem;
+    grid-template-columns: repeat(auto-fill, minmax(40vh, 1fr));
+    grid-auto-rows: minmax(13vh, auto);
+    grid-gap: 4em;
+    } 
+@media (max-width: 768px){
+    grid-template-columns: repeat(auto-fill, minmax(35vh, 1fr));
+    grid-auto-rows: minmax(20vh, auto);
+    grid-gap: 4em;
     } 
 @media (max-width: 500px){
     grid-gap: 0.5em;
@@ -258,9 +265,8 @@ const StyledDivCard = styled(motion.div) `
     &:hover {
         border: 2px solid rgba(245, 245, 245, 0.829);
     }
-@media (max-width: 1024px){
-    height: 52vh;
-    width: 55vh;
+@media (max-width: 768px){
+    width: 40vw;
     } 
 @media (max-width: 500px){
     height: 49vh;
@@ -275,9 +281,11 @@ const StyledDivCard = styled(motion.div) `
         width: 26vw;
 
     @media (max-width: 1024px){
-        width: 55vw;
-        height: 55vh;
+        
     }
+    @media (max-width: 768px){
+        width: 40vw;
+    } 
     @media (max-width: 500px){
         width: 85vw;
         height: 22vh;

@@ -58,28 +58,30 @@ const StyledFormWrapper = styled(motion.div) `
     }
 
     form {
-        margin-top: 8vh;
-        margin-left: 35rem;
-        margin-right: 6rem;
-        width: 40vw;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 15rem 0 32rem;
+        width: 20vw;
+    @media (max-width: 1024px){
+        /* padding: .5rem 2rem; */
+        }
     @media (max-width: 500px){
-        margin-left: .4rem; 
-        margin-top: 2.5rem;
+        padding: .5rem 2rem;
         width: 20vw;
         }
-    }    
+    }     
     
     input{
         background: #343a40;
         margin-top: 3vh;
-        width: 27vw;
+        width: 30vw;
         padding-top: 2vh;
         align-items: center;
         display: block;
         justify-content: center;
         color: whitesmoke;
         font-size: 0.9rem;
-        align-items: center;
         border: none;
         border-bottom: 1px solid lightgreen;
         border-bottom-left-radius: 5px;
@@ -90,13 +92,15 @@ const StyledFormWrapper = styled(motion.div) `
             padding: 0.5rem 0.5rem;
         } 
     @media (max-width: 1024px){
-        margin-left: 6vh; 
+        /* margin-left: 18vh;  */
+        padding-left: 5rem;
         margin-top: 6vh;
-        width: 50vh; 
+        width: 29vw; 
         }
     @media (max-width: 500px){
-        margin-left: 1.5rem; 
+        /* margin-left: 5vh;  */
         margin-top: 2.2rem;
+        /* padding-left: 5rem; */
         width: 74vw;
         }
         
@@ -147,7 +151,7 @@ const StyledFormWrapper = styled(motion.div) `
     }
     @media (max-width: 1024px){
             margin-left: -1.5vh; 
-            padding: 1.5rem 4rem 1.5rem 4rem;
+            padding: 1rem 2rem ;
         }
     @media (max-width: 500px){
         margin-left: 2.2rem;
@@ -164,6 +168,7 @@ const StyledH2Contact = styled.h2 `
     font-weight: 900;
     color: whitesmoke;
 @media (max-width: 500px){
+    
         margin-top: 1vh;
         padding-top: 2rem;
         padding-bottom: 3vh;
