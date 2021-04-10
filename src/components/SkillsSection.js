@@ -57,7 +57,8 @@ const StyledDivWrapper = styled.div `
     margin-left: 3vh; 
     margin-right: 3vh;
     margin-bottom: -25vh;
-    padding-top: 16vh;
+    margin-top: 23vh;
+    padding-top: 20vh;
     padding-left: 1rem;
     padding-right: 1rem;
 
