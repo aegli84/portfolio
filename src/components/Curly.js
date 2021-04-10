@@ -24,13 +24,14 @@ const Curly = () => {
 
 const CurlySvg = styled.svg `
     position: absolute;
-    height: 90vh;
-    margin-top: -5vh;
-    width: 99vw;
+    height: 95vh;
+    margin-top: -10vh;
+    width: 100vw;
     z-index: -1;
     left: 0;
 
 @media (max-width: 1024px){
+    height: 50vh;
     width: 102vw; 
     }
 @media (max-width: 500px){

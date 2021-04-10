@@ -264,7 +264,7 @@ const StyledDivCard = styled(motion.div) `
     width: 55vh;
     } 
 @media (max-width: 500px){
-    height: 48vh;
+    height: 49vh;
     width: 85vw;
     font-size: 1rem;
     margin-bottom: 2.5rem;

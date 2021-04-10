@@ -62,7 +62,7 @@ const AboutSection = () => {
 };
 
 const StyledAbout = styled.div`
-    min-height: 90vh;
+    min-height: 95vh;
     margin-top: 5vh;
     display: flex;
     align-items: center;
@@ -80,7 +80,7 @@ const StyledAbout = styled.div`
 @media (max-width: 500px){
     padding: 1rem 1rem;
     margin-top: 0;
-    padding-top: 4rem;
+    padding-top: 6rem;
     }
 
 
