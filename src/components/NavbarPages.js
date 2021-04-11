@@ -70,6 +70,7 @@ const StyledNavContainer = styled.nav`
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+    background: #343a40;
     overflow: hidden; 
     padding: 1rem 10rem;
     box-shadow:  0 8px 6px -6px black;

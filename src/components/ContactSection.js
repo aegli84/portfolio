@@ -57,25 +57,28 @@ const StyledFormWrapper = styled(motion.div) `
     padding-bottom: 2rem;
     }
 
+#contact {
+    text-align: center;
+}
     form {
         display: block;
-        justify-content: center;
-        align-items: center;
-        padding: 1rem 15rem 0 32rem;
-        width: 20vw;
+        max-width: 30%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px;
     @media (max-width: 1024px){
         /* padding: .5rem 2rem; */
         }
     @media (max-width: 500px){
-        padding: 0.5rem 2rem;
-        width: 20vw;
+        
+        max-width: 85%;
         }
     }     
     
     input{
         background: #343a40;
         margin-top: 3vh;
-        width: 30vw;
+        width: 100%;
         padding-top: 2vh;
         align-items: center;
         display: block;
@@ -87,21 +90,17 @@ const StyledFormWrapper = styled(motion.div) `
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
         outline:none;
-        
         &:placeholder-shown {
             padding: 0.5rem 0.5rem;
         } 
     @media (max-width: 1024px){
-        /* margin-left: 18vh;  */
         padding-left: 5rem;
         margin-top: 6vh;
-        width: 29vw; 
+        width: 100%; 
         }
     @media (max-width: 500px){
-        /* margin-left: 5vh;  */
         margin-top: 2.2rem;
-        /* padding-left: 5rem; */
-        width: 74vw;
+        width: 100%;
         }
         
     }
@@ -113,8 +112,8 @@ const StyledFormWrapper = styled(motion.div) `
         color: whitesmoke;
         cursor: pointer;
         margin-top: 5vh; 
-        margin-left: 2vh;
-        align-items: center;
+        margin-left: auto;
+        margin-right:auto;
         width: 30vw;
         border-left: 1.5px solid #495059;
         border-right: 1.5px solid #495059;
@@ -137,7 +136,8 @@ const StyledFormWrapper = styled(motion.div) `
         font-size: 1rem;
         padding: 1rem 2.5rem;
         margin-top: 5vh;
-        margin-right: 35vh;
+        margin-left: auto;
+        margin-right:auto;
         cursor: pointer;
         border: 1px solid darkgrey;
         color: darkgrey;
