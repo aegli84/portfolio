@@ -67,7 +67,7 @@ const StyledFormWrapper = styled(motion.div) `
         /* padding: .5rem 2rem; */
         }
     @media (max-width: 500px){
-        padding: .5rem 2rem;
+        padding: 0.5rem 2rem;
         width: 20vw;
         }
     }     

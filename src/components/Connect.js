@@ -109,7 +109,7 @@ const StyledDivWrapper = styled.div`
 @media (max-width: 500px){
     writing-mode: horizontal-tb;
     line-height: 1rem;
-    padding: 11rem 0;
+    padding: 10rem 0;
     }
 `
 const StyledText = styled.li`
@@ -123,7 +123,7 @@ const StyledText = styled.li`
     writing-mode: horizontal-tb;
     font-size: 1.5rem;
     }
-@media (min-width: 500px){
+@media (max-width: 500px){
     font-size: 1.3rem;
     padding: 0 0 0 0.4rem;
     }
