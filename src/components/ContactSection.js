@@ -1,10 +1,59 @@
 import styled from 'styled-components';
 import {motion} from 'framer-motion'
-
-
+import {useState} from 'react';
 
 
 const ContactSection = () => {
+    //TO DO!!! 
+    //form validation with state hooks DONE 
+    //form submission PENDING
+    //state object
+    const [values, setValues] = useState({
+        firstName: '',
+        lastName: '',
+        email: '',
+    });
+
+    const [submitted, setSubmitted] = useState(false);
+
+    const [valid, setValid] = useState(false);
+
+    const handleFirstNameInputChange = (event) => {
+        setValues((values) => ({
+            ...values,
+            firstName: event.target.value,
+        }));
+    };
+    const handleLastNameInputChange = (event) => {
+        setValues((values) => ({
+            ...values,
+            lastName: event.target.value,
+            
+        }));
+    };
+    const handleEmailInputChange = (event) => {
+        setValues((values) => ({
+            ...values,
+            email: event.target.value,
+            
+        }));
+    };
+    const handleMessageInputChange = (event) => {
+        setValues((values) => ({
+            ...values,
+            message: event.target.value,
+            
+        }));
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if(values.firstName && values.lastName && values.email) {
+        setValid(true);
+        }
+        setSubmitted(true);
+    };
+
     return(
         
     <StyledFormWrapper  initial = "hidden" animate = "show" exit = "exit">
@@ -12,10 +61,36 @@ const ContactSection = () => {
         <StyledH2Contact>Contact me</StyledH2Contact>
         
         <div className = "form" id="contact">
-            <form>
-                <input name = "first-name" type = "name" placeholder ="First name" />
-                <input name = "last-name" type = "name" placeholder ="Last name" />
-                <input name = "email" type = "email" placeholder ="you@email.com" />
+            <form onSubmit={handleSubmit}>
+            {submitted && valid ? <div class='success-message'>SENT! Thank you for your message</div> : null}
+                <input 
+                    id="first-name"
+                    name = "firstName" 
+                    type = "text" 
+                    disabled={setSubmitted}
+                    placeholder ="First name" 
+                    value={values.firstName} 
+                    onChange={handleFirstNameInputChange}
+                    />
+                {submitted && !values.firstName ? <span id="first-name-error">Please enter your first name</span>: null} 
+                <input 
+                    id="last-name"
+                    name = "lastName" 
+                    type = "text" 
+                    placeholder ="Last name" 
+                    value={values.lastName} 
+                    onChange={handleLastNameInputChange}
+                    />
+                {submitted && !values.lastName ?<span id="last-name-error">Please enter your last name</span> : null} 
+                <input 
+                    id="email"
+                    name = "email" 
+                    type = "text" 
+                    placeholder ="you@email.com" 
+                    value={values.email}
+                    onChange={handleEmailInputChange}
+                    />
+                {submitted && !values.email ? <span id="email-error">Please enter your email address</span> :null} 
             </form>
             <textarea 
                 className = "textarea"
@@ -23,10 +98,13 @@ const ContactSection = () => {
                 name = "message" 
                 cols = "25" 
                 rows = "7" 
-                placeholder= "Your message here">
+                placeholder= "Your message here"
+                value={values.message}
+                onChange={handleMessageInputChange}>
             </textarea>
+            {/* <span id="message-error">Please enter your message</span> */}
             <div>
-                <button 
+                <button onClick={handleSubmit}
                     className = "button"
                     id = "submit" 
                     type = "submit" 
@@ -66,16 +144,30 @@ const StyledFormWrapper = styled(motion.div) `
         margin-left: auto;
         margin-right: auto;
         padding: 10px;
+    div, span {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1rem; 
+        font-weight: 600;
+        text-align: center;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        color:lightgreen;
+    }
+    span {
+        font-weight: 400;
+        font-size: .85rem; 
+        color: #d43c2c;
+    }
     @media (max-width: 1024px){
         /* padding: .5rem 2rem; */
         }
     @media (max-width: 500px){
-        
         max-width: 85%;
         }
     }     
     
     input{
+        
         background: #343a40;
         margin-top: 3vh;
         width: 100%;
@@ -90,8 +182,12 @@ const StyledFormWrapper = styled(motion.div) `
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
         outline:none;
+        &:placeholder {
+            
+        }   
         &:placeholder-shown {
             padding: 0.5rem 0.5rem;
+            
         } 
     @media (max-width: 1024px){
         padding-left: 5rem;

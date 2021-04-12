@@ -6,13 +6,12 @@ import {pageAnimation} from '../animation'
 import {titleAnimation, fade, photoAnimation} from '../animation'
 import Curly from './Curly' 
 import Connect from './Connect'
-
+import Resume from './Resume'
 
 const AboutSection = () => {
     
     return (
         <>
-    
         <Curly/>
         <motion.div  variants = {pageAnimation} initial = "hidden" animate = "show" >
         
@@ -34,13 +33,8 @@ const AboutSection = () => {
                 
                     <StyledP variants = {fade}>I'm very ----insert adjective here--- by everything that has to do with front-end development but I'm also very fascinated by how things work behind the scenes in the back-end
                     </StyledP>
-                    <motion.div>
-                        <motion.button 
-                            whileHover={{ scale: 1.1 }} 
-                            variants = {fade}
-                            >Resume
-                        </motion.button>
-                    </motion.div>
+                    
+                <Resume/>
                 
             </div>
         
@@ -81,33 +75,6 @@ const StyledAbout = styled.div`
     padding: 4rem 1rem;
     margin-top: 1.7rem;
     
-    }
-
-
-    button {
-        font-weight: bold;
-        font-size: 1rem;
-        padding: 1rem 2rem;
-        margin-top: 5vh;
-        cursor: pointer;
-        border: 1px solid darkgrey;
-        color: darkgrey;
-        transition: all 0.5s ease;
-        outline: none;
-        background: #495057;
-        border-radius: 5%;
-        &:hover {
-            background-color: #343a40 ;
-            color: lightgreen;
-        }
-    @media (max-width: 1024px){
-        margin: 0 1rem 3rem 1rem;   
-        }
-    @media (max-width: 500px){
-        margin: 1rem 1rem 5rem 1rem;  
-        padding: 1.3rem 2rem; 
-        font-size: 1.2rem;
-        }
     }
 `
 const StyledP = styled(motion.p)`
