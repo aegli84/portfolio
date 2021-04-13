@@ -57,9 +57,9 @@ h3 {
     color: whitesmoke;
 }
 p {
-        font-weight: lighter;
-        font-size: 1.4rem;
-        line-height: 150%;
+    font-weight: lighter;
+    font-size: 1.4rem;
+    line-height: 150%;
 }
 `;
 

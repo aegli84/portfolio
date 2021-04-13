@@ -156,7 +156,7 @@ const StyledFormWrapper = styled(motion.div) `
     span {
         font-weight: 400;
         font-size: .85rem; 
-        color: #d43c2c;
+        color: #d14c3d;
     }
     @media (max-width: 1024px){
         /* padding: .5rem 2rem; */
@@ -239,10 +239,10 @@ const StyledFormWrapper = styled(motion.div) `
         color: darkgrey;
         transition: all 0.5s ease;
         outline: none;
-        background: #495057;
+        background: #343a40;
         border-radius: 5%;
     &:hover {
-        background-color: #343a40 ;
+        background-color: #23282db9;
         color: lightgreen;
     }
     @media (max-width: 1024px){

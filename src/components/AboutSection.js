@@ -79,7 +79,7 @@ const StyledAbout = styled.div`
 `
 const StyledP = styled(motion.p)`
     margin-top: 1rem;
-    font-weight: 200;
+    font-weight: 300;
     padding-right: 8rem;
 
 @media (max-width: 1024px){

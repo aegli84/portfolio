@@ -8,7 +8,6 @@ const Resume = () => {
     
     return (
         <StyledDiv 
-            whileTap={{ scale: 1.1 }} 
             variants = {fade}>
             <StyledA 
                 onClick={() => window.open(cv)} 
@@ -21,7 +20,7 @@ const Resume = () => {
 }
 
 const StyledDiv = styled(motion.div) `
-    padding-top: 2rem;
+    padding-top: 3rem;
 
     @media (max-width: 500px){
             margin: 1rem 1rem 5rem 1rem;  
@@ -40,10 +39,10 @@ const StyledA = styled.a `
             color: darkgrey;
             transition: all 0.5s ease;
             outline: none;
-            background: #495057;
+            background: #343a40;
             border-radius: 5%;
             &:hover {
-                background-color: #343a40 ;
+                background-color: #23282db0;
                 color: lightgreen;
             }
         @media (max-width: 1024px){

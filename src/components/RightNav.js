@@ -8,20 +8,13 @@ const RightNav = ({ open }) => {
     
     const [closeSideNav, setCloseSideNav] = useState(false)
     
-    const openHandler = () => {
-            if (!closeSideNav) {
-                setCloseSideNav(true);
-            } else {
-                setCloseSideNav(false);
-            }
-        };
+    const hideSidebar = () => setCloseSideNav (true);
     
     return (
         <Ul open={open} >
-            {/* <NavbarPages/> */}
-            <li >
+            <li>
                 <ScrollIntoView  selector= "#about">
-                    <Link  to="/about"  onClick={openHandler}>About me</Link>
+                    <Link  to="/about" onClick={hideSidebar}>About me</Link>
                     </ScrollIntoView>
                 </li>
                 <li>
