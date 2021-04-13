@@ -1,20 +1,18 @@
 import styled from 'styled-components';
-import { useState } from "react"
+//import { useState } from "react"
 import { NavHashLink as Link } from "react-router-hash-link";
 import ScrollIntoView from 'react-scroll-into-view'
 
-
 const RightNav = ({ open }) => {
+    //const [isOpen, setIsOpen] = useState(false)
     
-    const [closeSideNav, setCloseSideNav] = useState(false)
-    
-    const hideSidebar = () => setCloseSideNav (!closeSideNav);
+    // const hideSidebar = () => setCloseSideNav (!closeSideNav);
     
     return (
-        <Ul open={open} >
+        <Ul open={open}  >
             <li>
                 <ScrollIntoView  selector= "#about">
-                    <Link  to="/about" onClick={hideSidebar}>About me</Link>
+                    <Link  to="/about">About me</Link>
                     </ScrollIntoView>
                 </li>
                 <li>

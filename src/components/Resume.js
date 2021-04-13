@@ -35,7 +35,7 @@ const StyledA = styled.a `
             padding: 1rem 2rem;
             margin-top: 5vh;
             cursor: pointer;
-            border: 1px solid darkgrey;
+            border: 2px solid darkgrey;
             color: darkgrey;
             transition: all 0.5s ease;
             outline: none;

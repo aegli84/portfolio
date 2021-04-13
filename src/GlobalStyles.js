@@ -63,6 +63,4 @@ p {
 }
 `;
 
-
-
 export default GlobalStyle;

@@ -1,5 +1,5 @@
 import React from 'react';
-import ae from '../assets/ae.jpg';
+import aeh from '../assets/aeh.jpg';
 import styled from 'styled-components';
 import {motion} from 'framer-motion'
 import {pageAnimation} from '../animation'
@@ -42,7 +42,7 @@ const AboutSection = () => {
             <motion.div  variants = {photoAnimation} className = "image">
                 <StyledImg 
                 whileHover={{ scale: 1.1 }}
-                    src = {ae} 
+                    src = {aeh} 
                     alt = "andreea egli" />
             </motion.div>
             
@@ -108,9 +108,11 @@ const StyledImg = styled(motion.img)`
     height: 35vh;
     margin-right: 5rem;
     position: relative;
-    border-radius: 7px; 
-    box-shadow: 0 8px 6px -6px black;
+    border-radius: 30px; 
+    /* box-shadow: 0 8px 6px -6px black; */
     overflow: hidden;
+    box-shadow: 1px 3px 32px -4px black;
+    border: 2px solid rgba(245, 245, 245, 0.829);
 
 @media (max-width: 1024px){
     margin: 1rem 12rem 5rem 0rem; 
@@ -121,6 +123,7 @@ const StyledImg = styled(motion.img)`
     text-align: center;
     width: 17vh;
     height: 17vh;
+    border: 1px solid rgba(245, 245, 245, 0.829);
     /* display: none; */
     }
 `

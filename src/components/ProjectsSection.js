@@ -8,16 +8,18 @@ import { faDesktop } from '@fortawesome/free-solid-svg-icons';
 import webdev from '../assets/webdev.png'
 import todo from '../assets/todo.png'
 import comingsoon from '../assets/comingsoon.jpg'
-import {ScrollSections} from './ScrollSections'
-import {fade} from '../animation'
+//import {ScrollSections} from './ScrollSections'
+
 
 const ProjectsSection = () => {
-    const [element, controls] = ScrollSections();
+    //const [element, controls] = ScrollSections();
     return (
-        <motion.div variants = {fade} animate={controls} initial = 'hidden' ref={element}>
+        <>
+        <motion.div >
             <StyledH2Top>Projects</StyledH2Top>
                 <StyledDivCardsWrapper className = "cards" id="projects" > 
                     <StyledDivCard  
+                    
                         className = "card" 
                         whileHover={{scale: 1.1}}> 
                     <img src={meditationapp} alt="html"/>
@@ -52,6 +54,7 @@ const ProjectsSection = () => {
                     <StyledH6>FRAMER MOTION</StyledH6>
             </StyledDivCard>
                     <StyledDivCard  
+                    
                         className = "card" 
                         whileHover={{scale: 1.1}}> 
                     <img src={webdev} alt="webdev"/>
@@ -119,8 +122,7 @@ const ProjectsSection = () => {
                     <StyledH6>CSS</StyledH6>
                     <StyledH6>JAVASCRIPT</StyledH6>
                 </StyledDivCard>
-                
-                <StyledDivCard  
+                    <StyledDivCard  
                         className = "card" 
                         whileHover={{scale: 1.1}}> 
                     <img src={comingsoon} alt="todo"/>
@@ -154,8 +156,7 @@ const ProjectsSection = () => {
                     <StyledH6>CSS</StyledH6>
                     <StyledH6>JAVASCRIPT</StyledH6>
                 </StyledDivCard> 
-                
-                <StyledDivCard  
+                    <StyledDivCard  
                         className = "card" 
                         whileHover={{scale: 1.1}}> 
                     <img src={comingsoon} alt="todo"/>
@@ -189,8 +190,7 @@ const ProjectsSection = () => {
                     <StyledH6>CSS</StyledH6>
                     <StyledH6>JAVASCRIPT</StyledH6>
                 </StyledDivCard> 
-                
-                <StyledDivCard  
+                    <StyledDivCard  
                         className = "card" 
                         whileHover={{scale: 1.1}}> 
                     <img className = "colorize" src={comingsoon} alt="todo"/>
@@ -226,11 +226,12 @@ const ProjectsSection = () => {
                 </StyledDivCard> 
             </StyledDivCardsWrapper>
         </motion.div>
+        </>
     )
 }
 
 const StyledDivCardsWrapper = styled.div`
-    min-height: 85vh;
+    min-height: 75vh;
     padding: 2rem 7rem;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(50vh, 1fr));
@@ -248,6 +249,7 @@ const StyledDivCardsWrapper = styled.div`
     grid-gap: 4em;
     } 
 @media (max-width: 500px){
+    
     grid-gap: 0.5em;
     padding-left: 2.5rem;
     padding-right: 1rem;
