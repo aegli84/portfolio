@@ -8,7 +8,7 @@ const RightNav = ({ open }) => {
     
     const [closeSideNav, setCloseSideNav] = useState(false)
     
-    const hideSidebar = () => setCloseSideNav (true);
+    const hideSidebar = () => setCloseSideNav (!closeSideNav);
     
     return (
         <Ul open={open} >
@@ -19,7 +19,7 @@ const RightNav = ({ open }) => {
                 </li>
                 <li>
                 <ScrollIntoView selector= "#skills">
-                    <Link to="/skills">Skills</Link>
+                    <Link to="/skills" >Skills</Link>
                     </ScrollIntoView>
                 </li>
                 <li>
@@ -71,14 +71,5 @@ const Ul = styled.ul`
     }
     
 }`
-// const NavLine = styled.div`
 
-//     height: 0.7rem;
-//     background: #d96ed4bb; 
-//     opacity: 0.7;
-//     width: 0%;
-//     position: absolute;
-//     bottom: -35%;
-//     z-index: 1;
-// `
 export default RightNav;

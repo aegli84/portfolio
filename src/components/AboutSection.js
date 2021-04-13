@@ -15,7 +15,7 @@ const AboutSection = () => {
         <Curly/>
         <motion.div  variants = {pageAnimation} initial = "hidden" animate = "show" >
         
-        <StyledAbout >
+        <StyledAbout>
     
             <div className = "description" id="about" >
                 <div className = "title">

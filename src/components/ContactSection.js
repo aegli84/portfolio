@@ -1,17 +1,21 @@
 import styled from 'styled-components';
 import {motion} from 'framer-motion'
 import {useState} from 'react';
-
+import {ScrollSections} from './ScrollSections'
+import {fade} from '../animation'
 
 const ContactSection = () => {
     //TO DO!!! 
     //form validation with state hooks DONE 
     //form submission PENDING
     //state object
+    const [element, controls] = ScrollSections();
+
     const [values, setValues] = useState({
         firstName: '',
         lastName: '',
         email: '',
+        message: '',
     });
 
     const [submitted, setSubmitted] = useState(false);
@@ -48,7 +52,7 @@ const ContactSection = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if(values.firstName && values.lastName && values.email) {
+        if(values.firstName && values.lastName && values.email && values.message) {
         setValid(true);
         }
         setSubmitted(true);
@@ -56,7 +60,7 @@ const ContactSection = () => {
 
     return(
         
-    <StyledFormWrapper  initial = "hidden" animate = "show" exit = "exit">
+    <StyledFormWrapper variants = {fade} animate={controls} initial = 'hidden' ref={element} >
         
         <StyledH2Contact>Contact me</StyledH2Contact>
         
@@ -102,7 +106,7 @@ const ContactSection = () => {
                 value={values.message}
                 onChange={handleMessageInputChange}>
             </textarea>
-            {/* <span id="message-error">Please enter your message</span> */}
+            {submitted && !values.message ? <div id="message-error">Please enter your message</div> : null}
             <div>
                 <button onClick={handleSubmit}
                     className = "button"
@@ -152,10 +156,12 @@ const StyledFormWrapper = styled(motion.div) `
         padding-top: 1rem;
         padding-bottom: 1rem;
         color:lightgreen;
+        
     }
+    
     span {
         font-weight: 400;
-        font-size: .85rem; 
+        font-size: .80rem; 
         color: #d14c3d;
     }
     @media (max-width: 1024px){
@@ -166,6 +172,11 @@ const StyledFormWrapper = styled(motion.div) `
         }
     }     
     
+    #message-error {
+        color: #d14c3d;
+        font-weight: 400;
+        font-size: .80rem;
+    }
     input{
         
         background: #343a40;

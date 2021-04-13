@@ -8,11 +8,13 @@ import { faDesktop } from '@fortawesome/free-solid-svg-icons';
 import webdev from '../assets/webdev.png'
 import todo from '../assets/todo.png'
 import comingsoon from '../assets/comingsoon.jpg'
+import {ScrollSections} from './ScrollSections'
+import {fade} from '../animation'
 
 const ProjectsSection = () => {
-    
+    const [element, controls] = ScrollSections();
     return (
-        <>
+        <motion.div variants = {fade} animate={controls} initial = 'hidden' ref={element}>
             <StyledH2Top>Projects</StyledH2Top>
                 <StyledDivCardsWrapper className = "cards" id="projects" > 
                     <StyledDivCard  
@@ -223,12 +225,12 @@ const ProjectsSection = () => {
                     <StyledH6>JAVASCRIPT</StyledH6>
                 </StyledDivCard> 
             </StyledDivCardsWrapper>
-        </>
+        </motion.div>
     )
 }
 
 const StyledDivCardsWrapper = styled.div`
-    min-height: 90vh;
+    min-height: 85vh;
     padding: 2rem 7rem;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(50vh, 1fr));

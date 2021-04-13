@@ -14,13 +14,16 @@ import terminal from '../assets/terminal.svg';
 import vscode from '../assets/vscode.svg';
 import styledc from '../assets/styledc.png'
 import styled from 'styled-components';
-
+import {motion} from 'framer-motion'
+import {ScrollSections} from './ScrollSections'
+import {fade} from '../animation'
 
 const SkillsSection = () => {
+    const [element, controls] = ScrollSections();
     return (
         <>
             
-                <StyledDivWrapper id="skills">
+        <StyledDivWrapper id="skills" variants = {fade} animate={controls} initial = 'hidden' ref={element}>
                 <StyledText>Tech & tools</StyledText>
                 <SkillsIcons>
                     <img src={html} alt="html" />
@@ -43,12 +46,13 @@ const SkillsSection = () => {
     );
 };
 
-const StyledDivWrapper = styled.div `
+const StyledDivWrapper = styled(motion.div) `
     min-height: 90vh;
     margin-left: 15vh; 
     margin-right: 15vh;
-    margin-bottom: 17vh;
+    margin-bottom: 10vh;
     text-align: center;
+
 
 @media (max-width: 1024px){
     padding: 0.5rem 0.5rem;
