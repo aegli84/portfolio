@@ -86,14 +86,14 @@ const StyledText = styled.h2`
 const SkillsIcons = styled.div`
     height: 40vh;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 1em; 
     row-gap: 3rem;
     justify-items: center;
     align-items: center;
     img {
         margin-top: 1vh;
-        width: 35%;
+        width: 5vw;
     }
     
 @media (max-width: 500px){
@@ -103,7 +103,7 @@ const SkillsIcons = styled.div`
     img {
         margin-top: -1vh;
         padding: 1rem 2rem;
-        width: 30vw;
+        width: 25vw;
             
     } 
 }

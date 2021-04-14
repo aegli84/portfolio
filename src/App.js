@@ -15,7 +15,6 @@ function App() {
     <div className="App">
       <GlobalStyle/>
       <NavbarPages/>
-      
       <NavBurgerMenu/>
       <AboutSection/>
       <SkillsSection/>

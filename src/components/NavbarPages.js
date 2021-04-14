@@ -14,7 +14,7 @@ const NavbarPages = () => {
         
             <h1>
                 <ScrollIntoView selector= "#about">
-                    <Link id = "logo" to= "/about">ae</Link>
+                    <Link id = "logo" to= "/about">ae.</Link>
                 </ScrollIntoView>
             </h1>
             <ul>

@@ -8,8 +8,11 @@ const Resume = () => {
     
     return (
         <StyledDiv 
+        class = 'button'
+        
             variants = {fade}>
             <StyledA 
+             whileHover={{scale: 1.1}}
                 onClick={() => window.open(cv)} 
                 traget = "_blank" 
                 >Resume
@@ -23,13 +26,13 @@ const StyledDiv = styled(motion.div) `
     padding-top: 3rem;
 
     @media (max-width: 500px){
-            margin: 1rem 1rem 5rem 1rem;  
+            margin: 1rem 1rem 4rem 1rem;  
             padding: 1.3rem 2rem; 
             font-size: 1.2rem;
     }
     
 `
-const StyledA = styled.a `
+const StyledA = styled(motion.a) `
             font-weight: bold;
             font-size: 1rem;
             padding: 1rem 2rem;

@@ -1,20 +1,23 @@
 import styled from 'styled-components';
-//import { useState } from "react"
+import { useState } from "react"
 import { NavHashLink as Link } from "react-router-hash-link";
 import ScrollIntoView from 'react-scroll-into-view'
+import {motion} from 'framer-motion'
 
-const RightNav = ({ open }) => {
-    //const [isOpen, setIsOpen] = useState(false)
-    
-    // const hideSidebar = () => setCloseSideNav (!closeSideNav);
+
+const SideNav = ({ open }) => {
+    const [sidenav, setSidenav] = useState(false)
+
+    const showSidenav = () => setSidenav(!sidenav)
     
     return (
-        <Ul open={open}  >
-            <li>
+        <nav>
+        <Ul open={open}>
+            <motion.li whileTap={{scale: 1.1}} className = 'slide'>
                 <ScrollIntoView  selector= "#about">
-                    <Link  to="/about">About me</Link>
+                    <Link to="/about" >About me</Link>
                     </ScrollIntoView>
-                </li>
+                </motion.li>
                 <li>
                 <ScrollIntoView selector= "#skills">
                     <Link to="/skills" >Skills</Link>
@@ -32,6 +35,7 @@ const RightNav = ({ open }) => {
                     
                 </li>
         </Ul>
+        </nav>
     )
 }
 
@@ -45,11 +49,14 @@ const Ul = styled.ul`
         display: block;
         padding-left: 5rem;
         }
+        .slide {
+            transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
+        }
     }
 @media (max-width: 500px) {
     background-color: #08090af1;
     opacity: 1;
-    position: fixed;
+    position: fixed; 
     transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
     top: 0;
     right: 0;
@@ -70,4 +77,4 @@ const Ul = styled.ul`
     
 }`
 
-export default RightNav;
+export default SideNav;

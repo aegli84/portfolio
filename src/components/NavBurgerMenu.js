@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { useState } from "react"
-import RightNav from './RightNav';
+import SideNav from './SideNav';
 
 
 const BurgerMenu = () => {
@@ -8,13 +8,13 @@ const BurgerMenu = () => {
 
     return (
         <>
-            <StyledLogo >ae</StyledLogo>
+            <StyledLogo >ae.</StyledLogo>
                 <StyledBurger open={open} onClick={() => setOpen(!open)}>
                 <div />
                 <div />
                 <div />
             </StyledBurger>
-            <RightNav open={open}/>
+            <SideNav open={open}/>
         </>
     )
 };

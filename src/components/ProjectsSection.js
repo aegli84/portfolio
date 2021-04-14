@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faDesktop } from '@fortawesome/free-solid-svg-icons';
-import webdev from '../assets/webdev.png'
+import portfolioo from '../assets/portfolioo.png'
 import todo from '../assets/todo.png'
 import comingsoon from '../assets/comingsoon.jpg'
 //import {ScrollSections} from './ScrollSections'
@@ -57,7 +57,7 @@ const ProjectsSection = () => {
                     
                         className = "card" 
                         whileHover={{scale: 1.1}}> 
-                    <img src={webdev} alt="webdev"/>
+                    <img src={portfolioo} alt="webdev"/>
                     <StyledH3>WebDev Portfolio</StyledH3>
                         <Link 
                             to = {{pathname:"https://github.com/aegli84/portfolio"}} 

@@ -94,8 +94,8 @@ const Connect = () => {
 };
     
 const StyledDivWrapper = styled.div`
-    margin-top: -65vh;
-    margin-right: 1rem;
+    margin-top: -70vh;
+    margin-right: 2.5rem;
     display: flex;
     float: right;
     align-items: flex-end;
@@ -108,8 +108,8 @@ const StyledDivWrapper = styled.div`
     }
 @media (max-width: 500px){
     writing-mode: horizontal-tb;
-    line-height: 1rem;
-    padding: 10rem 0;
+    line-height: 2rem;
+    padding: 15rem 0;
     }
 `
 const StyledText = styled.li`
