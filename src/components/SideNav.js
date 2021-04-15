@@ -10,27 +10,27 @@ const SideNav = (props) => {
     return (
         <>
         <Ul open={open}>
-            <motion.li whileTap={{scale: 1.1}} className = 'slide'>
+            <motion.li whileTap={{scale: 1.1}}>
                 <ScrollIntoView  selector= "#about">
                     <Link to="/about" onClick={() => setOpen(!open)}>About me</Link>
                     </ScrollIntoView>
                 </motion.li>
-                <li>
+                <motion.li whileTap={{scale: 1.1}} >
                 <ScrollIntoView selector= "#skills">
                     <Link to="/skills" onClick={() => setOpen(!open)}>Skills</Link>
                     </ScrollIntoView>
-                </li>
-                <li>
+                </motion.li>
+                <motion.li whileTap={{scale: 1.1}} >
                 <ScrollIntoView selector= "#projects">
                     <Link to="/projects" onClick={() => setOpen(!open)}>Projects</Link>
                     </ScrollIntoView>
-                </li>
-                <li>
+                </motion.li>
+                <motion.li whileTap={{scale: 1.1}} >
                 <ScrollIntoView selector= "#contact">
                     <Link to="/contact" onClick={() => setOpen(!open)}>Contact</Link>
                     </ScrollIntoView>
                     
-                </li>
+                </motion.li>
         </Ul>
         </>
     )

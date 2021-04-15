@@ -31,13 +31,13 @@ const GlobalStyle = createGlobalStyle `
 
     html {
         overflow-x: hidden;
-        @media (max-width: 1300px){
-            font-size: 80%;
-        }
-        
-        @media (max-width: 1024px){
+        @media (min-width: 320px) and (max-width: 1024px){
             font-size: 75%;
         }
+${'' /*         
+        @media (max-width: 1024px){
+            font-size: 75%;
+        } */}
         
 } 
 

@@ -15,7 +15,7 @@ const StyledDiv = styled.div `
     justify-content: center;
     margin-bottom: 1rem;
     text-align: center;
-@media (max-width: 1024px){
+@media (min-width: 320px) and (max-width: 1024px){
         margin-bottom: 2rem;
         
     }
@@ -26,8 +26,9 @@ const StyledH4 = styled.h4`
     font-weight: lighter;
     font-size: 0.8rem;
 
-@media (max-width: 1024px){
+@media (min-width: 320px) and (max-width: 1024px){
         font-size: 1rem; 
+        /* margin-top: 1rem; */
     }
 `
 

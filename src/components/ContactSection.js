@@ -130,14 +130,14 @@ const StyledFormWrapper = styled(motion.div) `
     align-items: center;
     display: block;
     justify-content: center;
-@media (max-width: 1024px){
+@media (min-width: 320px) and (max-width: 768px){
     margin-top: 30vh;  
     padding: 7rem 2rem;
     }
-@media (max-width: 500px){
+/* @media (max-width: 500px){
     margin-top: 0;
     padding-bottom: 2rem;
-    }
+    } */
 
 #contact {
     text-align: center;
@@ -164,10 +164,10 @@ const StyledFormWrapper = styled(motion.div) `
         font-size: .80rem; 
         color: #d14c3d;
     }
-    @media (max-width: 1024px){
+    @media (min-width: 320px) and (max-width: 768px){
         /* padding: .5rem 2rem; */
         }
-    @media (max-width: 500px){
+    @media (min-width: 320px) and (max-width: 768px){
         max-width: 85%;
         }
     }     
@@ -200,15 +200,16 @@ const StyledFormWrapper = styled(motion.div) `
             padding: 0.5rem 0.5rem;
             
         } 
-    @media (max-width: 1024px){
+    @media (min-width: 320px) and (max-width: 768px){
         padding-left: 5rem;
-        margin-top: 6vh;
+        /* margin-top: 6vh; */
+        margin-top: 2.2rem;
         width: 100%; 
         }
-    @media (max-width: 500px){
+    /* @media (max-width: 500px){
         margin-top: 2.2rem;
         width: 100%;
-        }
+        } */
         
     }
 
@@ -231,7 +232,7 @@ const StyledFormWrapper = styled(motion.div) `
         &:placeholder-shown {
             padding: 0.5rem 0.5rem;
         } 
-    @media (max-width: 500px){
+    @media (min-width: 320px) and (max-width: 768px){
         margin-left: 0.5rem; 
         margin-top: 2rem;
         width: 75vw;
@@ -246,8 +247,8 @@ const StyledFormWrapper = styled(motion.div) `
         margin-left: auto;
         margin-right:auto;
         cursor: pointer;
-        border: 1px solid darkgrey;
-        color: darkgrey;
+        border: 1px solid lightgrey;
+        color: lightgrey;
         transition: all 0.5s ease;
         outline: none;
         background: #343a40;
@@ -256,16 +257,17 @@ const StyledFormWrapper = styled(motion.div) `
         background-color: #23282db9;
         color: lightgreen;
     }
-    @media (max-width: 1024px){
+    @media (min-width: 320px) and (max-width: 768px){
             margin-left: -1.5vh; 
             padding: 1rem 2rem ;
+            width: 35%;
         }
-    @media (max-width: 500px){
+    /* @media (max-width: 500px){
         margin-left: 2.2rem;
         width: 35vw;
         font-size: 1.3rem;
         padding: 1rem;
-        }
+        } */
     } 
 `
 
@@ -274,7 +276,7 @@ const StyledH2Contact = styled.h2 `
     padding-top: 5vh;
     font-weight: 900;
     color: whitesmoke;
-@media (max-width: 500px){
+@media (min-width: 320px) and (max-width: 1024px){
     
         margin-top: 1vh;
         padding-top: 2rem;

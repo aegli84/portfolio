@@ -67,17 +67,18 @@ const StyledAbout = styled.div`
     margin-bottom: 20vh;
 
 
-@media (max-width: 1024px){
+@media (min-width: 320px) and (max-width: 1024px){
     display: block;
     text-align: center; 
     padding: 2rem 2rem;
     margin-top: 8rem;
     }
-@media (max-width: 500px){
+    
+/* @media (max-width: 500px){
     padding: 4rem 1rem;
     margin-top: 5rem;
     
-    }
+    } */
 `
 const StyledHI = styled.h2 `
     font-weight: 900;
@@ -88,13 +89,13 @@ const StyledP = styled(motion.p)`
     margin-top: 1.5rem;
     font-weight: 400;
     padding-right: 8rem;
-
+/* 
 @media (max-width: 1024px){
     display: block;
     text-align: center;
     padding: 2rem;
-    }
-@media (max-width: 500px){
+    } */
+@media (min-width: 320px) and (max-width: 1024px){
     display: block;
     text-align: center;
     padding: 2rem 1rem 2rem 1rem;
@@ -126,9 +127,10 @@ const StyledImg = styled(motion.img)`
     margin: 1rem 12rem 5rem 0rem; 
     width: 20vh;
     height: 20vh;
-    }
-@media (max-width: 500px){
+    } 
+@media (min-width: 320px) and (max-width: 1024px){
     text-align: center;
+    
     width: 17vh;
     height: 17vh;
     border: 1px solid rgba(245, 245, 245, 0.829);

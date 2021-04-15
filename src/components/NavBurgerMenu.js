@@ -22,7 +22,7 @@ const BurgerMenu = () => {
 const StyledNav = styled.nav `
     display: none;
     
-    @media (max-width: 500px) {
+    @media (min-width: 320px) and (max-width: 768px) {
     min-height: 1vh;
     display: flex;
     align-items: flex-end;
@@ -41,7 +41,7 @@ const StyledNav = styled.nav `
 const StyledBurger = styled.div`
     display: none;
     
-@media (max-width: 500px) {
+@media (min-width: 320px) and (max-width: 768px) {
     width: 5rem;
     height: 2.5rem;
     position: fixed;
@@ -76,7 +76,7 @@ const StyledBurger = styled.div`
 `
 const StyledLogo = styled.div`
     display: none;  
-    @media (max-width: 500px){
+    @media  (min-width: 320px) and (max-width: 768px) {
         display: block;
         font-weight: 800;
         font-size: 2.9rem;

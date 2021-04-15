@@ -22,7 +22,6 @@ const SkillsSection = () => {
     const [element, controls] = ScrollSections();
     return (
         <>
-            
         <StyledDivWrapper id="skills" variants = {fade} animate={controls} initial = 'hidden' ref={element}>
                 <StyledText>Tech & tools</StyledText>
                 <SkillsIcons>
@@ -53,18 +52,18 @@ const StyledDivWrapper = styled(motion.div) `
     margin-bottom: 10vh;
     text-align: center;
 
-
+/* 
 @media (max-width: 1024px){
     padding: 0.5rem 0.5rem;
-    } 
-@media (max-width: 500px){
-    margin-left: 3vh; 
-    margin-right: 3vh;
+    }  */
+@media  (min-width: 320px) and (max-width: 1024px){
+    margin-left: 5vh; 
+    margin-right: 6vh;
     margin-bottom: -25vh;
     margin-top: 23vh;
     padding-top: 23vh;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding: 0.5rem;
+    
     }  
 `
 const StyledText = styled.h2`
@@ -96,7 +95,7 @@ const SkillsIcons = styled.div`
         width: 5vw;
     }
     
-@media (max-width: 500px){
+@media  (min-width: 320px) and (max-width: 768px){
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 1rem; 
     row-gap: 1rem;

@@ -8,11 +8,9 @@ const Resume = () => {
     
     return (
         <StyledDiv 
-        class = 'button'
-        
             variants = {fade}>
             <StyledA 
-             whileHover={{scale: 1.1}}
+                whileHover={{scale: 1.1}}
                 onClick={() => window.open(cv)} 
                 traget = "_blank" 
                 >Resume
@@ -38,8 +36,8 @@ const StyledA = styled(motion.a) `
             padding: 1rem 2rem;
             margin-top: 5vh;
             cursor: pointer;
-            border: 2px solid darkgrey;
-            color: darkgrey;
+            border: 2px solid lightgrey;
+            color: lightgrey;
             transition: all 0.5s ease;
             outline: none;
             background: #343a40;
