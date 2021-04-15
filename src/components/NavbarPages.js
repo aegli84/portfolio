@@ -81,10 +81,12 @@ const StyledNavContainer = styled.nav`
     @media (max-width: 500px){
         display: none;
     }
+
     a {
         font-weight: 700;
         color: whitesmoke;
         text-decoration: none;
+        
     }
     ul {
         display: flex;

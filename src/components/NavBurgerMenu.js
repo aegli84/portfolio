@@ -7,36 +7,56 @@ const BurgerMenu = () => {
     const [open, setOpen] = useState(false)
 
     return (
-        <>
+        <StyledNav>
             <StyledLogo >ae.</StyledLogo>
                 <StyledBurger open={open} onClick={() => setOpen(!open)}>
                 <div />
                 <div />
                 <div />
             </StyledBurger>
-            <SideNav open={open}/>
-        </>
+            <SideNav open={open} setOpen={setOpen}/>
+        </StyledNav>
     )
 };
 
+const StyledNav = styled.nav `
+    display: none;
+    
+    @media (max-width: 500px) {
+    min-height: 1vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;  
+    background: #343a40;
+    overflow: hidden; 
+    padding: 1rem 0; 
+    box-shadow:  0 8px 6px -6px black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    }
+`
 
 const StyledBurger = styled.div`
     display: none;
     
 @media (max-width: 500px) {
-    width: 4rem;
-    height: 2rem;
+    width: 5rem;
+    height: 2.5rem;
     position: fixed;
-    top: 7vh;
+    top: 5vh;
     right: 5vh;
     z-index: 20;
     display: flex;
     justify-content: space-around;
     flex-flow: column nowrap;
     
+    
     div {
-        width: 3rem;
-        height: 0.27rem;
+        
+        width: 3.5rem;
+        height: 0.35rem;
         background-color: ${({ open }) => open ? 'lightgreen' : '#d96ed4bb'};
         opacity: 0.6;
         border-radius: 15px;
@@ -61,7 +81,7 @@ const StyledLogo = styled.div`
         font-weight: 800;
         font-size: 2.9rem;
         color: whitesmoke;
-        margin-top: 6vh;
+        margin-top: 2vh;
         margin-left: 4rem;
     } 
     `

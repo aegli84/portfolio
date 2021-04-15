@@ -5,37 +5,35 @@ import ScrollIntoView from 'react-scroll-into-view'
 import {motion} from 'framer-motion'
 
 
-const SideNav = ({ open }) => {
-    const [sidenav, setSidenav] = useState(false)
-
-    const showSidenav = () => setSidenav(!sidenav)
+const SideNav = (props) => {
+    const { open, setOpen } = props;
     
     return (
-        <nav>
+        <>
         <Ul open={open}>
             <motion.li whileTap={{scale: 1.1}} className = 'slide'>
                 <ScrollIntoView  selector= "#about">
-                    <Link to="/about" >About me</Link>
+                    <Link to="/about" onClick={() => setOpen(!open)}>About me</Link>
                     </ScrollIntoView>
                 </motion.li>
                 <li>
                 <ScrollIntoView selector= "#skills">
-                    <Link to="/skills" >Skills</Link>
+                    <Link to="/skills" onClick={() => setOpen(!open)}>Skills</Link>
                     </ScrollIntoView>
                 </li>
                 <li>
                 <ScrollIntoView selector= "#projects">
-                    <Link to="/projects">Projects</Link>
+                    <Link to="/projects" onClick={() => setOpen(!open)}>Projects</Link>
                     </ScrollIntoView>
                 </li>
                 <li>
                 <ScrollIntoView selector= "#contact">
-                    <Link to="/contact">Contact</Link>
+                    <Link to="/contact" onClick={() => setOpen(!open)}>Contact</Link>
                     </ScrollIntoView>
                     
                 </li>
         </Ul>
-        </nav>
+        </>
     )
 }
 
@@ -49,9 +47,7 @@ const Ul = styled.ul`
         display: block;
         padding-left: 5rem;
         }
-        .slide {
-            transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
-        }
+        
     }
 @media (max-width: 500px) {
     background-color: #08090af1;
