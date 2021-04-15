@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { useState } from "react"
 import { NavHashLink as Link } from "react-router-hash-link";
 import ScrollIntoView from 'react-scroll-into-view'
 import {motion} from 'framer-motion'
