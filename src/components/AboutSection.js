@@ -1,9 +1,9 @@
 import React from 'react';
 import aeh from '../assets/aeh.jpg';
 import styled from 'styled-components';
-import {motion} from 'framer-motion'
-import {pageAnimation} from '../animation'
-import {titleAnimation, fade, photoAnimation} from '../animation'
+import { motion } from 'framer-motion'
+import { pageAnimation } from '../animation'
+import { titleAnimation, fade, photoAnimation } from '../animation'
 import Curly from './Curly' 
 import Connect from './Connect'
 import Resume from './Resume'
@@ -12,38 +12,36 @@ const AboutSection = () => {
     
     return (
         <>
-        <Curly/>
-        <motion.div  variants = {pageAnimation} initial = "hidden" animate = "show" >
-        
-        <StyledAbout>
-    
-            <div className = "description" id="about" >
-                <div className = "title">
-                    <StyledAllBigText>
-                    <StyledHI>Hello!</StyledHI>
-                        <motion.h2 variants = {titleAnimation}> My name is <StyledA>Andreea</StyledA>
-                        </motion.h2>
-                    </StyledAllBigText>
-                    <StyledAllBigText>
-                        <motion.h2 variants = {titleAnimation} ><span>and I'm a</span></motion.h2>
-                    </StyledAllBigText>
-                    <StyledAllBigText>
-                        <StyledH2  variants = {titleAnimation}><span>Full-Stack Web Developer.</span></StyledH2>
-                    </StyledAllBigText>
+            <Curly/>
+            <motion.div  variants = {pageAnimation} initial = "hidden" animate = "show">
+                <StyledAbout>
+                    <div className = "description" id="about" >
+                        <div className = "title">
+                        <StyledAllBigText>
+                        <StyledHI>Hello!</StyledHI>
+                            <motion.h2 variants = {titleAnimation}> My name is <StyledA>Andreea</StyledA>
+                            </motion.h2>
+                        </StyledAllBigText>
+                        <StyledAllBigText>
+                            <motion.h2 variants = {titleAnimation} ><span>and I'm a</span></motion.h2>
+                        </StyledAllBigText>
+                        <StyledAllBigText>
+                            <StyledH2  variants = {titleAnimation}><span>Full-Stack Web Developer.</span></StyledH2>
+                        </StyledAllBigText>
+                    </div>
+                        <StyledP variants = {fade}>I'm very captivated by everything that has to do with front-end development but I'm also very fascinated by how things work behind the scenes in the back-end
+                        </StyledP>
+                    <Resume/>
                 </div>
-                    <StyledP variants = {fade}>I'm very captivated by everything that has to do with front-end development but I'm also very fascinated by how things work behind the scenes in the back-end
-                    </StyledP>
-                <Resume/>
-            </div>
-            <motion.div  variants = {photoAnimation} className = "image">
-                <StyledImg 
-                whileHover={{ scale: 1.1 }}
-                    src = {aeh} 
-                    alt = "andreea egli" />
+                <motion.div  variants = {photoAnimation} className = "image">
+                    <StyledImg 
+                    whileHover={{ scale: 1.1 }}
+                        src = {aeh} 
+                        alt = "andreea egli"/>
+                </motion.div>
+            </StyledAbout>
+            <Connect/>
             </motion.div>
-        </StyledAbout>
-        <Connect/>
-        </motion.div>
         </>
     );
 };
@@ -68,7 +66,6 @@ const StyledAbout = styled.div`
 @media (max-width: 768px){
     padding: 4rem 1rem;
     margin-top: 5rem;
-    
     } 
 `
 const StyledHI = styled.h2 `
@@ -82,11 +79,9 @@ const StyledP = styled(motion.p)`
     padding-right: 8rem;
 
 @media (max-width: 1024px){
-    
     padding: 2rem;
     } 
 @media (max-width: 768px){
-    
     padding: 2rem 1rem 2rem 1rem;
     margin-top: 0;
     }
@@ -94,13 +89,10 @@ const StyledP = styled(motion.p)`
 const StyledH2 = styled(motion.h2)`
     font-weight: 900;
     color: lightgreen;
-    
 `
 const StyledA = styled.a `
     color: lightgreen;
     font-weight: 900;
-
-    
 `
 const StyledImg = styled(motion.img)`
     width: 35vh;

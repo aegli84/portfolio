@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { NavHashLink as Link } from "react-router-hash-link";
-import ScrollIntoView from 'react-scroll-into-view'
-import {motion} from 'framer-motion'
+import ScrollIntoView from 'react-scroll-into-view';
+import { motion } from 'framer-motion';
 
 
 const SideNav = (props) => {
@@ -9,29 +9,28 @@ const SideNav = (props) => {
     
     return (
         <>
-        <Ul open={open}>
-            <motion.li whileTap={{scale: 1.1}}>
-                <ScrollIntoView  selector= "#about">
-                    <Link to="/about" onClick={() => setOpen(!open)}>About me</Link>
+            <Ul open={open}>
+                <motion.li whileTap={{scale: 1.1}}>
+                    <ScrollIntoView  selector= "#about">
+                        <Link to="/about" onClick={() => setOpen(!open)}>About me</Link>
                     </ScrollIntoView>
                 </motion.li>
                 <motion.li whileTap={{scale: 1.1}} >
-                <ScrollIntoView selector= "#skills">
-                    <Link to="/skills" onClick={() => setOpen(!open)}>Skills</Link>
+                    <ScrollIntoView selector= "#skills">
+                        <Link to="/skills" onClick={() => setOpen(!open)}>Skills</Link>
                     </ScrollIntoView>
                 </motion.li>
                 <motion.li whileTap={{scale: 1.1}} >
-                <ScrollIntoView selector= "#projects">
-                    <Link to="/projects" onClick={() => setOpen(!open)}>Projects</Link>
+                    <ScrollIntoView selector= "#projects">
+                        <Link to="/projects" onClick={() => setOpen(!open)}>Projects</Link>
                     </ScrollIntoView>
                 </motion.li>
                 <motion.li whileTap={{scale: 1.1}} >
-                <ScrollIntoView selector= "#contact">
-                    <Link to="/contact" onClick={() => setOpen(!open)}>Contact</Link>
+                    <ScrollIntoView selector= "#contact">
+                        <Link to="/contact" onClick={() => setOpen(!open)}>Contact</Link>
                     </ScrollIntoView>
-                    
                 </motion.li>
-        </Ul>
+            </Ul>
         </>
     )
 }

@@ -236,7 +236,7 @@ const StyledDivCardsWrapper = styled.div`
     grid-template-columns: repeat(auto-fit, minmax(45vh, 2fr));
     grid-auto-rows: minmax(17vh, auto); 
     grid-gap: 3.5em;
-@media (max-width: 1024px){
+/* @media (max-width: 1024px){
     grid-template-columns: repeat(auto-fit, minmax(40vh, 1fr));
     grid-auto-rows: minmax(13vh, auto);
     grid-gap: 5em;
@@ -245,18 +245,17 @@ const StyledDivCardsWrapper = styled.div`
     grid-template-columns: repeat(auto-fit, minmax(35vh, 1fr));
     grid-auto-rows: minmax(20vh, auto);
     grid-gap: 4em;
-    }  
+    }   */
 @media (max-width: 500px){
-    
     grid-gap: 0.5em;
-    padding-left: 2.5rem;
+    padding-left: 3.5rem;
     padding-right: 1rem;
     } 
 `
 
 const StyledDivCard = styled(motion.div) `
     width: 26vw;
-    height: 57vh;
+    height: 65vh;
     box-shadow: 1px 3px 32px -7px black;
     border-radius:10px;
     column-gap: 100px;
@@ -267,29 +266,36 @@ const StyledDivCard = styled(motion.div) `
     &:hover {
         border: 2px solid rgba(245, 245, 245, 0.829);
     }
+@media (max-width: 1024px){
+        width: 40vw;
+        height: 60vh;
+    }
 @media (max-width: 768px){
-    width: 40vw;
+        width: 65vw;
+        height: 70vh;
     } 
 @media (max-width: 500px){
-    height: 49vh;
-    width: 85vw;
+    height: 57vh;
+    width: 80vw;
     font-size: 1rem;
     margin-bottom: 2.5rem;
     
     } 
     
     img {
-        height: 28vh;
+        height: 32vh;
         width: 26vw;
-    @media (max-width: 1024px){
-        
-    }
-    @media (max-width: 768px){
+@media (max-width: 1024px){
         width: 40vw;
+        height: 30vh;
+    }
+@media (max-width: 768px){
+        width: 65vw;
+        height: 40vh;
     } 
-    @media (max-width: 500px){
-        width: 85vw;
-        height: 22vh;
+@media (max-width: 500px){
+        width: 80vw;
+        height: 25.5vh;
         }
     }
     .github,
@@ -334,7 +340,7 @@ const StyledH6 = styled.h6`
         font-size: 1.5vh;
     }
 @media (max-width: 768px){
-        font-size: 1.2vh;
+        font-size: 1.4vh;
         padding-bottom: 1rem;
     }
 `
@@ -349,7 +355,7 @@ const StyledPara = styled.p`
         font-size: 1.9vh;
     }
     @media (max-width: 768px){
-        font-size: 1.7vh;
+        font-size: 1.8vh;
     }
 
 `

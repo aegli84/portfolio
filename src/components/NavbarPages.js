@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import {motion} from 'framer-motion'
-import {useLocation} from 'react-router-dom'
+import { motion } from 'framer-motion'
+import { useLocation } from 'react-router-dom'
 import { NavHashLink as Link } from "react-router-hash-link";
 import ScrollIntoView from 'react-scroll-into-view'
 
@@ -11,7 +11,6 @@ const NavbarPages = () => {
     
     return (
         <StyledNavContainer>
-        
             <h1>
                 <ScrollIntoView selector= "#about">
                     <Link id = "logo" to= "/about">ae.</Link>
@@ -60,7 +59,6 @@ const NavbarPages = () => {
                             /> 
                 </li>
             </ul>
-            
         </StyledNavContainer>
     )
 }
@@ -101,7 +99,7 @@ const StyledNavContainer = styled.nav`
         margin-bottom: 0.5rem;
         padding-left: 4rem;
         position: relative;
-}
+    }
     
 `
 const NavLine = styled(motion.div)`
@@ -112,7 +110,6 @@ const NavLine = styled(motion.div)`
     position: absolute;
     bottom: -35%;
     left: 40%;
-    
 `
 export default NavbarPages;
 

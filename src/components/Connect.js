@@ -7,14 +7,13 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 
 const Connect = () => {
-    
     return (
-    <StyledDivWrapper className = "connect">
-        <StyledUl>
-            <StyledText>Let's connect</StyledText>
-                <StyledLine>
-                    <div> - - /// - - </div>
-                </StyledLine>
+        <StyledDivWrapper className = "connect">
+            <StyledUl>
+                <StyledText>Let's connect</StyledText>
+                    <StyledLine>
+                        <div> - - /// - - </div>
+                    </StyledLine>
                 <StyledIcons>
                     <Link 
                         to = {{pathname:"https://github.com/aegli84"}} 
@@ -63,7 +62,6 @@ const Connect = () => {
                         </motion.div>
                     </Link>
                 </StyledIcons>
-
                 <StyledIcons>
                     <Link 
                         to = {{pathname:"https://github.com/aegli84"}} 
@@ -89,7 +87,7 @@ const Connect = () => {
                     </Link>
                 </StyledIcons>
         </StyledUl>
-    </StyledDivWrapper>
+        </StyledDivWrapper>
     );
 };
     
@@ -159,9 +157,7 @@ const StyledIcons = styled.li`
 @media (max-width: 1024px){
     writing-mode: horizontal-tb;
     text-orientation: mixed;
-    /* padding: 0 1rem 1rem 0.5rem; */
     display: inline-block;
-    /* margin: 0 1.5rem 0 0.5rem ; */
     font-size: 1.3rem;
     margin: 0 1rem 0 0.3rem ;
     } 

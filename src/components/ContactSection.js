@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import {motion} from 'framer-motion'
-import {useState} from 'react';
-import {ScrollSections} from './ScrollSections'
-import {fade} from '../animation'
+import { motion } from 'framer-motion'
+import { useState } from 'react';
+import { ScrollSections } from './ScrollSections'
+import { fade } from '../animation'
 
 const ContactSection = () => {
     //TO DO!!! 
@@ -59,12 +59,9 @@ const ContactSection = () => {
     };
 
     return(
-        
-    <StyledFormWrapper variants = {fade} animate={controls} initial = 'hidden' ref={element} >
-        
-        <StyledH2Contact>Contact me</StyledH2Contact>
-        
-        <div className = "form" id="contact">
+        <StyledFormWrapper variants = {fade} animate={controls} initial = 'hidden' ref={element}>
+            <StyledH2Contact>Contact me</StyledH2Contact>
+            <div className = "form" id="contact">
             <form onSubmit={handleSubmit}>
             {submitted && valid ? <div class='success-message'>SENT! Thank you for your message</div> : null}
                 <input 
@@ -117,7 +114,6 @@ const ContactSection = () => {
                 </button>
             </div>
         </div>
-        
     </StyledFormWrapper>
     )
 }
@@ -130,14 +126,11 @@ const StyledFormWrapper = styled(motion.div) `
     align-items: center;
     display: block;
     justify-content: center;
+
 @media (max-width: 768px){
     margin-top: 30vh;  
     padding: 7rem 2rem;
     }
-/* @media (max-width: 500px){
-    margin-top: 0;
-    padding-bottom: 2rem;
-    } */
 
 #contact {
     text-align: center;
@@ -156,22 +149,16 @@ const StyledFormWrapper = styled(motion.div) `
         padding-top: 1rem;
         padding-bottom: 1rem;
         color:lightgreen;
-        
     }
-    
     span {
         font-weight: 400;
         font-size: .80rem; 
         color: #d14c3d;
     }
     @media (max-width: 768px){
-        /* padding: .5rem 2rem; */
-        }
-    @media (max-width: 768px){
         max-width: 85%;
         }
     }     
-    
     #message-error {
         color: #d14c3d;
         font-weight: 400;
@@ -193,24 +180,15 @@ const StyledFormWrapper = styled(motion.div) `
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
         outline:none;
-        &:placeholder {
-            
-        }   
         &:placeholder-shown {
             padding: 0.5rem 0.5rem;
-            
         } 
+
     @media (max-width: 768px){
         padding-left: 15rem;
-        /* margin-top: 6vh; */
         margin-top: 2.2rem;
         width: 70vw; 
         }
-    /* @media (max-width: 500px){
-        margin-top: 2.2rem;
-        width: 100%;
-        } */
-        
     }
 
     textarea {
@@ -232,6 +210,7 @@ const StyledFormWrapper = styled(motion.div) `
         &:placeholder-shown {
             padding: 0.5rem 0.5rem;
         } 
+
     @media (max-width: 768px){
         margin-left: 0.5rem; 
         margin-top: 2rem;
@@ -262,20 +241,14 @@ const StyledFormWrapper = styled(motion.div) `
             padding: 1rem 2rem ;
             width: 35%;
         }
-    /* @media (max-width: 500px){
-        margin-left: 2.2rem;
-        width: 35vw;
-        font-size: 1.3rem;
-        padding: 1rem;
-        } */
     } 
 `
-
 const StyledH2Contact = styled.h2 `
     justify-content: center;
     padding-top: 5vh;
     font-weight: 900;
     color: whitesmoke;
+    
 @media (max-width: 768px){
     
         margin-top: 1vh;

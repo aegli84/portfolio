@@ -4,6 +4,7 @@ import SideNav from './SideNav';
 
 
 const BurgerMenu = () => {
+
     const [open, setOpen] = useState(false)
 
     return (
@@ -19,7 +20,7 @@ const BurgerMenu = () => {
     )
 };
 
-const StyledNav = styled.nav `
+const StyledNav = styled.nav`
     display: none;
     
     @media (min-width: 320px) and (max-width: 768px) {
@@ -37,7 +38,6 @@ const StyledNav = styled.nav `
     z-index: 1;
     }
 `
-
 const StyledBurger = styled.div`
     display: none;
     
@@ -51,10 +51,7 @@ const StyledBurger = styled.div`
     display: flex;
     justify-content: space-around;
     flex-flow: column nowrap;
-    
-    
     div {
-        
         width: 3.5rem;
         height: 0.35rem;
         background-color: ${({ open }) => open ? 'lightgreen' : '#d96ed4bb'};
@@ -84,7 +81,5 @@ const StyledLogo = styled.div`
         margin-top: 2vh;
         margin-left: 4rem;
     } 
-    `
-
-
+`
 export default BurgerMenu;
