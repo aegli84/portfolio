@@ -130,7 +130,7 @@ const StyledFormWrapper = styled(motion.div) `
     align-items: center;
     display: block;
     justify-content: center;
-@media (min-width: 320px) and (max-width: 768px){
+@media (max-width: 768px){
     margin-top: 30vh;  
     padding: 7rem 2rem;
     }
@@ -164,10 +164,10 @@ const StyledFormWrapper = styled(motion.div) `
         font-size: .80rem; 
         color: #d14c3d;
     }
-    @media (min-width: 320px) and (max-width: 768px){
+    @media (max-width: 768px){
         /* padding: .5rem 2rem; */
         }
-    @media (min-width: 320px) and (max-width: 768px){
+    @media (max-width: 768px){
         max-width: 85%;
         }
     }     
@@ -181,7 +181,7 @@ const StyledFormWrapper = styled(motion.div) `
         
         background: #343a40;
         margin-top: 3vh;
-        width: 100%;
+        width: 28vw;
         padding-top: 2vh;
         align-items: center;
         display: block;
@@ -200,11 +200,11 @@ const StyledFormWrapper = styled(motion.div) `
             padding: 0.5rem 0.5rem;
             
         } 
-    @media (min-width: 320px) and (max-width: 768px){
-        padding-left: 5rem;
+    @media (max-width: 768px){
+        padding-left: 15rem;
         /* margin-top: 6vh; */
         margin-top: 2.2rem;
-        width: 100%; 
+        width: 70vw; 
         }
     /* @media (max-width: 500px){
         margin-top: 2.2rem;
@@ -232,7 +232,7 @@ const StyledFormWrapper = styled(motion.div) `
         &:placeholder-shown {
             padding: 0.5rem 0.5rem;
         } 
-    @media (min-width: 320px) and (max-width: 768px){
+    @media (max-width: 768px){
         margin-left: 0.5rem; 
         margin-top: 2rem;
         width: 75vw;
@@ -257,7 +257,7 @@ const StyledFormWrapper = styled(motion.div) `
         background-color: #23282db9;
         color: lightgreen;
     }
-    @media (min-width: 320px) and (max-width: 768px){
+    @media (max-width: 768px){
             margin-left: -1.5vh; 
             padding: 1rem 2rem ;
             width: 35%;
@@ -276,7 +276,7 @@ const StyledH2Contact = styled.h2 `
     padding-top: 5vh;
     font-weight: 900;
     color: whitesmoke;
-@media (min-width: 320px) and (max-width: 1024px){
+@media (max-width: 768px){
     
         margin-top: 1vh;
         padding-top: 2rem;

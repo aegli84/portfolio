@@ -10,7 +10,6 @@ import todo from '../assets/todo.png'
 import comingsoon from '../assets/comingsoon.jpg'
 //import {ScrollSections} from './ScrollSections'
 
-
 const ProjectsSection = () => {
     //const [element, controls] = ScrollSections();
     return (
@@ -234,20 +233,19 @@ const StyledDivCardsWrapper = styled.div`
     min-height: 75vh;
     padding: 2rem 7rem;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(50vh, 1fr));
-    grid-auto-rows: minmax(17vh, auto);
+    grid-template-columns: repeat(auto-fit, minmax(45vh, 2fr));
+    grid-auto-rows: minmax(17vh, auto); 
     grid-gap: 3.5em;
-
 @media (max-width: 1024px){
-    grid-template-columns: repeat(auto-fill, minmax(40vh, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(40vh, 1fr));
     grid-auto-rows: minmax(13vh, auto);
-    grid-gap: 4em;
+    grid-gap: 5em;
     } 
 @media (max-width: 768px){
-    grid-template-columns: repeat(auto-fill, minmax(35vh, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(35vh, 1fr));
     grid-auto-rows: minmax(20vh, auto);
     grid-gap: 4em;
-    } 
+    }  
 @media (max-width: 500px){
     
     grid-gap: 0.5em;
@@ -283,7 +281,6 @@ const StyledDivCard = styled(motion.div) `
     img {
         height: 28vh;
         width: 26vw;
-
     @media (max-width: 1024px){
         
     }
@@ -293,13 +290,7 @@ const StyledDivCard = styled(motion.div) `
     @media (max-width: 500px){
         width: 85vw;
         height: 22vh;
-    }
-        /* filter: grayscale(100%);
-        &:hover {
-            filter: grayscale(0%);
-        }  */
-        /* border-top-left-radius: 8px;  */
-        /* border-top-right-radius: 8px; */
+        }
     }
     .github,
     .desktop {
@@ -318,7 +309,6 @@ const StyledH2Top = styled.h2`
         padding-top: 14vh;
         margin-top: 12vh;
     }
-
     
 `
 const StyledH3 = styled.h3`
@@ -327,7 +317,7 @@ const StyledH3 = styled.h3`
 @media (max-width: 1024px){
         font-size: 2.7vh;
     }
-@media (max-width: 500px){
+@media (max-width: 768px){
         font-size: 2.5vh;
     }
     
@@ -343,8 +333,9 @@ const StyledH6 = styled.h6`
 @media (max-width: 1024px){
         font-size: 1.5vh;
     }
-@media (max-width: 500px){
+@media (max-width: 768px){
         font-size: 1.2vh;
+        padding-bottom: 1rem;
     }
 `
 const StyledPara = styled.p`
@@ -357,8 +348,9 @@ const StyledPara = styled.p`
     @media (max-width: 1024px){
         font-size: 1.9vh;
     }
-    @media (max-width: 500px){
+    @media (max-width: 768px){
         font-size: 1.7vh;
     }
+
 `
 export default ProjectsSection;

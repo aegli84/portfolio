@@ -78,7 +78,7 @@ const StyledNavContainer = styled.nav`
     top: 0;
     width: 100%;
     z-index: 1;
-    @media (min-width: 320px) and (max-width: 1024px){
+    @media (max-width: 768px){
         display: none;
     }
 

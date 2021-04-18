@@ -76,7 +76,7 @@ const StyledBurger = styled.div`
 `
 const StyledLogo = styled.div`
     display: none;  
-    @media  (min-width: 320px) and (max-width: 768px) {
+    @media (max-width: 768px) {
         display: block;
         font-weight: 800;
         font-size: 2.9rem;

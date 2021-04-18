@@ -31,27 +31,19 @@ const AboutSection = () => {
                         <StyledH2  variants = {titleAnimation}><span>Full-Stack Web Developer.</span></StyledH2>
                     </StyledAllBigText>
                 </div>
-                
                     <StyledP variants = {fade}>I'm very captivated by everything that has to do with front-end development but I'm also very fascinated by how things work behind the scenes in the back-end
                     </StyledP>
-                    
                 <Resume/>
-                
             </div>
-        
-            
             <motion.div  variants = {photoAnimation} className = "image">
                 <StyledImg 
                 whileHover={{ scale: 1.1 }}
                     src = {aeh} 
                     alt = "andreea egli" />
             </motion.div>
-            
         </StyledAbout>
         <Connect/>
-
         </motion.div>
-        
         </>
     );
 };
@@ -66,19 +58,18 @@ const StyledAbout = styled.div`
     color: whitesmoke;
     margin-bottom: 20vh;
 
-
-@media (min-width: 320px) and (max-width: 1024px){
+@media (max-width: 1024px) {
     display: block;
     text-align: center; 
     padding: 2rem 2rem;
     margin-top: 8rem;
     }
     
-/* @media (max-width: 500px){
+@media (max-width: 768px){
     padding: 4rem 1rem;
     margin-top: 5rem;
     
-    } */
+    } 
 `
 const StyledHI = styled.h2 `
     font-weight: 900;
@@ -89,15 +80,13 @@ const StyledP = styled(motion.p)`
     margin-top: 1.5rem;
     font-weight: 400;
     padding-right: 8rem;
-/* 
+
 @media (max-width: 1024px){
-    display: block;
-    text-align: center;
+    
     padding: 2rem;
-    } */
-@media (min-width: 320px) and (max-width: 1024px){
-    display: block;
-    text-align: center;
+    } 
+@media (max-width: 768px){
+    
     padding: 2rem 1rem 2rem 1rem;
     margin-top: 0;
     }
@@ -124,13 +113,12 @@ const StyledImg = styled(motion.img)`
     border: 2px solid rgba(245, 245, 245, 0.829);
 
 @media (max-width: 1024px){
-    margin: 1rem 12rem 5rem 0rem; 
-    width: 20vh;
-    height: 20vh;
+    margin: 5rem 12rem 5rem 0rem; 
+    width: 19vh;
+    height: 19vh;
     } 
-@media (min-width: 320px) and (max-width: 1024px){
-    text-align: center;
-    
+@media (max-width: 768px){
+    margin: 3rem 12rem 5rem 0rem; 
     width: 17vh;
     height: 17vh;
     border: 1px solid rgba(245, 245, 245, 0.829);

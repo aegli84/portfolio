@@ -31,7 +31,7 @@ const GlobalStyle = createGlobalStyle `
 
     html {
         overflow-x: hidden;
-        @media (min-width: 320px) and (max-width: 1024px){
+        @media (max-width: 1200px){
             font-size: 75%;
         }
 ${'' /*         
@@ -45,6 +45,7 @@ body {
     background: #343a40;
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
+    width: 100%;
 }
 
 

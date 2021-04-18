@@ -52,17 +52,16 @@ const StyledDivWrapper = styled(motion.div) `
     margin-bottom: 10vh;
     text-align: center;
 
-/* 
 @media (max-width: 1024px){
     padding: 0.5rem 0.5rem;
-    }  */
-@media  (min-width: 320px) and (max-width: 1024px){
+    }  
+@media (max-width: 768px){
     margin-left: 5vh; 
-    margin-right: 6vh;
+    margin-right: 3vh;
     margin-bottom: -25vh;
     margin-top: 23vh;
     padding-top: 23vh;
-    padding: 0.5rem;
+
     
     }  
 `
@@ -76,7 +75,7 @@ const StyledText = styled.h2`
     margin-top: -8vh;  
     margin-bottom: 10vh; 
     }
-@media (max-width: 500px){
+@media (max-width: 768px){
     margin-top: -22vh;
     margin-bottom: 7vh;
     } 
@@ -94,15 +93,26 @@ const SkillsIcons = styled.div`
         margin-top: 1vh;
         width: 5vw;
     }
-    
-@media  (min-width: 320px) and (max-width: 768px){
+        
+@media (max-width: 1024px){
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 1rem; 
+    row-gap: 4rem;
+    img {
+        margin-top: -1vh;
+        padding: 1rem 2rem;
+        width: 12vw;
+            
+    } 
+}
+@media (max-width: 768px){
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 1rem; 
     row-gap: 1rem;
     img {
         margin-top: -1vh;
         padding: 1rem 2rem;
-        width: 25vw;
+        width: 21vw;
             
     } 
 }

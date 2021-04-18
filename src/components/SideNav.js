@@ -42,13 +42,13 @@ const Ul = styled.ul`
     flex-flow: row nowrap; */
     li {
         display: none;
-    @media (max-width: 500px){
+    @media (max-width: 768px){
         display: block;
         padding-left: 5rem;
         }
         
     }
-@media (max-width: 500px) {
+@media (max-width: 768px) {
     background-color: #08090af1;
     opacity: 1;
     position: fixed; 
