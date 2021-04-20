@@ -11,7 +11,7 @@ const Resume = () => {
             <StyledA 
                 whileHover={{scale: 1.1}}
                 onClick={() => window.open(cv)} 
-                traget = "_blank" 
+                target = "_blank" 
                 >Resume
             </StyledA>
         </StyledDiv>

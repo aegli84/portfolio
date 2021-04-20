@@ -68,7 +68,7 @@ const ContactSection = () => {
                     id="first-name"
                     name = "firstName" 
                     type = "text" 
-                    disabled={setSubmitted}
+                    // disabled={setSubmitted}
                     placeholder ="First name" 
                     value={values.firstName} 
                     onChange={handleFirstNameInputChange}
@@ -105,7 +105,7 @@ const ContactSection = () => {
             </textarea>
             {submitted && !values.message ? <div id="message-error">Please enter your message</div> : null}
             <div>
-                <button onClick={handleSubmit}
+                <button onClick={handleSubmit} 
                     className = "button"
                     id = "submit" 
                     type = "submit" 

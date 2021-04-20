@@ -64,9 +64,10 @@ const Connect = () => {
                 </StyledIcons>
                 <StyledIcons>
                     <Link 
-                        to = {{pathname:"https://github.com/aegli84"}} 
+                    
+                        to = {{pathname:"mailto:aegli@ymail.com"}} 
                         target={"_blank"} 
-                        rel="noopener noreferrer">
+                        rel="noopener noreferrer"> 
                         <motion.div 
                             whileHover={{ scale: 1.2 }}
                             initial={{ scale: 0 }}
@@ -76,13 +77,14 @@ const Connect = () => {
                                 stiffness: 50,
                                 damping: 20
                                 }}>
+                                
                             <FontAwesomeIcon 
                                 className = "github" 
                                 size = "lg"
                                 color = "whitesmoke"
                                 transform="down-1 grow-4" 
                                 fixedWidth
-                                icon = {faEnvelope}/>
+                                icon = {faEnvelope}/>  
                         </motion.div>
                     </Link>
                 </StyledIcons>
