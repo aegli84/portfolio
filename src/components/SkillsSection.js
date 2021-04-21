@@ -22,7 +22,12 @@ const SkillsSection = () => {
     const [element, controls] = ScrollSections();
     return (
         <>
-            <StyledDivWrapper id="skills" variants = {fade} animate={controls} initial = 'hidden' ref={element}>
+            <StyledDivWrapper 
+                id="skills" 
+                variants = {fade} 
+                animate={controls} 
+                initial = 'hidden' 
+                ref={element}>
                 <StyledText>Tech & tools</StyledText>
                 <SkillsIcons>
                     <img src={html} alt="html" />

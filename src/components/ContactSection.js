@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion'
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { ScrollSections } from './ScrollSections'
 import { fade } from '../animation'
 
@@ -10,6 +10,11 @@ const ContactSection = () => {
     //form submission PENDING
     //state object
     const [element, controls] = ScrollSections();
+    const inputRef = useRef();
+
+    useEffect(() => {
+        inputRef.current.focus();
+    }, []);
 
     const [values, setValues] = useState({
         firstName: '',
@@ -59,7 +64,11 @@ const ContactSection = () => {
     };
 
     return(
-        <StyledFormWrapper variants = {fade} animate={controls} initial = 'hidden' ref={element}>
+        <StyledFormWrapper 
+            variants = {fade} 
+            animate={controls} 
+            initial = 'hidden' 
+            ref={element}>
             <StyledH2Contact>Contact me</StyledH2Contact>
             <div className = "form" id="contact">
             <form onSubmit={handleSubmit}>
@@ -70,6 +79,7 @@ const ContactSection = () => {
                     type = "text" 
                     // disabled={setSubmitted}
                     placeholder ="First name" 
+                    ref={inputRef}
                     value={values.firstName} 
                     onChange={handleFirstNameInputChange}
                     />
