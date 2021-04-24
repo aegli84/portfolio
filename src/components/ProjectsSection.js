@@ -6,7 +6,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faDesktop } from '@fortawesome/free-solid-svg-icons';
 import portfolioo from '../assets/portfolioo.png'
-import todo from '../assets/todo.png'
+import todo from '../assets/todo.gif'
+import foodapp from '../assets/foodapp.gif'
 import comingsoon from '../assets/comingsoon.jpg'
 //import {ScrollSections} from './ScrollSections'
 
@@ -124,10 +125,10 @@ const ProjectsSection = () => {
                     <StyledDivCard  
                         className = "card" 
                         whileHover={{scale: 1.1}}> 
-                    <img src={comingsoon} alt="todo"/>
-                    <StyledH3>Project undefined</StyledH3>
+                    <img src={foodapp} alt="recipe-app"/>
+                    <StyledH3>Mangiare - recipe search</StyledH3>
                         <Link 
-                            to = {{pathname:"https://github.com/aegli84/Todo-list"}} 
+                            to = {{pathname:"https://github.com/aegli84/Mangiare---recipe-search"}} 
                             target={"_blank"} 
                             rel="noopener noreferrer">
                             <FontAwesomeIcon 
@@ -139,7 +140,7 @@ const ProjectsSection = () => {
                                 icon = {faGithub}/>
                         </Link>
                         <Link 
-                            to = {{pathname:"hhttps://aegli84.github.io/Todo-list/"}} 
+                            to = {{pathname:""}} 
                             target={"_blank"} 
                             rel="noopener noreferrer">
                             <FontAwesomeIcon 
@@ -151,9 +152,9 @@ const ProjectsSection = () => {
                                 icon = {faDesktop}/>
                         </Link>
                     <StyledPara>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, delectus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. </StyledPara> 
-                    <StyledH6>HTML</StyledH6>
-                    <StyledH6>CSS</StyledH6>
-                    <StyledH6>JAVASCRIPT</StyledH6>
+                    <StyledH6>REACT</StyledH6>
+                    <StyledH6>STYLED-COMPONENTS</StyledH6>
+                    <StyledH6>API</StyledH6>
                 </StyledDivCard> 
                     <StyledDivCard  
                         className = "card" 
@@ -265,6 +266,7 @@ const StyledDivCard = styled(motion.div) `
     overflow: hidden;
     &:hover {
         border: 2px solid rgba(245, 245, 245, 0.829);
+        box-shadow: 0px 5px 20px #515861;
     }
 @media (max-width: 1024px){
         width: 40vw;

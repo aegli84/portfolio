@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion'
-import { useState, useRef, useEffect } from 'react';
+import { useState } from 'react';
 import { ScrollSections } from './ScrollSections'
 import { fade } from '../animation'
 
@@ -10,11 +10,6 @@ const ContactSection = () => {
     //form submission PENDING
     //state object
     const [element, controls] = ScrollSections();
-    const inputRef = useRef();
-
-    useEffect(() => {
-        inputRef.current.focus();
-    }, []);
 
     const [values, setValues] = useState({
         firstName: '',
@@ -79,7 +74,6 @@ const ContactSection = () => {
                     type = "text" 
                     // disabled={setSubmitted}
                     placeholder ="First name" 
-                    ref={inputRef}
                     value={values.firstName} 
                     onChange={handleFirstNameInputChange}
                     />
