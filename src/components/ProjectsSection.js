@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faDesktop } from '@fortawesome/free-solid-svg-icons';
-import portfolioo from '../assets/portfolioo.png'
+import portfolio from '../assets/portfolio.gif'
 import todo from '../assets/todo.gif'
 import foodapp from '../assets/foodapp.gif'
 import comingsoon from '../assets/comingsoon.jpg'
@@ -25,7 +25,7 @@ const ProjectsSection = () => {
                     <img src={meditationapp} alt="html"/>
                     <StyledH3>Heaven - Meditation Web App</StyledH3>
                         <Link 
-                            to = {{pathname:"https://github.com/aegli84"}} 
+                            to = {{pathname:"https://github.com/aegli84/heaven"}} 
                             target = {"_blank"} 
                             rel = "noopener noreferrer">
                         <FontAwesomeIcon 
@@ -48,7 +48,7 @@ const ProjectsSection = () => {
                             fixedWidth
                             icon = {faDesktop}/>
                         </Link>
-                    <StyledPara>Project under construction. All links lead to my GitHub until further notice </StyledPara> 
+                    <StyledPara>Project under construction. All links lead to my personal GitHub until further notice </StyledPara> 
                     <StyledH6>REACT</StyledH6>
                     <StyledH6>SASS</StyledH6>
                     <StyledH6>FRAMER MOTION</StyledH6>
@@ -57,7 +57,7 @@ const ProjectsSection = () => {
                     
                         className = "card" 
                         whileHover={{scale: 1.1}}> 
-                    <img src={portfolioo} alt="webdev"/>
+                    <img src={portfolio} alt="webdev"/>
                     <StyledH3>WebDev Portfolio</StyledH3>
                         <Link 
                             to = {{pathname:"https://github.com/aegli84/portfolio"}} 
@@ -72,7 +72,7 @@ const ProjectsSection = () => {
                                 icon = {faGithub}/>
                             </Link>
                         <Link 
-                            to = {{pathname:"https://portfolio-andreea-egli-760d4eup8-aegli84.vercel.app/"}} 
+                            to = {{pathname:"https://portfolio-andreea-egli-jwlmizxe7-aegli84.vercel.app/"}} 
                             target={"_blank"} 
                             rel="noopener noreferrer">
                             <FontAwesomeIcon 
@@ -83,7 +83,7 @@ const ProjectsSection = () => {
                                 fixedWidth
                                 icon = {faDesktop}/>
                         </Link>
-                    <StyledPara>Portfolio built in React with styled-components for stylig and framer motion for page animations. A long content page with scroll to section for a modern look.</StyledPara> 
+                    <StyledPara>Portfolio built in React with styled-components for stylig and framer motion for page animations. A long content page with a smooth scroll to section for a modern look and feel</StyledPara> 
                     <StyledH6>REACT</StyledH6>
                     <StyledH6>STYLED-COMPONENTS</StyledH6>
                     <StyledH6>FRAMER MOTION</StyledH6>
@@ -117,7 +117,7 @@ const ProjectsSection = () => {
                                 fixedWidth
                                 icon = {faDesktop}/>
                         </Link>
-                    <StyledPara>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, delectus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. </StyledPara> 
+                    <StyledPara>A classic and simple to-do list built with HTML, CSS and vanilla Javascript with a touch of light animations</StyledPara> 
                     <StyledH6>HTML</StyledH6>
                     <StyledH6>CSS</StyledH6>
                     <StyledH6>JAVASCRIPT</StyledH6>
@@ -151,7 +151,7 @@ const ProjectsSection = () => {
                                 fixedWidth
                                 icon = {faDesktop}/>
                         </Link>
-                    <StyledPara>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, delectus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. </StyledPara> 
+                    <StyledPara>A simple recipe API search web app built in React with React hooks. Future versions will include account creation and login as well as recipe saving and organizing</StyledPara> 
                     <StyledH6>REACT</StyledH6>
                     <StyledH6>STYLED-COMPONENTS</StyledH6>
                     <StyledH6>API</StyledH6>
