@@ -9,6 +9,7 @@ import portfolio from '../assets/portfolio.gif'
 import todo from '../assets/todo.gif'
 import foodapp from '../assets/foodapp.gif'
 import comingsoon from '../assets/comingsoon.jpg'
+import Curly from './Curly' 
 //import {ScrollSections} from './ScrollSections'
 
 const ProjectsSection = () => {
@@ -225,6 +226,7 @@ const ProjectsSection = () => {
                     <StyledH6>JAVASCRIPT</StyledH6>
                 </StyledDivCard> 
             </StyledDivCardsWrapper>
+        {/* <h3><Para>Check back soon for new and exciting projects!</Para></h3> */}
         </motion.div>
         </>
     )
@@ -305,7 +307,7 @@ const StyledDivCard = styled(motion.div) `
         @media (max-width: 500px){
         font-size: 2rem;
         margin-bottom: 1rem;
-    }
+        }
     }
     
 `
@@ -359,6 +361,14 @@ const StyledPara = styled.p`
     @media (max-width: 768px){
         font-size: 1.8vh;
     }
-
 `
+const Para = styled.p`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: underline; 
+    font-weight: 500;
+    font-size: 2.7vh;
+`
+
 export default ProjectsSection;
