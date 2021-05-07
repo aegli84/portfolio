@@ -8,8 +8,7 @@ import { faDesktop } from '@fortawesome/free-solid-svg-icons';
 import portfolio from '../assets/portfolio.gif'
 import todo from '../assets/todo.gif'
 import foodapp from '../assets/foodapp.gif'
-import comingsoon from '../assets/comingsoon.jpg'
-import Curly from './Curly' 
+import comingsoon from '../assets/comingsoon.jpg' 
 //import {ScrollSections} from './ScrollSections'
 
 const ProjectsSection = () => {
@@ -362,13 +361,13 @@ const StyledPara = styled.p`
         font-size: 1.8vh;
     }
 `
-const Para = styled.p`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: underline; 
-    font-weight: 500;
-    font-size: 2.7vh;
-`
+// const Para = styled.p`
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     text-decoration: underline; 
+//     font-weight: 500;
+//     font-size: 2.7vh;
+// `
 
 export default ProjectsSection;

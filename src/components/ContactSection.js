@@ -56,6 +56,7 @@ const ContactSection = () => {
         setValid(true);
         }
         setSubmitted(true);
+        //setValues(values);
     };
 
     return(

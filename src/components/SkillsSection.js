@@ -20,6 +20,7 @@ import {fade} from '../animation'
 
 const SkillsSection = () => {
     const [element, controls] = ScrollSections();
+
     return (
         <>
             <StyledDivWrapper 
