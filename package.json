@@ -12,6 +12,7 @@
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.1",
+    "emailjs-com": "^2.6.4",
     "express": "^4.17.1",
     "file-saver": "^2.0.5",
     "framer-motion": "^4.0.0",
@@ -61,5 +62,17 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "description": "<!-- **Portfolio built in React",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aegli84/portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aegli84/portfolio/issues"
   }
 }

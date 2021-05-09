@@ -3,12 +3,14 @@ import { motion } from 'framer-motion'
 import { useState } from 'react';
 import { ScrollSections } from './ScrollSections'
 import { fade } from '../animation'
+import emailjs from 'emailjs-com'
 
 const ContactSection = () => {
     //TO DO!!! 
     //form validation with state hooks DONE 
     //form submission PENDING
     //state object
+
     const [element, controls] = ScrollSections();
 
     const [values, setValues] = useState({
@@ -49,16 +51,31 @@ const ContactSection = () => {
             
         }));
     };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
+    const isFormValid = () => {
         if(values.firstName && values.lastName && values.email && values.message) {
         setValid(true);
         }
         setSubmitted(true);
-        //setValues(values);
     };
+    const sendEmail = (e) => {
+    emailjs.sendForm('service_f1p0t7i', 'template_uizlxy5', e.target, 'user_KuHi5dO9Dm285xRgiHUrl')
+        .then((result) => {
+            console.log(result.text + 'works');
+        }, (error) => {
+            console.log(error.text + 'not working');
+        });
+    }
+    
 
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        if (!isFormValid()) {
+            alert('Please fill in all fealds')
+        } else {
+            sendEmail(e)
+            
+        }
+    }
     return(
         <StyledFormWrapper 
             variants = {fade} 
@@ -68,12 +85,12 @@ const ContactSection = () => {
             <StyledH2Contact>Contact me</StyledH2Contact>
             <div className = "form" id="contact">
             <form onSubmit={handleSubmit}>
-            {submitted && valid ? <div class='success-message'>SENT! Thank you for your message</div> : null}
+            {submitted && valid ? <div className='success-message'>SENT! Thank you for your message</div> : null}
                 <input 
                     id="first-name"
                     name = "firstName" 
                     type = "text" 
-                    // disabled={setSubmitted}
+                    //disabled={setSubmitted}
                     placeholder ="First name" 
                     value={values.firstName} 
                     onChange={handleFirstNameInputChange}
@@ -110,13 +127,12 @@ const ContactSection = () => {
             </textarea>
             {submitted && !values.message ? <div id="message-error">Please enter your message</div> : null}
             <div>
-                <button onClick={handleSubmit} 
+                <input onClick={handleSubmit} 
                     className = "button"
                     id = "submit" 
                     type = "submit" 
                     value = "submit"
-                    >Send
-                </button>
+                    />
             </div>
         </div>
     </StyledFormWrapper>
@@ -223,7 +239,7 @@ const StyledFormWrapper = styled(motion.div) `
         }
     }
 
-    button {
+    .button {
         font-weight: bold;
         font-size: 1rem;
         padding: 1rem 2.5rem;
