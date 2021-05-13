@@ -20,24 +20,24 @@ const AboutSection = () => {
                 <StyledAbout>
                     <div className = "description" id="about" >
                         <div className = "title">
-                        <StyledAllBigText>
-                        <StyledHI>Hello!</StyledHI>
+                        <BigText>
+                        <HI>Hello!</HI>
                             <motion.h2 variants = {titleAnimation}> My name is <StyledA>Andreea</StyledA>
                             </motion.h2>
-                        </StyledAllBigText>
-                        <StyledAllBigText>
+                        </BigText>
+                        <BigText>
                             <motion.h2 variants = {titleAnimation} ><span>and I'm a</span></motion.h2>
-                        </StyledAllBigText>
-                        <StyledAllBigText>
-                            <StyledH2  variants = {titleAnimation}><span>Full-Stack Web Developer.</span></StyledH2>
-                        </StyledAllBigText>
+                        </BigText>
+                        <BigText>
+                            <H2 variants = {titleAnimation}><span>Full-Stack Web Developer.</span></H2>
+                        </BigText>
                     </div>
-                        <StyledP variants = {fade}>I'm very captivated by everything that has to do with front-end development but I'm also very fascinated by how things work behind the scenes in the back-end
-                        </StyledP>
+                        <P variants = {fade}>I'm very captivated by everything that has to do with front-end development but I'm also very fascinated by how things work behind the scenes in the back-end
+                        </P>
                     <Resume/>
                 </div>
                 <motion.div  variants = {photoAnimation} className = "image">
-                    <StyledImg 
+                    <Img 
                     whileHover={{ scale: 1.1 }}
                         src = {aeh} 
                         alt = "andreea egli"/>
@@ -71,12 +71,12 @@ const StyledAbout = styled.div`
     margin-top: 5rem;
     } 
 `
-const StyledHI = styled.h2 `
+const HI = styled.h2 `
     font-weight: 900;
     font-size: 3.5rem;
     color: lightgreen; 
 `
-const StyledP = styled(motion.p)`
+const P = styled(motion.p)`
     margin-top: 1.5rem;
     font-weight: 400;
     padding-right: 8rem;
@@ -89,7 +89,7 @@ const StyledP = styled(motion.p)`
     margin-top: 0;
     }
 `
-const StyledH2 = styled(motion.h2)`
+const H2 = styled(motion.h2)`
     font-weight: 900;
     color: lightgreen;
 `
@@ -97,7 +97,7 @@ const StyledA = styled.a `
     color: lightgreen;
     font-weight: 900;
 `
-const StyledImg = styled(motion.img)`
+const Img = styled(motion.img)`
     width: 35vh;
     height: 35vh;
     margin-right: 5rem;
@@ -108,19 +108,19 @@ const StyledImg = styled(motion.img)`
     border: 2px solid rgba(245, 245, 245, 0.829);
 
 @media (max-width: 1024px){
-    margin: 5rem 12rem 5rem 0rem; 
-    width: 19vh;
-    height: 19vh;
+    margin: 5rem 10rem 5rem 0rem; 
+    width: 20vh;
+    height: 20vh;
     } 
 @media (max-width: 768px){
-    margin: 3rem 12rem 5rem 0rem; 
+    margin-left: 1rem;
     width: 17vh;
     height: 17vh;
     border: 1px solid rgba(245, 245, 245, 0.829);
     /* display: none; */
     }
 `
-const StyledAllBigText = styled.div `
+const BigText = styled.div `
     /* overflow: hidden; */
     text-shadow: 0  15px 7px black; 
 `

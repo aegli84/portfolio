@@ -23,14 +23,14 @@ const SkillsSection = () => {
 
     return (
         <>
-            <StyledDivWrapper 
+            <DivWrapper 
                 id="skills" 
                 variants = {fade} 
                 animate={controls} 
                 initial = 'hidden' 
                 ref={element}>
-                <StyledText>Tech & tools</StyledText>
-                <SkillsIcons>
+                <Text>Tech & tools</Text>
+                <Icons>
                     <img src={html} alt="html" />
                     <img src={css} alt="css" />
                     <img src={bootstrap} alt="bootstrap" />
@@ -45,13 +45,13 @@ const SkillsSection = () => {
                     <img src={vscode} alt="vscode" />
                     <img src={terminal} alt="terminal" />
                     <img src={figma} alt="figma" />
-                </SkillsIcons>
-        </StyledDivWrapper>
+                </Icons>
+        </DivWrapper>
         </>
     );
 };
 
-const StyledDivWrapper = styled(motion.div) `
+const DivWrapper = styled(motion.div) `
     min-height: 90vh;
     margin-left: 15vh; 
     margin-right: 15vh;
@@ -69,7 +69,7 @@ const StyledDivWrapper = styled(motion.div) `
     padding-top: 23vh;
     }  
 `
-const StyledText = styled.h2`
+const Text = styled.h2`
     margin-bottom: 15vh; 
     font-weight: 900;
     color: whitesmoke;
@@ -85,7 +85,7 @@ const StyledText = styled.h2`
     } 
 `
 
-const SkillsIcons = styled.div`
+const Icons = styled.div`
     height: 40vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;

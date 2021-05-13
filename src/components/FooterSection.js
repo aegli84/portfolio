@@ -2,13 +2,13 @@ import styled from 'styled-components'
 
 const FooterSection = () => {
     return (
-        <StyledDiv>
-            <StyledH4>Made with ❤️ by Andreea Egli 2021</StyledH4>
-        </StyledDiv>
+        <Div>
+            <H4>Made with ❤️ by Andreea Egli 2021</H4>
+        </Div>
     )
 }
 
-const StyledDiv = styled.div `
+const Div = styled.div `
     display: flex;
     justify-content: center;
     margin-bottom: 1rem;
@@ -18,7 +18,7 @@ const StyledDiv = styled.div `
         margin-bottom: 2rem;
     }
 `
-const StyledH4 = styled.h4`
+const H4 = styled.h4`
     color: whitesmoke;
     font-weight: lighter;
     font-size: 0.8rem;

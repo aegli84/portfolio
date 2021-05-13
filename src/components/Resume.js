@@ -6,19 +6,19 @@ import { fade } from '../animation'
 
 const Resume = () => {
     return (
-        <StyledDiv 
+        <Div 
             variants = {fade}>
-            <StyledA 
+            <A 
                 whileHover={{scale: 1.1}}
                 onClick={() => window.open(cv)} 
                 target = "_blank" 
                 >Resume
-            </StyledA>
-        </StyledDiv>
+            </A>
+        </Div>
     );
 }
 
-const StyledDiv = styled(motion.div)`
+const Div = styled(motion.div)`
     padding-top: 3rem;
 
 @media (max-width: 500px){
@@ -27,7 +27,7 @@ const StyledDiv = styled(motion.div)`
         font-size: 1.2rem;
         }
 `
-const StyledA = styled(motion.a)`
+const A = styled(motion.a)`
     font-weight: bold;
     font-size: 1rem;
     padding: 1rem 2rem;

@@ -8,13 +8,13 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 const Connect = () => {
     return (
-        <StyledDivWrapper className = "connect">
-            <StyledUl>
-                <StyledText>Let's connect</StyledText>
-                    <StyledLine>
+        <DivWrapper className = "connect">
+            <Ul>
+                <Text>Let's connect</Text>
+                    <Line>
                         <div> - - /// - - </div>
-                    </StyledLine>
-                <StyledIcons>
+                    </Line>
+                <Icons>
                     <Link 
                         to = {{pathname:"https://github.com/aegli84"}} 
                         target={"_blank"} 
@@ -37,8 +37,8 @@ const Connect = () => {
                                 icon = {faGithub}/>
                         </motion.div>
                     </Link>
-                </StyledIcons>
-                <StyledIcons>
+                </Icons>
+                <Icons>
                     <Link 
                         to = {{pathname: "https://www.linkedin.com/in/andreeaegli/"}} 
                         target={"_blank"} 
@@ -61,10 +61,9 @@ const Connect = () => {
                                 icon = {faLinkedin}/>
                         </motion.div>
                     </Link>
-                </StyledIcons>
-                <StyledIcons>
+                </Icons>
+                <Icons>
                     <Link 
-                    
                         to = {{pathname:"mailto:aegli@ymail.com"}} 
                         target={"_blank"} 
                         rel="noopener noreferrer"> 
@@ -87,13 +86,13 @@ const Connect = () => {
                                 icon = {faEnvelope}/>  
                         </motion.div>
                     </Link>
-                </StyledIcons>
-        </StyledUl>
-        </StyledDivWrapper>
+                </Icons>
+        </Ul>
+        </DivWrapper>
     );
 };
     
-const StyledDivWrapper = styled.div`
+const DivWrapper = styled.div`
     margin-top: -70vh;
     margin-right: 2.5rem;
     display: flex;
@@ -105,15 +104,19 @@ const StyledDivWrapper = styled.div`
 @media (max-width: 1024px){
     writing-mode: horizontal-tb;
     line-height: 2rem;
-    padding: 11rem;
+    margin-right: 20rem;
+    padding-top: 8rem;
+
     }
 @media (max-width: 768px){
     writing-mode: horizontal-tb;
-    line-height: 2rem;
-    padding: 10rem 0;
+    line-height: 1rem;
+    margin-right: 1rem;
+    padding-top: 15rem;
+    padding-right: 1rem;
     } 
 `
-const StyledText = styled.li`
+const Text = styled.li`
     writing-mode: vertical-rl;
     text-orientation: mixed;
     color: whitesmoke;
@@ -131,14 +134,14 @@ const StyledText = styled.li`
     padding: 0 0 0 0.4rem;
     } 
 `
-const StyledUl = styled.ul`
+const Ul = styled.ul`
     list-style: none;
     &:hover {
         color: lightgreen;
         transition: all 0.7s ease;
     }
 `
-const StyledLine = styled.li`
+const Line = styled.li`
     writing-mode: vertical-rl;
     text-orientation: mixed;
     margin-top: 1rem;
@@ -153,7 +156,7 @@ const StyledLine = styled.li`
     padding: 0 3.5rem;
     }
 `
-const StyledIcons = styled.li`
+const Icons = styled.li`
     margin: 0.3rem 0.2rem;
     
 @media (max-width: 1024px){

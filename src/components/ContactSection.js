@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { useState } from 'react';
 import { ScrollSections } from './ScrollSections'
 import { fade } from '../animation'
-import emailjs from 'emailjs-com'
+//import emailjs from 'emailjs-com'
 
 const ContactSection = () => {
     //TO DO!!! 
@@ -17,72 +17,61 @@ const ContactSection = () => {
         firstName: '',
         lastName: '',
         email: '',
-        message: '',
+        message: ''
     });
 
     const [submitted, setSubmitted] = useState(false);
 
     const [valid, setValid] = useState(false);
 
-    const handleFirstNameInputChange = (event) => {
-        setValues((values) => ({
-            ...values,
-            firstName: event.target.value,
-        }));
-    };
-    const handleLastNameInputChange = (event) => {
-        setValues((values) => ({
-            ...values,
-            lastName: event.target.value,
+    const fillForm = (e, field) => {
+        let newForm = {...values};
+        newForm[field] = e.target.value;
+        setValues(newForm);
+    }
+    // //form validation
+    // const isFormValid = () => {
+    //     if(values.firstName && values.lastName && values.email && values.message) {
+    //     setValid(true);
+    //     }
+    //     setSubmitted(true);
+        
+    // };
+    // //sending email
+    // const sendEmail = (e) => {
+    // emailjs.sendForm('service_f1p0t7i', 'template_uizlxy5', e.target, 'user_KuHi5dO9Dm285xRgiHUrl')
+    //     .then((result) => {
+    //         console.log(result.text + 'works');
+    //     }, (error) => {
+    //         console.log(error.text + 'not working');
+    //     });
+    // }
+    
+
+    // const handleSubmit = (e) => {
+    //     e.preventDefault()
+    //     if (!isFormValid()) {
+    //     } else {
+    //         sendEmail(e)
             
-        }));
-    };
-    const handleEmailInputChange = (event) => {
-        setValues((values) => ({
-            ...values,
-            email: event.target.value,
-            
-        }));
-    };
-    const handleMessageInputChange = (event) => {
-        setValues((values) => ({
-            ...values,
-            message: event.target.value,
-            
-        }));
-    };
-    const isFormValid = () => {
+    //     }
+    // }
+    const handleSubmit = (e) => {
+        e.preventDefault();
         if(values.firstName && values.lastName && values.email && values.message) {
         setValid(true);
         }
         setSubmitted(true);
+        setValues({firstName: '', lastName: '', email: '', message: ''}) 
     };
-    const sendEmail = (e) => {
-    emailjs.sendForm('service_f1p0t7i', 'template_uizlxy5', e.target, 'user_KuHi5dO9Dm285xRgiHUrl')
-        .then((result) => {
-            console.log(result.text + 'works');
-        }, (error) => {
-            console.log(error.text + 'not working');
-        });
-    }
-    
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        if (!isFormValid()) {
-            alert('Please fill in all fealds')
-        } else {
-            sendEmail(e)
-            
-        }
-    }
     return(
-        <StyledFormWrapper 
+        <FormWrapper 
             variants = {fade} 
             animate={controls} 
             initial = 'hidden' 
             ref={element}>
-            <StyledH2Contact>Contact me</StyledH2Contact>
+            <H2>Contact me</H2>
             <div className = "form" id="contact">
             <form onSubmit={handleSubmit}>
             {submitted && valid ? <div className='success-message'>SENT! Thank you for your message</div> : null}
@@ -93,7 +82,7 @@ const ContactSection = () => {
                     //disabled={setSubmitted}
                     placeholder ="First name" 
                     value={values.firstName} 
-                    onChange={handleFirstNameInputChange}
+                    onChange = {(e) => fillForm(e, 'firstName')}
                     />
                 {submitted && !values.firstName ? <span id="first-name-error">Please enter your first name</span>: null} 
                 <input 
@@ -102,7 +91,7 @@ const ContactSection = () => {
                     type = "text" 
                     placeholder ="Last name" 
                     value={values.lastName} 
-                    onChange={handleLastNameInputChange}
+                    onChange = {(e) => fillForm(e, 'lastName')}
                     />
                 {submitted && !values.lastName ?<span id="last-name-error">Please enter your last name</span> : null} 
                 <input 
@@ -111,7 +100,7 @@ const ContactSection = () => {
                     type = "text" 
                     placeholder ="you@email.com" 
                     value={values.email}
-                    onChange={handleEmailInputChange}
+                    onChange = {(e) => fillForm(e, 'email')}
                     />
                 {submitted && !values.email ? <span id="email-error">Please enter your email address</span> :null} 
             </form>
@@ -123,23 +112,26 @@ const ContactSection = () => {
                 rows = "7" 
                 placeholder= "Your message here"
                 value={values.message}
-                onChange={handleMessageInputChange}>
+                onChange = {(e) => fillForm(e, 'message')}>
             </textarea>
             {submitted && !values.message ? <div id="message-error">Please enter your message</div> : null}
             <div>
-                <input onClick={handleSubmit} 
+            <button 
+            onClick={handleSubmit}
+            // onClick={() => setValues({firstName: '', lastName: '', email: '',message: '',})} 
                     className = "button"
                     id = "submit" 
                     type = "submit" 
                     value = "submit"
-                    />
+                    >Send
+                </button>
             </div>
         </div>
-    </StyledFormWrapper>
+    </FormWrapper>
     )
 }
 
-const StyledFormWrapper = styled(motion.div) `
+const FormWrapper = styled(motion.div) `
     min-height: 90vh;
     margin-top: 10vh;
     padding-top: 2rem;
@@ -264,14 +256,13 @@ const StyledFormWrapper = styled(motion.div) `
         }
     } 
 `
-const StyledH2Contact = styled.h2 `
+const H2 = styled.h2 `
     justify-content: center;
     padding-top: 5vh;
     font-weight: 900;
     color: whitesmoke;
     
 @media (max-width: 768px){
-    
         margin-top: 1vh;
         padding-top: 2rem;
         padding-bottom: 3vh;

@@ -10,7 +10,7 @@ const NavbarPages = () => {
     const { pathname } = useLocation();
     
     return (
-        <StyledNavContainer>
+        <NavContainer>
             <h1>
                 <ScrollIntoView selector= "#about">
                     <Link id = "logo" to= "/about">ae.</Link>
@@ -59,11 +59,11 @@ const NavbarPages = () => {
                             /> 
                 </li>
             </ul>
-        </StyledNavContainer>
+        </NavContainer>
     )
 }
 
-const StyledNavContainer = styled.nav`
+const NavContainer = styled.nav`
     min-height: 10vh;
     display: flex;
     align-items: flex-end;
