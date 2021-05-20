@@ -252,7 +252,7 @@ const Card = styled(motion.div)`
     }
 @media (max-width: 1024px){
         width: 35vw;
-        height: 45vh;
+        height: 65vh;
         margin: 1vh;
     }
 @media (max-width: 768px){
@@ -260,9 +260,9 @@ const Card = styled(motion.div)`
         height: 70vh;
     } 
 @media (max-width: 500px){
-    height: 57vh;
+    height: 65vh;
     width: 85vw;
-    font-size: 1rem;
+    font-size: 1.8rem;
     margin-bottom: 2.5rem;
     } 
     
@@ -271,7 +271,7 @@ const Card = styled(motion.div)`
         width: 26vw;
 @media (max-width: 1024px){
         width: 35vw;
-        height: 20vh;
+        height: 32.5vh;
     }
 @media (max-width: 768px){
         width: 70vw;
@@ -279,7 +279,7 @@ const Card = styled(motion.div)`
     } 
 @media (max-width: 500px){
         width: 80vw;
-        height: 25.5vh;
+        height: 30vh;
         }
     }
     .github,

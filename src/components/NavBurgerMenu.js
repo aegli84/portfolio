@@ -8,19 +8,19 @@ const BurgerMenu = () => {
     const [open, setOpen] = useState(false)
 
     return (
-        <StyledNav>
-            <StyledLogo >ae.</StyledLogo>
-                <StyledBurger open={open} onClick={() => setOpen(!open)}>
-                <div />
-                <div />
-                <div />
-            </StyledBurger>
+        <Nav>
+            <Logo >ae.</Logo>
+                <Burger open={open} onClick={() => setOpen(!open)}>
+                    <div />
+                    <div />
+                    <div />
+                </Burger>
             <SideNav open={open} setOpen={setOpen}/>
-        </StyledNav>
+        </Nav>
     )
 };
 
-const StyledNav = styled.nav`
+const Nav = styled.nav`
     display: none;
     
     @media (min-width: 320px) and (max-width: 768px) {
@@ -38,7 +38,7 @@ const StyledNav = styled.nav`
     z-index: 1;
     }
 `
-const StyledBurger = styled.div`
+const Burger = styled.div`
     display: none;
     
 @media (min-width: 320px) and (max-width: 768px) {
@@ -71,7 +71,7 @@ const StyledBurger = styled.div`
     }}
 }
 `
-const StyledLogo = styled.div`
+const Logo = styled.div`
     display: none;  
     @media (max-width: 768px) {
         display: block;

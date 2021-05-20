@@ -62,7 +62,7 @@ const ContactSection = () => {
         setValid(true);
         }
         setSubmitted(true);
-        setValues({firstName: '', lastName: '', email: '', message: ''}) 
+        //setValues({firstName: '', lastName: '', email: '', message: ''}) 
     };
 
     return(
