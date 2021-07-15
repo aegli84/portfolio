@@ -20,7 +20,7 @@ function App() {
       <SkillsSection/>
       <ProjectsSection/>
       <ContactSection/>
-      <FooterSection/>
+      <FooterSection />
     </div>
   );
 }
