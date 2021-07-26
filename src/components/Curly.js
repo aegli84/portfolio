@@ -29,10 +29,15 @@ const CurlySvg = styled.svg `
     z-index: -1;
     left: 0;
 
-@media (min-width: 320px) and (max-width: 1024px){
+@media (max-width: 768px){
     height: 88vh;
     width: 100vw; 
     padding-bottom: 10vh;
+    }
+@media (max-width: 480px){
+    height: 90vh;
+    width: 110vw; 
+    
     }
 `
 export default Curly;

@@ -88,9 +88,9 @@ const DivWrapper = styled.div`
 
 @media (max-width: 768px){
     writing-mode: horizontal-tb;
-    line-height: 2rem;
+    line-height: 1.5rem;
     position: relative;
-    top: -40rem;
+    top: -37rem;
     left: 35rem;
 
     }
@@ -98,7 +98,7 @@ const DivWrapper = styled.div`
     writing-mode: horizontal-tb;
     line-height: 1rem;
     position: absolute;
-    top: 60rem;
+    top: 64rem;
     left:17rem;
     margin-right: 1.2rem;
     } 

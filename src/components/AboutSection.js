@@ -88,7 +88,7 @@ const P = styled(motion.p)`
     padding: 2rem;
     } 
 @media (max-width: 480px){
-    padding: 2rem 1rem 1rem;
+    padding: 3rem 1rem 2rem;
     
     }
 `
@@ -111,14 +111,14 @@ const Img = styled(motion.img)`
     border: 2px solid rgba(245, 245, 245, 0.829);
 
 @media (max-width: 768px){
-    margin: 5rem 19rem 5rem 3rem; 
-    width: 15vh;
-    height: 15vh;
+    margin: 7rem 25rem 5rem 3rem; 
+    width: 18vh;
+    height: 18vh;
     } 
 @media (max-width: 480px){
-    margin: 1rem 13rem 0 1rem;
-    width: 15vh;
-    height: 15vh;
+    margin: 3rem 13rem 0 1rem;
+    width: 17vh;
+    height: 17vh;
     border: 1px solid rgba(245, 245, 245, 0.829);
     /* display: none; */
     }

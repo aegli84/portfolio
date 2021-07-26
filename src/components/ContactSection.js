@@ -101,7 +101,8 @@ const FormWrapper = styled(motion.div) `
 @media (max-width: 480px){
     margin-top: 5rem;  
     margin-bottom: 7rem;
-    padding: 7rem 2rem;
+    margin-left: 1.2rem;
+    padding: 1rem;
     }
 
     form {
@@ -136,6 +137,7 @@ const FormWrapper = styled(motion.div) `
         justify-content: left;
         color: whitesmoke;
         font-size: 0.9rem;
+        font-family: 'Montserrat', sans-serif;
         border: none;
         border-bottom: 1px solid lightgreen;
         border-bottom-left-radius: 5px;
@@ -149,10 +151,12 @@ const FormWrapper = styled(motion.div) `
         margin-top: 2.2rem;
         width: 70vw; 
         border-bottom: 2px solid lightgreen;
+        font-size: 1.5rem; 
         }
     @media (max-width: 480px){
         margin-top: 2.5rem;
         width: 70vw; 
+        font-size: 1.3rem; 
         }
     }
 
@@ -177,15 +181,17 @@ const FormWrapper = styled(motion.div) `
         } 
 
     @media (max-width: 768px){
-        margin-left: 0.5rem; 
         margin-top: 5rem;
         width: 70vw;
         height: 15rem;
         border-bottom: 2px solid lightgreen;
+        font-size: 1.6rem; 
         }
     @media (max-width: 480px){
         margin-top: 4rem;
-        width: 69vw;
+        width: 70vw;
+        border-bottom: 2px solid lightgreen;
+        font-size: 1.5rem;
         }
     }
     
