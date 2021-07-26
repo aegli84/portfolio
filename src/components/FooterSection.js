@@ -23,9 +23,10 @@ const H4 = styled.h4`
     font-weight: lighter;
     font-size: 0.8rem;
 
-@media (min-width: 320px) and (max-width: 1024px){
+@media (max-width: 480px){
         font-size: 1rem; 
-        /* margin-top: 1rem; */
+        padding-top: 3rem;
+        margin-top: 1rem;
     }
 `
 

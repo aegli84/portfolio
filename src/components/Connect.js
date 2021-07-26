@@ -82,23 +82,23 @@ const Connect = () => {
     
 const DivWrapper = styled.div`
     position: relative;
-    top: -60vh;
-    left:85rem;
+    top: -30rem;
+    left: 85rem;
     line-height: 2rem;
 
 @media (max-width: 768px){
     writing-mode: horizontal-tb;
     line-height: 2rem;
     position: relative;
-    top: -47vh;
+    top: -40rem;
     left: 35rem;
 
     }
 @media (max-width: 480px){
     writing-mode: horizontal-tb;
     line-height: 1rem;
-    position: relative;
-    top: -20vh;
+    position: absolute;
+    top: 60rem;
     left:17rem;
     margin-right: 1.2rem;
     } 

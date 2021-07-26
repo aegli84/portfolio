@@ -258,7 +258,7 @@ const Card = styled(motion.div)`
     }
 
 @media (max-width: 480px){
-    height: 60vh;
+    height: 65vh;
     width: 90vw;
     font-size: 1.8rem;
     margin: 1.5rem;

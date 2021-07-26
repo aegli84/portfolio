@@ -88,6 +88,7 @@ const FormWrapper = styled(motion.div) `
     height: 90vh;
     margin-top: 10vh;
     padding-top: 2rem;
+    padding-bottom: 2rem;
     text-align: center;
     align-items: center;
     display: block;
@@ -98,7 +99,8 @@ const FormWrapper = styled(motion.div) `
     padding: 7rem 2rem;
     }
 @media (max-width: 480px){
-    margin-top: 10vh;  
+    margin-top: 5rem;  
+    margin-bottom: 7rem;
     padding: 7rem 2rem;
     }
 
