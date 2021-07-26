@@ -26,7 +26,7 @@ const H4 = styled.h4`
 @media (max-width: 480px){
         font-size: 1rem; 
         padding-top: 3rem;
-        margin-top: 1rem;
+        margin-top: 10rem;
     }
 `
 

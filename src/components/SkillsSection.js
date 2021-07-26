@@ -66,7 +66,7 @@ const DivWrapper = styled(motion.div) `
     margin-left: 5vh; 
     margin-right: 3vh;
     margin-bottom: 5vh;
-    margin-top: 25vh;
+    margin-top: 35vh;
     }  
 `
 const Text = styled.h2`

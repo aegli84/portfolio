@@ -305,6 +305,7 @@ const H2 = styled.h2`
         font-size: 5rem;
     }
 @media (max-width: 480px){
+        margin-top: 10vh;
         margin-bottom: 7vh;
         font-size: 3.5rem;
     }  

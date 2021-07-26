@@ -37,7 +37,7 @@ const CurlySvg = styled.svg `
 @media (max-width: 480px){
     height: 90vh;
     width: 100vw; 
-    
+    padding-bottom: 7vh;
     }
 `
 export default Curly;
