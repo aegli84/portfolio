@@ -52,10 +52,9 @@ const SkillsSection = () => {
 };
 
 const DivWrapper = styled(motion.div) `
-    height: 90vh;
+    min-height: 90vh;
     margin-left: 15vh; 
     margin-right: 15vh;
-
     text-align: center;
 
 @media (max-width: 768px){
@@ -67,7 +66,7 @@ const DivWrapper = styled(motion.div) `
     margin-left: 5vh; 
     margin-right: 3vh;
     margin-bottom: 5vh;
-    margin-top: 13vh;
+    margin-top: 25vh;
     }  
 `
 const Text = styled.h2`
