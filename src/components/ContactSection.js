@@ -1,69 +1,21 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion'
-import { useState } from 'react';
 import { ScrollSections } from './ScrollSections'
 import { fade } from '../animation'
-//import emailjs from 'emailjs-com'
+import { useForm, ValidationError } from '@formspree/react';
 
 const ContactSection = () => {
-    //TO DO!!! 
-    //form validation with state hooks DONE 
-    //form submission PENDING
-    //state object
 
     const [element, controls] = ScrollSections();
 
-    const [values, setValues] = useState({
-        firstName: '',
-        lastName: '',
-        email: '',
-        message: ''
-    });
+    const [state, handleSubmit] = useForm('mleawqzn')
 
-    const [submitted, setSubmitted] = useState(false);
-
-    const [valid, setValid] = useState(false);
-
-    const fillForm = (e, field) => {
-        let newForm = {...values};
-        newForm[field] = e.target.value;
-        setValues(newForm);
+    if(state.succeeded) {
+        return <div>
+        <H2>Contact me</H2>
+        <P>Thanks! Your message has been sent!</P>
+        </div>
     }
-    // //form validation
-    // const isFormValid = () => {
-    //     if(values.firstName && values.lastName && values.email && values.message) {
-    //     setValid(true);
-    //     }
-    //     setSubmitted(true);
-        
-    // };
-    // //sending email
-    // const sendEmail = (e) => {
-    // emailjs.sendForm('service_f1p0t7i', 'template_uizlxy5', e.target, 'user_KuHi5dO9Dm285xRgiHUrl')
-    //     .then((result) => {
-    //         console.log(result.text + 'works');
-    //     }, (error) => {
-    //         console.log(error.text + 'not working');
-    //     });
-    // }
-    
-
-    // const handleSubmit = (e) => {
-    //     e.preventDefault()
-    //     if (!isFormValid()) {
-    //     } else {
-    //         sendEmail(e)
-            
-    //     }
-    // }
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        if(values.firstName && values.lastName && values.email && values.message) {
-        setValid(true);
-        }
-        setSubmitted(true);
-        //setValues({firstName: '', lastName: '', email: '', message: ''}) 
-    };
 
     return(
         <FormWrapper 
@@ -74,65 +26,66 @@ const ContactSection = () => {
             <H2>Contact me</H2>
             <div className = "form" id="contact">
             <form onSubmit={handleSubmit}>
-            {submitted && valid ? <div className='success-message'>SENT! Thank you for your message</div> : null}
                 <input 
-                    id="first-name"
-                    name = "firstName" 
+                    id="name"
+                    name = "name" 
                     type = "text" 
-                    //disabled={setSubmitted}
-                    placeholder ="First name" 
-                    value={values.firstName} 
-                    onChange = {(e) => fillForm(e, 'firstName')}
+                    placeholder ="Full Name" 
+                    required= {true}
                     />
-                {submitted && !values.firstName ? <span id="first-name-error">Please enter your first name</span>: null} 
-                <input 
-                    id="last-name"
-                    name = "lastName" 
-                    type = "text" 
-                    placeholder ="Last name" 
-                    value={values.lastName} 
-                    onChange = {(e) => fillForm(e, 'lastName')}
+                    <ValidationError 
+                        prefix="Name"
+                        field="name"
+                        errors={state.errors}
                     />
-                {submitted && !values.lastName ?<span id="last-name-error">Please enter your last name</span> : null} 
                 <input 
                     id="email"
                     name = "email" 
                     type = "text" 
                     placeholder ="you@email.com" 
-                    value={values.email}
-                    onChange = {(e) => fillForm(e, 'email')}
+                    required= {true}
                     />
-                {submitted && !values.email ? <span id="email-error">Please enter your email address</span> :null} 
-            </form>
-            <textarea 
-                className = "textarea"
-                type = "text" 
-                name = "message" 
-                cols = "25" 
-                rows = "7" 
-                placeholder= "Your message here"
-                value={values.message}
-                onChange = {(e) => fillForm(e, 'message')}>
-            </textarea>
-            {submitted && !values.message ? <div id="message-error">Please enter your message</div> : null}
-            <div>
-            <button 
-            onClick={handleSubmit}
-            // onClick={() => setValues({firstName: '', lastName: '', email: '',message: '',})} 
+                    <ValidationError 
+                        prefix="Email" 
+                        field="email"
+                        errors={state.errors}
+                    />
+                <input 
+                    type="text" 
+                    name="_gotcha" 
+                    style= {{display:'none'}} 
+                    />
+                <textarea 
+                    id = "message"
+                    type = "text" 
+                    name = "message" 
+                    cols = "25" 
+                    rows = "7" 
+                    placeholder= "Your message here"
+                    required= {true}
+                    >
+                </textarea>
+                    <ValidationError 
+                        prefix="Message" 
+                        field="message"
+                        errors={state.errors}
+                        />
+                <button 
                     className = "button"
                     id = "submit" 
                     type = "submit" 
                     value = "submit"
+                    disabled={state.submitting}
                     >Send
                 </button>
-            </div>
+            </form>
         </div>
     </FormWrapper>
     )
 }
 
 const FormWrapper = styled(motion.div) `
-    min-height: 90vh;
+    height: 90vh;
     margin-top: 10vh;
     padding-top: 2rem;
     text-align: center;
@@ -141,51 +94,44 @@ const FormWrapper = styled(motion.div) `
     justify-content: center;
 
 @media (max-width: 768px){
-    margin-top: 30vh;  
+    margin-top: 10vh;  
+    padding: 7rem 2rem;
+    }
+@media (max-width: 480px){
+    margin-top: 10vh;  
     padding: 7rem 2rem;
     }
 
-#contact {
-    text-align: center;
-}
     form {
-        display: block;
-        max-width: 30%;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 10px;
+        max-width: 27%;
+        margin: auto;
+        text-align: left;
     div, span {
         font-family: 'Montserrat', sans-serif;
         font-size: 1rem; 
-        font-weight: 600;
-        text-align: center;
+        font-weight: 300;
+        text-align: left;
         padding-top: 1rem;
         padding-bottom: 1rem;
-        color:lightgreen;
-    }
-    span {
-        font-weight: 400;
-        font-size: .80rem; 
-        color: #d14c3d;
+        color: red;
     }
     @media (max-width: 768px){
-        max-width: 85%;
+        max-width: 75%;
+        }
+    @media (max-width: 480px){
+        max-width: 82%;
         }
     }     
-    #message-error {
-        color: #d14c3d;
-        font-weight: 400;
-        font-size: .80rem;
-    }
+    
     input{
-        
         background: #343a40;
         margin-top: 3vh;
         width: 28vw;
         padding-top: 2vh;
-        align-items: center;
-        display: block;
-        justify-content: center;
+        align-items: left;
+        display: inline-block;
+        text-align: left;
+        justify-content: left;
         color: whitesmoke;
         font-size: 0.9rem;
         border: none;
@@ -194,12 +140,16 @@ const FormWrapper = styled(motion.div) `
         border-bottom-right-radius: 5px;
         outline:none;
         &:placeholder-shown {
-            padding: 0.5rem 0.5rem;
+            padding: 0.8rem 0.5rem;
         } 
 
     @media (max-width: 768px){
-        padding-left: 15rem;
         margin-top: 2.2rem;
+        width: 70vw; 
+        border-bottom: 2px solid lightgreen;
+        }
+    @media (max-width: 480px){
+        margin-top: 2.5rem;
         width: 70vw; 
         }
     }
@@ -210,10 +160,10 @@ const FormWrapper = styled(motion.div) `
         font-size: 0.9rem;
         color: whitesmoke;
         cursor: pointer;
-        margin-top: 5vh; 
+        margin-top: 7vh; 
         margin-left: auto;
         margin-right:auto;
-        width: 30vw;
+        width: 28vw;
         border-left: 1.5px solid #495059;
         border-right: 1.5px solid #495059;
         border-top: 1.5px solid #495059;
@@ -226,10 +176,17 @@ const FormWrapper = styled(motion.div) `
 
     @media (max-width: 768px){
         margin-left: 0.5rem; 
-        margin-top: 2rem;
-        width: 75vw;
+        margin-top: 5rem;
+        width: 70vw;
+        height: 15rem;
+        border-bottom: 2px solid lightgreen;
+        }
+    @media (max-width: 480px){
+        margin-top: 4rem;
+        width: 69vw;
         }
     }
+    
 
     .button {
         font-weight: bold;
@@ -250,22 +207,40 @@ const FormWrapper = styled(motion.div) `
         color: lightgreen;
     }
     @media (max-width: 768px){
-            margin-left: -1.5vh; 
+        font-size: 1.7rem;
+            margin-left: 1.5vh; 
+            padding: 2rem;
+            width: 30%;
+        }
+        @media (max-width: 480px){
+            font-size: 1.2rem;
+            margin-left: 1rem; 
             padding: 1rem 2rem ;
-            width: 35%;
+            width: 45%;
         }
     } 
 `
 const H2 = styled.h2 `
-    justify-content: center;
+    text-align: center;
     padding-top: 5vh;
     font-weight: 900;
     color: whitesmoke;
-    
+    margin-bottom: 5rem;
 @media (max-width: 768px){
         margin-top: 1vh;
         padding-top: 2rem;
         padding-bottom: 3vh;
-        }
+        font-size: 5rem;
+    }
+@media (max-width: 480px){
+        padding-bottom: .5rem;
+        font-size: 3.5rem;
+    }
+`
+const P = styled.p`
+    text-align: center;
+    color: lightgreen;
+    padding: 8rem 0rem 21rem ;
+    font-weight: 300;
 `
 export default ContactSection;

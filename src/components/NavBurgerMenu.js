@@ -78,8 +78,12 @@ const Logo = styled.div`
         font-weight: 800;
         font-size: 2.9rem;
         color: whitesmoke;
-        margin-top: 2vh;
+        margin-top: 4vh;
         margin-left: 4rem;
+    } 
+    @media (max-width: 480px) {
+        margin-top: 2vh;
+        
     } 
 `
 export default BurgerMenu;

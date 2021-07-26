@@ -33,12 +33,12 @@ export const fade = {
     hidden: {opacity: 0},
     show: {
         opacity: 1, 
-        transition: { ease: "easeOut", duration: 0.4},
+        transition: { ease: "easeOut", duration: 0.2},
     }
 }
 
 export const photoAnimation = {
-    hidden: {scale: 1.4, opacity: 0},
+    hidden: {scale: 1.2, opacity: 0},
     show: {
         scale: 1.1,
         opacity: 1,

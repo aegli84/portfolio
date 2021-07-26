@@ -50,25 +50,28 @@ const AboutSection = () => {
 };
 
 const StyledAbout = styled.div`
-    min-height: 95vh;
+    height: 95vh;
     margin-top: 5vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 5rem 10rem;
+    padding: 5rem 8rem;
     color: whitesmoke;
-    margin-bottom: 20vh;
+    margin-bottom: 10vh;
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     display: block;
     text-align: center; 
-    padding: 2rem 2rem;
-    margin-top: 8rem;
+    padding: 3rem;
+    margin-top: 11rem;
+    margin-bottom: 0vh;
     }
     
-@media (max-width: 768px){
-    padding: 4rem 1rem;
-    margin-top: 5rem;
+@media (max-width: 480px){
+    padding: 1rem;
+    text-align: center;
+    margin-top: 9rem;
+    margin-bottom: 0vh;
     } 
 `
 const HI = styled.h2 `
@@ -81,12 +84,12 @@ const P = styled(motion.p)`
     font-weight: 400;
     padding-right: 8rem;
 
-@media (max-width: 1024px){
+@media (max-width: 768px){
     padding: 2rem;
     } 
-@media (max-width: 768px){
-    padding: 2rem 1rem 2rem 1rem;
-    margin-top: 0;
+@media (max-width: 480px){
+    padding: 2rem 1rem 1rem;
+    
     }
 `
 const H2 = styled(motion.h2)`
@@ -102,20 +105,20 @@ const Img = styled(motion.img)`
     height: 35vh;
     margin-right: 5rem;
     position: relative;
-    border-radius: 30px; 
+    border-radius: 20px; 
     overflow: hidden;
     box-shadow: 1px 3px 32px -4px black;
     border: 2px solid rgba(245, 245, 245, 0.829);
 
-@media (max-width: 1024px){
-    margin: 5rem 10rem 5rem 0rem; 
-    width: 20vh;
-    height: 20vh;
-    } 
 @media (max-width: 768px){
-    margin-left: 1rem;
-    width: 17vh;
-    height: 17vh;
+    margin: 5rem 19rem 5rem 3rem; 
+    width: 15vh;
+    height: 15vh;
+    } 
+@media (max-width: 480px){
+    margin: 1rem 13rem 0 1rem;
+    width: 15vh;
+    height: 15vh;
     border: 1px solid rgba(245, 245, 245, 0.829);
     /* display: none; */
     }

@@ -20,14 +20,10 @@ const Connect = () => {
                         target={"_blank"} 
                         rel="noopener noreferrer">
                         <motion.div 
-                            whileHover={{ scale: 1.2 }}
+                            
                             initial={{ scale: 0 }}
                             animate={{ rotate: 360, scale: 1 }}
-                            transition={{
-                                type: "spring",
-                                stiffness: 50,
-                                damping: 20
-                                }}>
+                            >
                             <FontAwesomeIcon 
                                 className = "github" 
                                 size = "lg"
@@ -44,14 +40,10 @@ const Connect = () => {
                         target={"_blank"} 
                         rel="noopener noreferrer">
                         <motion.div 
-                            whileHover={{ scale: 1.2 }}
+                            
                             initial={{ scale: 0 }}
                             animate={{ rotate: 360, scale: 1 }}
-                            transition={{
-                                type: "spring",
-                                stiffness: 50,
-                                damping: 20
-                                }}>
+                            >
                             <FontAwesomeIcon 
                                 className = "linkedin" 
                                 size = "lg"
@@ -68,17 +60,13 @@ const Connect = () => {
                         target={"_blank"} 
                         rel="noopener noreferrer"> 
                         <motion.div 
-                            whileHover={{ scale: 1.2 }}
+                            
                             initial={{ scale: 0 }}
                             animate={{ rotate: 360, scale: 1 }}
-                            transition={{
-                                type: "spring",
-                                stiffness: 50,
-                                damping: 20
-                                }}>
+                            >
                                 
                             <FontAwesomeIcon 
-                                className = "github" 
+                                className = "email" 
                                 size = "lg"
                                 color = "whitesmoke"
                                 transform="down-1 grow-4" 
@@ -93,50 +81,46 @@ const Connect = () => {
 };
     
 const DivWrapper = styled.div`
-    margin-top: -70vh;
-    margin-right: 2.5rem;
-    display: flex;
-    float: right;
-    align-items: flex-end;
-    justify-content: space-around;
+    position: relative;
+    top: -60vh;
+    left:85rem;
     line-height: 2rem;
 
-@media (max-width: 1024px){
-    writing-mode: horizontal-tb;
-    line-height: 2rem;
-    margin-right: 20rem;
-    padding-top: 8rem;
-
-    }
 @media (max-width: 768px){
     writing-mode: horizontal-tb;
+    line-height: 2rem;
+    position: relative;
+    top: -47vh;
+    left: 35rem;
+
+    }
+@media (max-width: 480px){
+    writing-mode: horizontal-tb;
     line-height: 1rem;
-    margin-right: 1rem;
-    padding-top: 15rem;
-    padding-right: 1rem;
+    position: relative;
+    top: -20vh;
+    left:17rem;
+    margin-right: 1.2rem;
     } 
 `
 const Text = styled.li`
     writing-mode: vertical-rl;
     text-orientation: mixed;
     color: whitesmoke;
-    margin-right: 3.5rem;               
     list-style: none;
 
-@media (max-width: 1024px){
-    writing-mode: horizontal-tb;
-    font-size: 1.5rem;
-    font-size: 1.3rem;
-    padding: 0 0 0 0.4rem;
-    }
 @media (max-width: 768px){
-    font-size: 1.3rem;
+    writing-mode: horizontal-tb;
+    font-size: 2.2rem;
+    }
+@media (max-width: 480px){
+    font-size: 1.5rem;
     padding: 0 0 0 0.4rem;
     } 
 `
 const Ul = styled.ul`
     list-style: none;
-    &:hover {
+    :hover {
         color: lightgreen;
         transition: all 0.7s ease;
     }
@@ -147,28 +131,40 @@ const Line = styled.li`
     margin-top: 1rem;
     margin-bottom: 1rem;
 
-@media (max-width: 1024px){
-    writing-mode: horizontal-tb;
-    padding: 0 5.5rem;
-    } 
 @media (max-width: 768px){
     writing-mode: horizontal-tb;
-    padding: 0 3.5rem;
+    padding: .5rem 5.5rem;
+    } 
+@media (max-width: 480px){
+    writing-mode: horizontal-tb;
+    padding: .5rem 3.5rem;
     }
 `
 const Icons = styled.li`
-    margin: 0.3rem 0.2rem;
+    margin: 0.4rem 0.2rem;
+    .github:hover {
+        color: #764F7C;
+        transition: all 0.7s ease;
+    } 
+    .linkedin:hover {
+        color: #764F7C;
+        transition: all 0.7s ease;
+    } 
+    .email:hover {
+        color: #764F7C;
+        transition: all 0.7s ease;
+    }
     
-@media (max-width: 1024px){
+@media (max-width: 768px){
     writing-mode: horizontal-tb;
     text-orientation: mixed;
     display: inline-block;
-    font-size: 1.3rem;
-    margin: 0 1rem 0 0.3rem ;
+    font-size: 1.8rem;
+    margin: 1rem 1rem 0 1rem ;
     } 
-@media (max-width: 768px){
-    font-size: 1.3rem;
-    margin: 0 1rem 0 0.3rem ;
+@media (max-width: 480px){
+    font-size: 1.5rem;
+    margin: .5rem 1rem 0 0.3rem ;
     } 
 `
 export default Connect;

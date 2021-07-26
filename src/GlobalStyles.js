@@ -17,7 +17,7 @@ const GlobalStyle = createGlobalStyle `
         background: #343a40;
         font-family: 'Montserrat', sans-serif;
         overflow-x: hidden;
-        width: 100%;
+        
     }
     h2 {
         font-weight: bold;

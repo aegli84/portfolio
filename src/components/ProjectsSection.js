@@ -9,10 +9,10 @@ import portfolio from '../assets/portfolio.gif'
 import todo from '../assets/todo.gif'
 import foodapp from '../assets/foodapp.gif'
 import comingsoon from '../assets/comingsoon.jpg' 
-//import {ScrollSections} from './ScrollSections'
+
 
 const ProjectsSection = () => {
-    //const [element, controls] = ScrollSections();
+    
     return (
         <>
         <motion.div >
@@ -20,11 +20,11 @@ const ProjectsSection = () => {
                 <CardWrapper className = "cards" id="projects" > 
                     <Card  
                         className = "card" 
-                        whileHover={{scale: 1.1}}> 
-                    <img src={meditationapp} alt="html"/>
-                    <H3>Heaven - Meditation Web App</H3>
+                        > 
+                    <img src={comingsoon} alt="html"/>
+                    <H3>Plantpedia - Plant datatbase & subscription box Web App</H3>
                         <Link 
-                            to = {{pathname:"https://github.com/aegli84/heaven"}} 
+                            to = {{pathname:"https://github.com/aegli84"}} 
                             target = {"_blank"} 
                             rel = "noopener noreferrer">
                         <FontAwesomeIcon 
@@ -47,14 +47,14 @@ const ProjectsSection = () => {
                             fixedWidth
                             icon = {faDesktop}/>
                         </Link>
-                    <Para>Project under construction. All links lead to my personal GitHub until further notice </Para> 
+                    <Para>Capstone project under construction. All links lead to my personal GitHub until further notice </Para> 
                     <H6>REACT</H6>
-                    <H6>SASS</H6>
-                    <H6>FRAMER MOTION</H6>
+                    <H6>STYLED-COMPONENTS</H6>
+                    <H6>CONTEXT API</H6>
             </Card>
                     <Card  
                         className = "card" 
-                        whileHover={{scale: 1.1}}> 
+                        > 
                     <img src={portfolio} alt="webdev"/>
                     <H3>WebDev Portfolio</H3>
                         <Link 
@@ -88,7 +88,7 @@ const ProjectsSection = () => {
             </Card>
                     <Card  
                         className = "card" 
-                        whileHover={{scale: 1.1}}> 
+                        > 
                     <img src={todo} alt="todo"/>
                     <H3>Wunder - Todo List</H3>
                         <Link 
@@ -122,7 +122,7 @@ const ProjectsSection = () => {
                 </Card>
                     <Card  
                         className = "card" 
-                        whileHover={{scale: 1.1}}> 
+                        > 
                     <img src={foodapp} alt="recipe-app"/>
                     <H3>Mangiare - recipe search</H3>
                         <Link 
@@ -152,13 +152,14 @@ const ProjectsSection = () => {
                     <Para>A simple recipe API search web app built in React with React hooks. Future versions will include account creation and login as well as recipe saving and organizing</Para> 
                     <H6>REACT</H6>
                     <H6>STYLED-COMPONENTS</H6>
+                    <H6>AXIOS</H6>
                     <H6>API</H6>
                 </Card> 
                     <Card  
                         className = "card" 
-                        whileHover={{scale: 1.1}}> 
+                        > 
                     <img src={comingsoon} alt="todo"/>
-                    <H3>Project undefined</H3>
+                    <H3>Chat WebApp - under construction</H3>
                         <Link 
                             to = {{pathname:"https://github.com/aegli84/Todo-list"}} 
                             target={"_blank"} 
@@ -188,40 +189,40 @@ const ProjectsSection = () => {
                     <H6>CSS</H6>
                     <H6>JAVASCRIPT</H6>
                 </Card> 
-                    <Card  
+                <Card  
                         className = "card" 
-                        whileHover={{scale: 1.1}}> 
-                    <img className = "colorize" src={comingsoon} alt="todo"/>
-                    <H3>Project undefined</H3>
+                        > 
+                    <img src={meditationapp} alt="html"/>
+                    <H3>Heaven - Meditation Web App</H3>
                         <Link 
-                            to = {{pathname:"https://github.com/aegli84/Todo-list"}} 
-                            target={"_blank"} 
-                            rel="noopener noreferrer">
-                            <FontAwesomeIcon 
-                                className = "github" 
-                                size = "lg"
-                                color = "#343a40"
-                                transform="left-7 down-9 grow-4" 
-                                fixedWidth
-                                icon = {faGithub}/>
+                            to = {{pathname:"https://github.com/aegli84/heaven"}} 
+                            target = {"_blank"} 
+                            rel = "noopener noreferrer">
+                        <FontAwesomeIcon 
+                            className = "github" 
+                            size = "lg"
+                            color = "#343a40"
+                            transform ="left-7 down-9 grow-4" 
+                            fixedWidth
+                            icon = {faGithub}/>
                         </Link>
                         <Link 
-                            to = {{pathname:"hhttps://aegli84.github.io/Todo-list/"}} 
+                            to = {{pathname:"https://github.com/aegli84"}} 
                             target={"_blank"} 
                             rel="noopener noreferrer">
-                            <FontAwesomeIcon 
-                                className = "desktop" 
-                                size = "lg"
-                                color = "#343a40"
-                                transform="right-5 down-9 grow-2" 
-                                fixedWidth
-                                icon = {faDesktop}/>
+                        <FontAwesomeIcon 
+                            className = "desktop" 
+                            size = "lg"
+                            color = "#343a40"
+                            transform ="right-5 down-9 grow-2" 
+                            fixedWidth
+                            icon = {faDesktop}/>
                         </Link>
-                    <Para>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, delectus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. </Para> 
-                    <H6>HTML</H6>
-                    <H6>CSS</H6>
-                    <H6>JAVASCRIPT</H6>
-                </Card> 
+                    <Para>Project under construction. All links lead to my personal GitHub until further notice </Para> 
+                    <H6>REACT</H6>
+                    <H6>SASS</H6>
+                    <H6>FRAMER MOTION</H6>
+            </Card>
             </CardWrapper>
         {/* <h3><Para>Check back soon for new and exciting projects!</Para></h3> */}
         </motion.div>
@@ -231,7 +232,7 @@ const ProjectsSection = () => {
 
 const CardWrapper = styled.div`
     min-height: 75vh;
-    padding: 3rem 4rem;
+    /* padding: 3rem 4rem; */
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
@@ -239,7 +240,7 @@ const CardWrapper = styled.div`
 `
 const Card = styled(motion.div)`
     width: 26vw;
-    height: 65vh;
+    height: 67vh;
     box-shadow: 1px 3px 32px -7px black;
     border-radius:10px;
     text-align: center;
@@ -247,50 +248,48 @@ const Card = styled(motion.div)`
     background: rgba(245, 245, 245, 0.829); 
     overflow: hidden;
     &:hover {
-        border: 2px solid rgba(245, 245, 245, 0.829);
+        border: 1px solid rgba(245, 245, 245, 0.829);
         box-shadow: 0px 5px 20px #515861;
     }
-@media (max-width: 1024px){
-        width: 35vw;
-        height: 65vh;
-        margin: 1vh;
-    }
 @media (max-width: 768px){
-        width: 70vw;
-        height: 70vh;
-    } 
-@media (max-width: 500px){
-    height: 65vh;
-    width: 85vw;
+        width: 75vw;
+        height: 65vh;
+        margin: 3vh;
+    }
+
+@media (max-width: 480px){
+    height: 60vh;
+    width: 90vw;
     font-size: 1.8rem;
-    margin-bottom: 2.5rem;
+    margin: 1.5rem;
     } 
     
     img {
-        height: 32vh;
+        height: 29vh;
         width: 26vw;
-@media (max-width: 1024px){
-        width: 35vw;
-        height: 32.5vh;
-    }
+        object-fit: fill;
 @media (max-width: 768px){
-        width: 70vw;
+        width: 75vw;
         height: 35vh;
     } 
-@media (max-width: 500px){
-        width: 80vw;
-        height: 30vh;
+@media (max-width: 480px){
+        width: 90vw;
+        height: 25vh;
         }
     }
     .github,
     .desktop {
+            margin-bottom: 1rem;
+            margin-top: 1rem;
         @media (max-width: 768px){
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            margin-top: 1rem;
         }
-        @media (max-width: 500px){
-        font-size: 2rem;
-        margin-bottom: 1rem;
+        @media (max-width: 480px){
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            margin-top: 1rem;
         }
     }
     
@@ -299,14 +298,19 @@ const H2 = styled.h2`
     font-weight: 900;
     color: whitesmoke;
     text-align: center;
-@media (max-width: 1024px){
-        padding-top: 14vh;
-        margin-top: 12vh;
+    margin-bottom: 7rem;
+@media (max-width: 768px){
+        margin-top: 2vh;
+        margin-bottom: 7vh;
+        font-size: 5rem;
     }
-    
+@media (max-width: 480px){
+        margin-bottom: 7vh;
+        font-size: 3.5rem;
+    }  
 `
 const H3 = styled.h3`
-    margin-top: 1rem;
+    margin-top: 2rem;
     color: #343a40;
 @media (max-width: 1024px){
         font-size: 2.1vh;
@@ -324,10 +328,10 @@ const H6 = styled.h6`
     font-weight: bolder;
     font-size: 0.7rem;
     color: #343a40;
-@media (max-width: 1024px){
+@media (max-width: 768px){
         font-size: 1.3vh;
     }
-@media (max-width: 768px){
+@media (max-width: 480px){
         font-size: 1.4vh;
         padding-bottom: 1rem;
     }
