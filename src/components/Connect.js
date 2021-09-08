@@ -83,7 +83,7 @@ const Connect = () => {
 const DivWrapper = styled.div`
     position: relative;
     top: -30rem;
-    left: 85rem;
+    left: 100rem;
     line-height: 2rem;
 
 @media (max-width: 768px){

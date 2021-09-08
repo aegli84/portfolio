@@ -1,4 +1,4 @@
-import CV from '../assets/CV.pdf'
+import cv from '../assets/cv.pdf'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import { fade } from '../animation'
@@ -10,7 +10,7 @@ const Resume = () => {
             variants = {fade}>
             <A 
                 whileHover={{scale: 1.1}}
-                onClick={() => window.open(CV)} 
+                onClick={() => window.open(cv)} 
                 target = "_blank" 
                 >Resume
             </A>

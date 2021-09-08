@@ -1,15 +1,16 @@
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
-import meditationapp from '../assets/meditationapp.jpg';
+//import meditationapp from '../assets/meditationapp.jpg';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faDesktop } from '@fortawesome/free-solid-svg-icons';
-import portfolio from '../assets/portfolio.gif'
-import todo from '../assets/todo.gif'
-import foodapp from '../assets/foodapp.gif'
+import portfolioae from '../assets/portfolioae.JPG'
+import neurocat from '../assets/neurocat.JPG'
+import mangiare from '../assets/mangiare.PNG'
+import todo from '../assets/todo.PNG'
 import comingsoon from '../assets/comingsoon.jpg' 
-
+import plantfour from '../assets/plantfour.png'
 
 const ProjectsSection = () => {
     
@@ -21,10 +22,44 @@ const ProjectsSection = () => {
                     <Card  
                         className = "card" 
                         > 
-                    <img src={comingsoon} alt="html"/>
-                    <H3>Plantpedia - Plant datatbase & subscription box Web App</H3>
+                    <img src={plantfour} alt="Plantpedia"/>
+                    <H3>Plantpedia </H3>
                         <Link 
-                            to = {{pathname:"https://github.com/aegli84"}} 
+                            to = {{pathname:"https://github.com/aegli84/Plantpedia-2.0"}} 
+                            target = {"_blank"} 
+                            rel = "noopener noreferrer">
+                        <FontAwesomeIcon 
+                            className = "github" 
+                            size = "lg"
+                            color = "#343a40"
+                            transform ="left-7 down-9 grow-4" 
+                            fixedWidth
+                            icon = {faGithub}/>
+                        </Link>
+                        <Link 
+                            to = {{pathname:"https://plantpedia-2-0.vercel.app/"}} 
+                            target={"_blank"} 
+                            rel="noopener noreferrer">
+                        <FontAwesomeIcon 
+                            className = "desktop" 
+                            size = "lg"
+                            color = "#343a40"
+                            transform ="right-5 down-9 grow-2" 
+                            fixedWidth
+                            icon = {faDesktop}/>
+                        </Link>
+                    <Para>Plant database and plant care guides with subscription shop and chat functions </Para> 
+                    <H6>REACT</H6>
+                    <H6>STYLED-COMPONENTS</H6>
+                    <H6>CONTEXT API</H6>
+            </Card>
+                    <Card  
+                        className = "card" 
+                        > 
+                    <img src={neurocat} alt="html" style={{background: '#3c8993'}}/>
+                    <H3>neurocat - Website client re-build</H3>
+                        <Link 
+                            to = {{pathname:"https://github.com/aegli84/heaven"}} 
                             target = {"_blank"} 
                             rel = "noopener noreferrer">
                         <FontAwesomeIcon 
@@ -47,83 +82,15 @@ const ProjectsSection = () => {
                             fixedWidth
                             icon = {faDesktop}/>
                         </Link>
-                    <Para>Capstone project under construction. All links lead to my personal GitHub until further notice </Para> 
+                    <Para>Project under construction. All links lead to my personal GitHub until further notice </Para> 
                     <H6>REACT</H6>
-                    <H6>STYLED-COMPONENTS</H6>
-                    <H6>CONTEXT API</H6>
-            </Card>
-                    <Card  
-                        className = "card" 
-                        > 
-                    <img src={portfolio} alt="webdev"/>
-                    <H3>WebDev Portfolio</H3>
-                        <Link 
-                            to = {{pathname:"https://github.com/aegli84/portfolio"}} 
-                            target={"_blank"} 
-                            rel="noopener noreferrer">
-                            <FontAwesomeIcon 
-                                className = "github" 
-                                size = "lg"
-                                color = "#343a40"
-                                transform="left-7 down-9 grow-4" 
-                                fixedWidth
-                                icon = {faGithub}/>
-                            </Link>
-                        <Link 
-                            to = {{pathname:"https://portfolio-andreea-egli-jwlmizxe7-aegli84.vercel.app/"}} 
-                            target={"_blank"} 
-                            rel="noopener noreferrer">
-                            <FontAwesomeIcon 
-                                className = "desktop" 
-                                size = "lg"
-                                color = "#343a40"
-                                transform="right-5 down-9 grow-2" 
-                                fixedWidth
-                                icon = {faDesktop}/>
-                        </Link>
-                    <Para>Portfolio built in React with styled-components for stylig and framer motion for page animations. A long content page with a smooth scroll to section for a modern look and feel</Para> 
-                    <H6>REACT</H6>
-                    <H6>STYLED-COMPONENTS</H6>
+                    <H6>SASS</H6>
                     <H6>FRAMER MOTION</H6>
             </Card>
                     <Card  
                         className = "card" 
                         > 
-                    <img src={todo} alt="todo"/>
-                    <H3>Wunder - Todo List</H3>
-                        <Link 
-                            to = {{pathname:"https://github.com/aegli84/Todo-list"}} 
-                            target={"_blank"} 
-                            rel="noopener noreferrer">
-                            <FontAwesomeIcon 
-                                className = "github" 
-                                size = "lg"
-                                color = "#343a40"
-                                transform="left-7 down-9 grow-4" 
-                                fixedWidth
-                                icon = {faGithub}/>
-                        </Link>
-                        <Link 
-                            to = {{pathname:"https://aegli84.github.io/Todo-list/"}} 
-                            target={"_blank"} 
-                            rel="noopener noreferrer">
-                            <FontAwesomeIcon 
-                                className = "desktop" 
-                                size = "lg"
-                                color = "#343a40"
-                                transform="right-5 down-9 grow-2" 
-                                fixedWidth
-                                icon = {faDesktop}/>
-                        </Link>
-                    <Para>A classic and simple to-do list built with HTML, CSS and vanilla Javascript with a touch of light animations</Para> 
-                    <H6>HTML</H6>
-                    <H6>CSS</H6>
-                    <H6>JAVASCRIPT</H6>
-                </Card>
-                    <Card  
-                        className = "card" 
-                        > 
-                    <img src={foodapp} alt="recipe-app"/>
+                    <img src={mangiare} alt="recipe-app" style={{background: '#eed0c6'}}/>
                     <H3>Mangiare - recipe search</H3>
                         <Link 
                             to = {{pathname:"https://github.com/aegli84/Mangiare---recipe-search"}} 
@@ -158,7 +125,75 @@ const ProjectsSection = () => {
                     <Card  
                         className = "card" 
                         > 
-                    <img src={comingsoon} alt="todo"/>
+                    <img src={portfolioae} alt="webdev" style={{background: '#343a40'}}/>
+                    <H3>WebDev Portfolio</H3>
+                        <Link 
+                            to = {{pathname:"https://github.com/aegli84/portfolio"}} 
+                            target={"_blank"} 
+                            rel="noopener noreferrer">
+                            <FontAwesomeIcon 
+                                className = "github" 
+                                size = "lg"
+                                color = "#343a40"
+                                transform="left-7 down-9 grow-4" 
+                                fixedWidth
+                                icon = {faGithub}/>
+                            </Link>
+                        <Link 
+                            to = {{pathname:"https://portfolio-andreea-egli-jwlmizxe7-aegli84.vercel.app/"}} 
+                            target={"_blank"} 
+                            rel="noopener noreferrer">
+                            <FontAwesomeIcon 
+                                className = "desktop" 
+                                size = "lg"
+                                color = "#343a40"
+                                transform="right-5 down-9 grow-2" 
+                                fixedWidth
+                                icon = {faDesktop}/>
+                        </Link>
+                    <Para>Portfolio built in React with styled-components for stylig and framer motion for page animations. A long content page with a smooth scroll to section for a modern look and feel</Para> 
+                    <H6>REACT</H6>
+                    <H6>STYLED-COMPONENTS</H6>
+                    <H6>FRAMER MOTION</H6>
+            </Card>
+                    <Card  
+                        className = "card" 
+                        > 
+                    <img src={todo} alt="todo" style={{background: '#3d405b'}}/>
+                    <H3>Wunder - Todo List</H3>
+                        <Link 
+                            to = {{pathname:"https://github.com/aegli84/Todo-list"}} 
+                            target={"_blank"} 
+                            rel="noopener noreferrer">
+                            <FontAwesomeIcon 
+                                className = "github" 
+                                size = "lg"
+                                color = "#343a40"
+                                transform="left-7 down-9 grow-4" 
+                                fixedWidth
+                                icon = {faGithub}/>
+                        </Link>
+                        <Link 
+                            to = {{pathname:"https://aegli84.github.io/Todo-list/"}} 
+                            target={"_blank"} 
+                            rel="noopener noreferrer">
+                            <FontAwesomeIcon 
+                                className = "desktop" 
+                                size = "lg"
+                                color = "#343a40"
+                                transform="right-5 down-9 grow-2" 
+                                fixedWidth
+                                icon = {faDesktop}/>
+                        </Link>
+                    <Para>A classic and simple to-do list built with HTML, CSS and vanilla Javascript with a touch of light animations</Para> 
+                    <H6>HTML</H6>
+                    <H6>CSS</H6>
+                    <H6>JAVASCRIPT</H6>
+                </Card>
+                    <Card  
+                        className = "card" 
+                        > 
+                    <img src={comingsoon} alt="todo" style={{background: '#d7d3c8'}}/>
                     <H3>Chat WebApp - under construction</H3>
                         <Link 
                             to = {{pathname:"https://github.com/aegli84/Todo-list"}} 
@@ -189,41 +224,8 @@ const ProjectsSection = () => {
                     <H6>CSS</H6>
                     <H6>JAVASCRIPT</H6>
                 </Card> 
-                <Card  
-                        className = "card" 
-                        > 
-                    <img src={meditationapp} alt="html"/>
-                    <H3>Heaven - Meditation Web App</H3>
-                        <Link 
-                            to = {{pathname:"https://github.com/aegli84/heaven"}} 
-                            target = {"_blank"} 
-                            rel = "noopener noreferrer">
-                        <FontAwesomeIcon 
-                            className = "github" 
-                            size = "lg"
-                            color = "#343a40"
-                            transform ="left-7 down-9 grow-4" 
-                            fixedWidth
-                            icon = {faGithub}/>
-                        </Link>
-                        <Link 
-                            to = {{pathname:"https://github.com/aegli84"}} 
-                            target={"_blank"} 
-                            rel="noopener noreferrer">
-                        <FontAwesomeIcon 
-                            className = "desktop" 
-                            size = "lg"
-                            color = "#343a40"
-                            transform ="right-5 down-9 grow-2" 
-                            fixedWidth
-                            icon = {faDesktop}/>
-                        </Link>
-                    <Para>Project under construction. All links lead to my personal GitHub until further notice </Para> 
-                    <H6>REACT</H6>
-                    <H6>SASS</H6>
-                    <H6>FRAMER MOTION</H6>
-            </Card>
-            </CardWrapper>
+                
+                </CardWrapper>
         {/* <h3><Para>Check back soon for new and exciting projects!</Para></h3> */}
         </motion.div>
         </>
@@ -268,6 +270,8 @@ const Card = styled(motion.div)`
         height: 29vh;
         width: 26vw;
         object-fit: fill;
+        background-color: black;
+        padding-top: .3rem;
 @media (max-width: 768px){
         width: 75vw;
         height: 35vh;
