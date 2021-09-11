@@ -86,12 +86,12 @@ const DivWrapper = styled.div`
     left: 100rem;
     line-height: 2rem;
 
-@media (max-width: 768px){
+@media (max-width: 1502px){
     writing-mode: horizontal-tb;
     line-height: 1.5rem;
     position: relative;
-    top: -37rem;
-    left: 35rem;
+    top: -27rem;
+    left: 85rem;
 
     }
 @media (max-width: 480px){
@@ -155,12 +155,12 @@ const Icons = styled.li`
         transition: all 0.7s ease;
     }
     
-@media (max-width: 768px){
-    writing-mode: horizontal-tb;
+@media (max-width: 1502px){
+    writing-mode: vertical-rl;
     text-orientation: mixed;
-    display: inline-block;
-    font-size: 1.8rem;
-    margin: 1rem 1rem 0 1rem ;
+    display: block;
+    font-size: 1.5rem;
+    margin: 1.5rem 0rem 0 -.5rem ;
     } 
 @media (max-width: 480px){
     font-size: 1.5rem;

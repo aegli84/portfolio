@@ -97,7 +97,7 @@ const ProjectsSection = () => {
                         > 
                     <img src={portfolioae} alt="webdev" style={{background: '#343a40'}}/>
                     <H3>WebDev Portfolio</H3>
-                        <Para>Portfolio built in React with styled-components for stylig and framer motion for page animations. A long content page with a smooth scroll to section for a modern look and feel</Para> 
+                        <Para>My personal portfolio. A long content page with a smooth scroll to section for a modern look and feel</Para> 
                     <H6>REACT</H6>
                     <H6>STYLED-COMPONENTS</H6>
                     <H6>FRAMER MOTION</H6>
@@ -144,8 +144,8 @@ const ProjectsSection = () => {
                         className = "card" 
                         > 
                     <img src={comingsoon} alt="todo" style={{background: '#d7d3c8'}}/>
-                    <H3>Chat WebApp - under construction</H3>
-                        <Para>Lorem ipsum dolor sit amet consectetur        adipisicing elit. Voluptatibus, delectus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. </Para> 
+                    <H3>Chat WebApp </H3>
+                        <Para>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, delectus. Lorem ipsum. </Para> 
                     <H6>HTML</H6>
                     <H6>CSS</H6>
                     <H6>JAVASCRIPT</H6>
@@ -194,9 +194,9 @@ const Card = styled.div`
         box-shadow:0px 15px 30px #515861;
         margin-top:-10px;
     }
-@media (max-width: 768px){
-        width: 75vw;
-        height: 65vh;
+@media (max-width: 1502px){
+        width: 26vw;
+        height: 76vh;
         margin: 3vh;
     }
 
