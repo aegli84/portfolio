@@ -2,12 +2,12 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom';
 import { FiGithub } from 'react-icons/fi';
 import { BsBoxArrowUpRight } from 'react-icons/bs';
-import portfolioae from '../assets/portfolioae.JPG'
-import neurocat from '../assets/neurocat.JPG'
-import mangiare from '../assets/mangiare.PNG'
-import todo from '../assets/todo.PNG'
+import portfolioae from '../assets/portfolioae.png'
+import neurocat from '../assets/neurocat.png'
+import mangiare from '../assets/mangiare.png'
+import todo from '../assets/todo.png'
 import coming from '../assets/coming.jpeg' 
-import plantfour from '../assets/plantfour.png'
+import plantpedia from '../assets/plantpedia.png'
 
 const ProjectsSection = () => {
     
@@ -19,7 +19,7 @@ const ProjectsSection = () => {
                     <Card  
                         className = "card" 
                         > 
-                    <img src={plantfour} alt="Plantpedia"/>
+                    <img src={plantpedia} alt="Plantpedia"/>
                     <H3>Plantpedia</H3>
                         <Para>Plant database and plant care guides with subscription shop and chat function</Para> 
                     <H6>REACT</H6>
