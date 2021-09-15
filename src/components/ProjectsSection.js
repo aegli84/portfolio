@@ -6,7 +6,7 @@ import portfolioae from '../assets/portfolioae.JPG'
 import neurocat from '../assets/neurocat.JPG'
 import mangiare from '../assets/mangiare.PNG'
 import todo from '../assets/todo.PNG'
-import comingsoon from '../assets/comingsoon.jpg' 
+import coming from '../assets/coming.jpeg' 
 import plantfour from '../assets/plantfour.png'
 
 const ProjectsSection = () => {
@@ -143,7 +143,7 @@ const ProjectsSection = () => {
                     <Card  
                         className = "card" 
                         > 
-                    <img src={comingsoon} alt="todo" style={{background: '#d7d3c8'}}/>
+                    <img src={coming} alt="todo" style={{background: '#d7d3c8'}}/>
                     <H3>Chat WebApp </H3>
                         <Para>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, delectus. Lorem ipsum. </Para> 
                     <H6>HTML</H6>
