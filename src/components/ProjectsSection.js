@@ -71,7 +71,7 @@ const ProjectsSection = () => {
                         className = "card" 
                         > 
                     <img src={mangiare} alt="recipe-app" style={{background: '#eed0c6'}}/>
-                    <H3>Mangiare - recipe search</H3>
+                    <H3>Mangiare</H3>
                         <Para>A simple recipe API search web app built in React with React hooks. Future versions will include account creation and login as well as recipe saving and organizing</Para> 
                     <H6>REACT</H6>
                     <H6>STYLED-COMPONENTS</H6>
@@ -195,11 +195,14 @@ const Card = styled.div`
         margin-top:-10px;
     }
 @media (max-width: 1502px){
-        width: 26vw;
-        height: 76vh;
+        width: 28vw;
+        height: 72vh;
         margin: 3vh;
     }
-
+    @media (max-width: 768px){
+        width: 71vw;
+        height: 70vh;
+    }
 @media (max-width: 480px){
     height: 65vh;
     width: 90vw;
@@ -209,16 +212,16 @@ const Card = styled.div`
     
     img {
         height: 29vh;
-        width: 26vw;
+        width: 100%;
         object-fit: fill;
         background-color: black;
         padding-top: .3rem;
 @media (max-width: 768px){
-        width: 75vw;
+        width: 100%;
         height: 35vh;
     } 
 @media (max-width: 480px){
-        width: 90vw;
+        width: 100%;
         height: 25vh;
         }
     }

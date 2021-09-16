@@ -89,16 +89,23 @@ const DivWrapper = styled.div`
 @media (max-width: 1502px){
     writing-mode: horizontal-tb;
     line-height: 1.5rem;
-    position: relative;
     top: -27rem;
     left: 85rem;
 
     }
+    @media (max-width: 768px){
+    writing-mode: horizontal-rl;
+    line-height: 1rem;
+    position: absolute;
+    top: 53rem;
+    left:35rem;
+    margin: 1rem;
+    } 
 @media (max-width: 480px){
     writing-mode: horizontal-tb;
     line-height: 1rem;
     position: absolute;
-    top: 64rem;
+    top: 60rem;
     left:17rem;
     margin-right: 1.2rem;
     } 
@@ -161,6 +168,9 @@ const Icons = styled.li`
     display: block;
     font-size: 1.5rem;
     margin: 1.5rem 0rem 0 -.5rem ;
+    } 
+    @media (max-width: 480px){
+    writing-mode: horizontal-rl;
     } 
 @media (max-width: 480px){
     font-size: 1.5rem;
