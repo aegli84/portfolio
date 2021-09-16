@@ -1,10 +1,14 @@
 import styled from 'styled-components'
+import Connect from './Connect'
 
 const FooterSection = () => {
     return (
-        <Div>
-            <H4>Made with ❤️ by Andreea Egli 2021</H4>
-        </Div>
+        <>
+        <Connect/>
+            <Div>
+                <H4>Made with ❤️ by Andreea Egli-Hehl 2021</H4>
+            </Div>
+        </>
     )
 }
 
@@ -21,12 +25,12 @@ const Div = styled.div `
 const H4 = styled.h4`
     color: whitesmoke;
     font-weight: lighter;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    margin-bottom: 3rem;
 
 @media (max-width: 480px){
         font-size: 1rem; 
-        padding-top: 3rem;
-        margin-top: 10rem;
+        
     }
 `
 

@@ -5,7 +5,6 @@ import { motion } from 'framer-motion'
 import { pageAnimation } from '../animation'
 import { titleAnimation, fade, photoAnimation } from '../animation'
 import Curly from './Curly' 
-import Connect from './Connect'
 import Resume from './Resume'
 
 const AboutSection = () => {
@@ -43,7 +42,6 @@ const AboutSection = () => {
                         alt = "andreea egli"/>
                 </motion.div>
             </StyledAbout>
-            <Connect/>
             </motion.div>
         </>
     );
@@ -60,18 +58,18 @@ const StyledAbout = styled.div`
     margin-bottom: 10vh;
 
 @media (max-width: 768px) {
+    height: 45vh;
     display: block;
     text-align: center; 
     padding: 3rem;
     margin-top: 11rem;
-    margin-bottom: 0vh;
     }
     
 @media (max-width: 480px){
     padding: 1rem;
     text-align: center;
     margin-top: 9rem;
-    margin-bottom: 0vh;
+    
     } 
 `
 const HI = styled.h2 `
@@ -111,16 +109,10 @@ const Img = styled(motion.img)`
     border: 2px solid rgba(245, 245, 245, 0.829);
 
 @media (max-width: 768px){
-    margin: 7rem 25rem 5rem 3rem; 
-    width: 18vh;
-    height: 18vh;
+    display: none;
     } 
 @media (max-width: 480px){
-    margin: 3rem 13rem 0 1rem;
-    width: 17vh;
-    height: 17vh;
-    border: 1px solid rgba(245, 245, 245, 0.829);
-    /* display: none; */
+    display: none; 
     }
 `
 const BigText = styled.div `

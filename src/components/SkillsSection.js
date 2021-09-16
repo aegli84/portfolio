@@ -14,21 +14,17 @@ import terminal from '../assets/terminal.svg';
 import vscode from '../assets/vscode.svg';
 import styledc from '../assets/styledc.png'
 import styled from 'styled-components';
-import {motion} from 'framer-motion'
-import {ScrollSections} from './ScrollSections'
-import {fade} from '../animation'
+
+
 
 const SkillsSection = () => {
-    const [element, controls] = ScrollSections();
+    
 
     return (
         <>
             <DivWrapper 
                 id="skills" 
-                variants = {fade} 
-                animate={controls} 
-                initial = 'hidden' 
-                ref={element}>
+                >
                 <Text>Tech & tools</Text>
                 <Icons>
                     <img src={html} alt="html" />
@@ -51,22 +47,20 @@ const SkillsSection = () => {
     );
 };
 
-const DivWrapper = styled(motion.div) `
+const DivWrapper = styled.div `
     min-height: 90vh;
     margin-left: 15vh; 
     margin-right: 15vh;
     text-align: center;
 
 @media (max-width: 768px){
-    margin: 0 5rem 3rem 4rem;
-    padding-top: 3vh;
+    margin: 0 5rem 5rem 5rem;
     }  
 
 @media (max-width: 480px){
     margin-left: 5vh; 
     margin-right: 3vh;
-    margin-bottom: 5vh;
-    margin-top: 35vh;
+    margin-top: 28rem;
     }  
 `
 const Text = styled.h2`
@@ -77,7 +71,7 @@ const Text = styled.h2`
     text-align: center;
 
 @media (max-width: 768px){
-    margin-top: -8vh;  
+    margin-top: 1rem;  
     margin-bottom: 10vh; 
     }
 @media (max-width: 480px){
