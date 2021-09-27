@@ -75,11 +75,13 @@ const HI = styled.h2 `
     font-weight: 900;
     font-size: 3.5rem;
     color: #3DC9A7; 
+    font-family: 'Lato', sans-serif;
 `
 const P = styled.p`
     margin-top: 1.5rem;
-    font-weight: 400;
+    font-weight: 300;
     padding-right: 8rem;
+    font-family: 'Montserrat', sans-serif;
 
 @media (max-width: 768px){
     padding: 2rem;
@@ -92,10 +94,12 @@ const P = styled.p`
 const H2 = styled.h2`
     font-weight: 900;
     color: #3DC9A7;
+    font-family: 'Lato', sans-serif;
 `
 const StyledA = styled.a `
     color: #3DC9A7;
     font-weight: 900;
+    font-family: 'Lato', sans-serif;
 `
 const Img = styled.img`
     width: 40vh;
@@ -115,7 +119,7 @@ const Img = styled.img`
 `
 const BigText = styled.div `
     /* overflow: hidden; */
-    text-shadow: 0  15px 7px black; 
+    text-shadow: 0  15px 7px #081730; 
 `
 export default AboutSection;
 
