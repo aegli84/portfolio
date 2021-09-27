@@ -66,21 +66,21 @@ const Icons = styled.div`
     margin: 2rem 4rem;
 
     .github:hover {
-        color: #764F7C;
+        color: #3DC9A7;
         transition: all 0.7s ease;
     } 
     .linkedin:hover {
-        color: #764F7C;
+        color: #3DC9A7;
         transition: all 0.7s ease;
     } 
     .email:hover {
-        color: #764F7C;
+        color: #3DC9A7;
         transition: all 0.7s ease;
     }
     
 @media (max-width: 1502px){
-    font-size: 1.6rem;
-
+    font-size: 1.2rem;
+    margin-top: 5rem;
     } 
     
 @media (max-width: 480px){

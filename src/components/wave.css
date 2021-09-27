@@ -1,0 +1,45 @@
+.wave,
+.wave::before,
+.wave::after {
+  content: '';
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 250vw;
+  height: 270vw;
+  margin-left: -125vw;
+  transform-origin: 50% 50%;
+  background-color: transparent;
+  border-radius: 38% 42%;
+  box-shadow: inset 0 0 10vw rgba(255, 0, 255, 0.452);
+  animation: spin 76s infinite linear;
+  mix-blend-mode: multiply;
+  z-index: -1;
+}
+
+.wave::before {
+  width: 105%;
+  height: 95%;
+  margin-top: -105vw;
+  transform-origin: 49% 51%;
+  border-radius: 40% 38%;
+  box-shadow: inset 0 0 10vw rgba(255, 0, 255, 0.513);
+  animation: spin 73s infinite linear;
+}
+
+.wave::after {
+  width: 102%;
+  height: 95%;
+  margin-top: -105vw;
+  transform-origin: 51% 49%;
+  border-radius: 48% 42%;
+  box-shadow: inset 0 0 10vw rgba(255, 0, 255, 0.445);
+  animation: spin 10s infinite linear;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+
+

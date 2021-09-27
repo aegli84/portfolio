@@ -1,12 +1,12 @@
 import styled from 'styled-components';
-import { motion } from 'framer-motion'
-import { ScrollSections } from './ScrollSections'
-import { fade } from '../animation'
 import { useForm, ValidationError } from '@formspree/react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const ContactSection = () => {
-
-    const [element, controls] = ScrollSections();
+    AOS.init({
+        duration: 1200,
+    })
 
     const [state, handleSubmit] = useForm('mleawqzn')
 
@@ -18,12 +18,11 @@ const ContactSection = () => {
     }
 
     return(
+        <>
+        <H2>Contact me</H2>
         <FormWrapper 
-            variants = {fade} 
-            animate={controls} 
-            initial = 'hidden' 
-            ref={element}>
-            <H2>Contact me</H2>
+            data-aos="zoom-in"
+            >
             <div className = "form" id="contact">
             <form onSubmit={handleSubmit}>
                 <input 
@@ -81,26 +80,29 @@ const ContactSection = () => {
             </form>
         </div>
     </FormWrapper>
+    </>
     )
 }
 
-const FormWrapper = styled(motion.div) `
-    height: 90vh;
-    margin-top: 10vh;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+const FormWrapper = styled.div `
+    height: 45vh;
+    margin-top: 5vh;
     text-align: center;
     align-items: center;
     display: block;
     justify-content: center;
-
+@media (max-width: 1502px){
+    margin-top: 1rem;
+    margin-bottom: 15rem;
+    height: 35vh;
+    } 
 @media (max-width: 768px){
     margin-top: 10vh;  
     padding: 7rem 2rem;
     }
 @media (max-width: 480px){
-    margin-top: 5rem;  
-    margin-bottom: 7rem;
+    margin-top: 3rem;  
+    margin-bottom: 17rem;
     margin-left: 1.2rem;
     padding: 1rem;
     }
@@ -127,10 +129,10 @@ const FormWrapper = styled(motion.div) `
     }     
     
     input{
-        background: #343a40;
+        background: #081730b9;
         margin-top: 3vh;
         width: 28vw;
-        padding-top: 2vh;
+        padding: 5rem;
         align-items: left;
         display: inline-block;
         text-align: left;
@@ -139,9 +141,8 @@ const FormWrapper = styled(motion.div) `
         font-size: 0.9rem;
         font-family: 'Montserrat', sans-serif;
         border: none;
-        border-bottom: 1px solid lightgreen;
-        border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px;
+        border: 1px solid #2EBA8B;
+        border-radius: .4rem;
         outline:none;
         &:placeholder-shown {
             padding: 0.8rem 0.5rem;
@@ -154,27 +155,27 @@ const FormWrapper = styled(motion.div) `
         font-size: 1.5rem; 
         }
     @media (max-width: 480px){
-        margin-top: 2.5rem;
+        margin-top: 1rem;
         width: 70vw; 
         font-size: 1.3rem; 
         }
     }
 
     textarea {
-        background: #343a40;
+        background: #081730b9;
         font-family: 'Montserrat', sans-serif;
         font-size: 0.9rem;
         color: whitesmoke;
         cursor: pointer;
-        margin-top: 7vh; 
+        margin-top: 2vh; 
         margin-left: auto;
         margin-right:auto;
         width: 28vw;
         border-left: 1.5px solid #495059;
         border-right: 1.5px solid #495059;
         border-top: 1.5px solid #495059;
-        border-radius: 5px;
-        border-bottom: 1px solid lightgreen;
+        border-radius: .4rem;
+        border: 1px solid #2EBA8B;
         outline:none; 
         &:placeholder-shown {
             padding: 0.5rem 0.5rem;
@@ -204,15 +205,15 @@ const FormWrapper = styled(motion.div) `
         margin-left: auto;
         margin-right:auto;
         cursor: pointer;
-        border: 1px solid lightgrey;
+        border: 1px solid #2EBA8B;
         color: lightgrey;
         transition: all 0.5s ease;
         outline: none;
-        background: #343a40;
-        border-radius: 5%;
+        background: #081730;
+        border-radius: 5rem;
+        text-transform: uppercase;
     &:hover {
-        background-color: #23282db9;
-        color: lightgreen;
+        background-color:  rgba(255, 0, 255, 0.267);
     }
     @media (max-width: 768px){
         font-size: 1.7rem;
@@ -230,19 +231,17 @@ const FormWrapper = styled(motion.div) `
 `
 const H2 = styled.h2 `
     text-align: center;
-    padding-top: 5vh;
+    margin-top: 25rem;
+    margin-bottom: 7rem;
     font-weight: 900;
     color: whitesmoke;
-    margin-bottom: 5rem;
+    
 @media (max-width: 768px){
-        margin-top: 1vh;
-        padding-top: 2rem;
-        padding-bottom: 3vh;
+        margin-top: 10vh;
         font-size: 5rem;
     }
 @media (max-width: 480px){
-    margin-top: 10vh;
-        padding-bottom: .5rem;
+        margin-top: 10vh;
         font-size: 3.5rem;
     }
 `

@@ -1,15 +1,15 @@
 import cv from '../assets/cv.pdf'
 import styled from 'styled-components'
-import { motion } from 'framer-motion'
-import { fade } from '../animation'
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Resume = () => {
+    AOS.init({
+        duration: 1200,
+    })
     return (
-        <Div 
-            variants = {fade}>
+        <Div data-aos="fade-up" data-aos-delay="300">
             <A 
-                whileHover={{scale: 1.1}}
                 onClick={() => window.open(cv)} 
                 target = "_blank" 
                 >Resume
@@ -18,7 +18,7 @@ const Resume = () => {
     );
 }
 
-const Div = styled(motion.div)`
+const Div = styled.div`
     padding-top: 3rem;
 
 @media (max-width: 500px){
@@ -27,21 +27,22 @@ const Div = styled(motion.div)`
         font-size: 1.2rem;
         }
 `
-const A = styled(motion.a)`
+const A = styled.a`
     font-weight: bold;
     font-size: 1rem;
-    padding: 1rem 2rem;
+    padding: 1.2rem 2.5rem;
     margin-top: 5vh;
     cursor: pointer;
-    border: 2px solid lightgrey;
+    border: 1px solid #2EBA8B;
     color: lightgrey;
     transition: all 0.5s ease;
     outline: none;
-    background: #343a40;
-    border-radius: 5%;
+    background: #081730;
+    border-radius: 5rem;
+    text-transform: uppercase;
     &:hover {
-        background-color: #23282db0;
-        color: lightgreen;
+        background-color:  rgba(255, 0, 255, 0.267);
+        
         }
 @media (max-width: 1024px){
         margin: 0 1rem 3rem 1rem;   

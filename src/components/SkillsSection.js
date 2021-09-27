@@ -14,11 +14,14 @@ import terminal from '../assets/terminal.svg';
 import vscode from '../assets/vscode.svg';
 import styledc from '../assets/styledc.png'
 import styled from 'styled-components';
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 const SkillsSection = () => {
-    
+    AOS.init({
+        duration: 1200,
+    })
 
     return (
         <>
@@ -26,7 +29,7 @@ const SkillsSection = () => {
                 id="skills" 
                 >
                 <Text>Tech & tools</Text>
-                <Icons>
+                <Icons data-aos="zoom-in">
                     <img src={html} alt="html" />
                     <img src={css} alt="css" />
                     <img src={bootstrap} alt="bootstrap" />

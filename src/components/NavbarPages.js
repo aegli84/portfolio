@@ -68,10 +68,9 @@ const NavContainer = styled.nav`
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    background: #343a40;
+    background: #081730b9;
     overflow: hidden; 
     padding: 1rem 10rem;
-    box-shadow:  0 8px 6px -6px black;
     position: fixed;
     top: 0;
     width: 100%;
@@ -104,7 +103,7 @@ const NavContainer = styled.nav`
 `
 const NavLine = styled(motion.div)`
     height: 0.2rem;
-    background: #D96ED4; 
+    background: rgba(255, 0, 255, 0.452); 
     opacity: 0.6;
     width: 0%;
     position: absolute;

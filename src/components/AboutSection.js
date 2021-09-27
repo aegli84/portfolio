@@ -1,48 +1,47 @@
 import React from 'react';
 import aeh from '../assets/aeh.jpg';
 import styled from 'styled-components';
-import { motion } from 'framer-motion'
-import { pageAnimation } from '../animation'
-import { titleAnimation, fade, photoAnimation } from '../animation'
 import Curly from './Curly' 
 import Resume from './Resume'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const AboutSection = () => {
-    
+    AOS.init({
+        duration: 1200,
+    })
     return (
         <>
             <Curly/>
-            <motion.div  
-                variants = {pageAnimation} 
-                initial = "hidden" 
-                animate = "show">
+            <div  
+                >
                 <StyledAbout>
                     <div className = "description" id="about" >
                         <div className = "title">
-                        <BigText>
-                        <HI>Hello!</HI>
-                            <motion.h2 variants = {titleAnimation}> My name is <StyledA>Andreea</StyledA>
-                            </motion.h2>
+                        <BigText >
+                        <HI data-aos="fade-right">Hello!</HI>
+                            <h2 data-aos="fade-right" data-aos-delay="100"> My name is <StyledA data-aos="fade-right" data-aos-delay="100">Andreea</StyledA>
+                            </h2>
                         </BigText>
-                        <BigText>
-                            <motion.h2 variants = {titleAnimation} ><span>and I'm a</span></motion.h2>
+                        <BigText data-aos="fade-right" data-aos-delay="300">
+                            <h2 ><span>and I'm a</span></h2>
                         </BigText>
-                        <BigText>
-                            <H2 variants = {titleAnimation}><span>Full-Stack Web Developer.</span></H2>
+                        <BigText data-aos="fade-right" data-aos-delay="500">
+                            <H2 ><span>Full-Stack Web Developer.</span></H2>
                         </BigText>
                     </div>
-                        <P variants = {fade}>I'm very captivated by everything that has to do with front-end development but I'm also very fascinated by how things work behind the scenes in the back-end
+                        <P data-aos="fade-up" >I'm very captivated by everything that has to do with front-end development but I'm also very fascinated by how things work behind the scenes in the back-end
                         </P>
-                    <Resume/>
+                    <Resume />
                 </div>
-                <motion.div  variants = {photoAnimation} className = "image">
-                    <Img 
-                    whileHover={{ scale: 1.1 }}
+                <div  className = "image">
+                    <Img data-aos="fade-left"
                         src = {aeh} 
                         alt = "andreea egli"/>
-                </motion.div>
+                </div>
             </StyledAbout>
-            </motion.div>
+            
+            </div>
         </>
     );
 };
@@ -75,9 +74,9 @@ const StyledAbout = styled.div`
 const HI = styled.h2 `
     font-weight: 900;
     font-size: 3.5rem;
-    color: lightgreen; 
+    color: #3DC9A7; 
 `
-const P = styled(motion.p)`
+const P = styled.p`
     margin-top: 1.5rem;
     font-weight: 400;
     padding-right: 8rem;
@@ -90,24 +89,23 @@ const P = styled(motion.p)`
     
     }
 `
-const H2 = styled(motion.h2)`
+const H2 = styled.h2`
     font-weight: 900;
-    color: lightgreen;
+    color: #3DC9A7;
 `
 const StyledA = styled.a `
-    color: lightgreen;
+    color: #3DC9A7;
     font-weight: 900;
 `
-const Img = styled(motion.img)`
-    width: 35vh;
-    height: 35vh;
+const Img = styled.img`
+    width: 40vh;
+    height: 40vh;
     margin-right: 5rem;
     position: relative;
-    border-radius: 20px; 
+    border-radius: 50%; 
     overflow: hidden;
+    object-fit: cover;
     box-shadow: 1px 3px 32px -4px black;
-    border: 2px solid rgba(245, 245, 245, 0.829);
-
 @media (max-width: 768px){
     display: none;
     } 

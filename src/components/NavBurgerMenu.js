@@ -28,7 +28,7 @@ const Nav = styled.nav`
     display: flex;
     align-items: flex-end;
     justify-content: space-between;  
-    background: #343a40;
+    background: #081730b9;
     overflow: hidden; 
     padding: 1rem 0; 
     box-shadow:  0 8px 6px -6px black;
@@ -54,7 +54,7 @@ const Burger = styled.div`
     div {
         width: 3.5rem;
         height: 0.35rem;
-        background-color: ${({ open }) => open ? 'lightgreen' : '#d96ed4bb'};
+        background-color: ${({ open }) => open ? '#2EBA8B' : 'rgba(255, 0, 255, 0.452)'};
         opacity: 0.6;
         border-radius: 15px;
         transform-origin: 1px;

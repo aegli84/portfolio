@@ -2,22 +2,27 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom';
 import { FiGithub } from 'react-icons/fi';
 import { BsBoxArrowUpRight } from 'react-icons/bs';
-import portfolioae from '../assets/portfolioae.png'
+import portfolio from '../assets/portfolio.png'
 import neurocat from '../assets/neurocat.png'
 import mangiare from '../assets/mangiare.png'
 import todo from '../assets/todo.png'
 import coming from '../assets/coming.jpeg' 
 import plantpedia from '../assets/plantpedia.png'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 const ProjectsSection = () => {
-    
+    AOS.init({
+        duration: 1200,
+    })
     return (
         <>
         <div >
             <H2>Projects</H2>
                 <CardWrapper className = "cards" id="projects" > 
                     <Card  
-                        className = "card" 
+                        className = "card" data-aos="fade-right"
                         > 
                     <img src={plantpedia} alt="Plantpedia"/>
                     <H3>Plantpedia</H3>
@@ -44,7 +49,7 @@ const ProjectsSection = () => {
                         </div>
                     </Card>
                     <Card  
-                        className = "card" 
+                        className = "card" data-aos="zoom-in"
                         > 
                     <img src={neurocat} alt="html" style={{background: '#3c8993'}}/>
                     <H3>Neurocat</H3>
@@ -68,7 +73,7 @@ const ProjectsSection = () => {
                         </div>
             </Card>
                     <Card  
-                        className = "card" 
+                        className = "card" data-aos="fade-left"
                         > 
                     <img src={mangiare} alt="recipe-app" style={{background: '#eed0c6'}}/>
                     <H3>Mangiare</H3>
@@ -93,9 +98,9 @@ const ProjectsSection = () => {
                         </div>
                 </Card> 
                     <Card  
-                        className = "card" 
+                        className = "card" data-aos="fade-right"
                         > 
-                    <img src={portfolioae} alt="webdev" style={{background: '#343a40'}}/>
+                    <img src={portfolio} alt="webdev" style={{background: '#081730'}}/>
                     <H3>WebDev Portfolio</H3>
                         <Para>My personal portfolio. A long content page with a smooth scroll to section for a modern look and feel</Para> 
                     <H6>REACT</H6>
@@ -117,7 +122,7 @@ const ProjectsSection = () => {
                         </div>
             </Card>
                     <Card  
-                        className = "card" 
+                        className = "card" data-aos="zoom-in"
                         > 
                     <img src={todo} alt="todo" style={{background: '#3d405b'}}/>
                     <H3>Wunder - Todo List</H3>
@@ -141,7 +146,7 @@ const ProjectsSection = () => {
                         </div>
                 </Card>
                     <Card  
-                        className = "card" 
+                        className = "card" data-aos="fade-left"
                         > 
                     <img src={coming} alt="todo" style={{background: '#d7d3c8'}}/>
                     <H3>Chat WebApp </H3>
@@ -172,11 +177,12 @@ const ProjectsSection = () => {
 }
 
 const CardWrapper = styled.div`
-    min-height: 75vh;
+    min-height: 70vh;
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
     justify-content: center;
+    
 `
 const Card = styled.div`
     width: 26vw;
@@ -187,12 +193,12 @@ const Card = styled.div`
     margin: 1.5rem;
     background: rgba(245, 245, 245, 0.829); 
     overflow: hidden;
-    transition: 0.3s all ease-in-out;
+    
+    
     &:hover {
-        /* transition: 0.3s all ease-in-out; */
         border: 1px solid rgba(245, 245, 245, 0.829);
         box-shadow:0px 15px 30px #515861;
-        margin-top:-10px;
+        
     }
 @media (max-width: 1502px){
         width: 28vw;
@@ -232,6 +238,7 @@ const H2 = styled.h2`
     color: whitesmoke;
     text-align: center;
     margin-bottom: 2em;
+    margin-top: 2em;
 @media (max-width: 768px){
         margin-top: 2vh;
         margin-bottom: 7vh;
