@@ -105,7 +105,7 @@ const ProjectsSection = () => {
                         <Para>My personal portfolio. A long content page with a smooth scroll to section for a modern look and feel</Para> 
                     <H6>REACT</H6>
                     <H6>STYLED-COMPONENTS</H6>
-                    <H6>FRAMER MOTION</H6>
+                    <H6>AOS ANIMATIONS</H6>
                     <div>
                         <Link 
                             to = {{pathname:"https://github.com/aegli84/portfolio"}} 
@@ -185,15 +185,15 @@ const CardWrapper = styled.div`
     
 `
 const Card = styled.div`
-    width: 26vw;
-    height: 67vh;
+    width: 26%;
+    height: 69vh;
     box-shadow: 1px 3px 32px -7px black;
     border-radius:10px;
     text-align: center;
     margin: 1.5rem;
     background: rgba(245, 245, 245, 0.829); 
     overflow: hidden;
-    
+    padding: .2rem;
     
     &:hover {
         border: 1px solid rgba(245, 245, 245, 0.829);
@@ -201,9 +201,9 @@ const Card = styled.div`
         
     }
 @media (max-width: 1502px){
-        width: 28vw;
-        height: 72vh;
-        margin: 3vh;
+        width: 29vw;
+        height: 87vh;
+        margin: 2vh;
     }
     @media (max-width: 768px){
         width: 71vw;
@@ -217,11 +217,13 @@ const Card = styled.div`
     } 
     
     img {
-        height: 29vh;
+        height: 30vh;
         width: 100%;
         object-fit: fill;
-        background-color: black;
-        padding-top: .3rem;
+        border-radius:10px;
+@media (max-width: 1502px){
+    height: 40vh;
+    } 
 @media (max-width: 768px){
         width: 100%;
         height: 35vh;
