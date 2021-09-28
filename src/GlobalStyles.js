@@ -31,6 +31,28 @@ const GlobalStyle = createGlobalStyle `
         font-size: 1.4rem;
         line-height: 150%;
     }
+    ::-webkit-scrollbar {
+        width: 12px;
+        z-index: -1;
+    }
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.363); 
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        z-index: -1;
+    }
+    ::-webkit-scrollbar-thumb {
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        background:#4230649a;
+        box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+        z-index: -1;
+    }
+    ::-webkit-scrollbar-thumb:window-inactive {
+        background:#6e52a5b4;
+        z-index: -1;
+    }
+
 `;
 
 export default GlobalStyle;
