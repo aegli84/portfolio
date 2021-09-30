@@ -7,7 +7,7 @@ import neurocat from '../assets/neurocat.png'
 import mangiare from '../assets/mangiare.png'
 import todo from '../assets/todo.png'
 import coming from '../assets/coming.jpeg' 
-import plantpedia from '../assets/plantpedia.png'
+import plante from '../assets/plante.png'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -24,7 +24,7 @@ const ProjectsSection = () => {
                     <Card  
                         className = "card" data-aos="fade-right"
                         > 
-                    <img src={plantpedia} alt="Plantpedia"/>
+                    <img src={plante} alt="Plantpedia"/>
                     <H3>Plantpedia</H3>
                         <Para>Plant database and plant care guides with subscription shop and chat function</Para> 
                     <H6>REACT</H6>
@@ -185,8 +185,8 @@ const CardWrapper = styled.div`
     
 `
 const Card = styled.div`
-    width: 26%;
-    height: 69vh;
+    width: 24%;
+    height: 71vh;
     box-shadow: 1px 3px 32px -7px black;
     border-radius:10px;
     text-align: center;
@@ -217,9 +217,10 @@ const Card = styled.div`
     } 
     
     img {
-        height: 30vh;
+        height: 29vh;
         width: 100%;
-        object-fit: fill;
+        /* object-fit: scale-down; */
+        /* object-position: 100%; */
         border-radius:10px;
 @media (max-width: 1502px){
     height: 40vh;

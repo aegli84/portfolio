@@ -1,10 +1,20 @@
-<!-- **Portfolio built in React 
+ 
+<br />
 
-### Libraries = Framer Motion for animations & styled-components for styling
-### Packages  = react-scroll-into-view 
+* Preview of the landing page 👇
+
+![Long content SPA](https://res.cloudinary.com/di32yybrd/image/upload/v1633030216/portfolio/Andreea_Egli_-_P_xwwbwb.png)
+
+### Built With
+
+#### Framework
+* [React](https://reactjs.org/)
+
+#### Styling
+* [CSS-in-JS](https://styled-components.com/)
+
+#### Animations
+* [aos](https://michalsnik.github.io/aos/)
 
 
-![](https://media.giphy.com/media/3gMwxVBA3ZvaMuzMBf/giphy.gif) 
-
-
- -->
+[LIVE version](https://andreaegli.tech/)
