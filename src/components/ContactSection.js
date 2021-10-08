@@ -132,7 +132,7 @@ const FormWrapper = styled.div `
         background: #081730b9;
         margin-top: 3vh;
         width: 28vw;
-        padding: 5rem;
+        padding: 1rem;
         align-items: left;
         display: inline-block;
         text-align: left;
@@ -144,9 +144,9 @@ const FormWrapper = styled.div `
         border: 1px solid #2EBA8B;
         border-radius: .4rem;
         outline:none;
-        &:placeholder-shown {
+        /* &:placeholder-shown {
             padding: 0.8rem 0.5rem;
-        } 
+        }  */
 
     @media (max-width: 768px){
         margin-top: 2.2rem;
@@ -177,9 +177,10 @@ const FormWrapper = styled.div `
         border-radius: .4rem;
         border: 1px solid #2EBA8B;
         outline:none; 
-        &:placeholder-shown {
+        padding: 1rem;
+        /* &:placeholder-shown {
             padding: 0.5rem 0.5rem;
-        } 
+        }  */
 
     @media (max-width: 768px){
         margin-top: 5rem;
