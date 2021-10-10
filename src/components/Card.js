@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { FiGithub } from 'react-icons/fi';
 import { BsBoxArrowUpRight } from 'react-icons/bs';
 
@@ -16,20 +16,20 @@ const Card = ({ item: {  title, body, image, tech, linkgithub, linkdemo } }) => 
             <CardContent>
                 <h3>{title}</h3>
                 <p>{body}</p>
-                <h6>{tech}</h6>
+                <p className='tech'>{tech}</p>
             <CardLink>
-                <Link 
-                    to = {{pathname:{linkgithub}}} 
+                <a 
+                    href = {linkgithub} 
                     target={"_blank"} 
                     rel="noopener noreferrer">
                     <FiGithub className='icon'/>
-                </Link>
-                <Link 
-                    to = {{pathname:{linkdemo}}} 
+                </a>
+                <a 
+                    href = {linkdemo} 
                     target={"_blank"} 
                     rel="noopener noreferrer">
                     <BsBoxArrowUpRight className='icon'/>
-                </Link>
+                </a>
             </CardLink>
             </CardContent>
         </CardContainer>
@@ -42,6 +42,7 @@ const CardContainer = styled.div`
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
+    max-width: 960px;
     background-color: rgba(255, 255, 255, 0.87);
     box-shadow: 1px 3px 32px -7px black;
     border-radius:10px;
@@ -73,10 +74,11 @@ const CardContent = styled.div `
         font-weight: 400;
         color: #343a40;
     }
-    h6 {
+    .tech {
         margin:  0 1rem;
         padding: 0 2rem 2rem 2rem;
         font-size: .8rem;
+        font-weight: 700;
     }
 `
 const CardLink = styled.div `

@@ -12,9 +12,14 @@ const ProjectsSection = () => {
         <>
             <H2>Projects</H2>
                 <ProjectContainer className = "cards" id="projects" > 
-                {contentCard.map((item, index) => (
-                <Card key={index} item={item}/>
-                ))}
+                
+                    {contentCard.map((item, index) => (
+                    <Card key={index} item={item}/>
+                    
+                
+                
+            
+                    ))}
                 </ProjectContainer>
         </>
     )
@@ -32,6 +37,8 @@ const ProjectContainer = styled.div`
         margin: 2rem;
     }
 `
+
+
 // const Card = styled.div`
 //     width: 24%;
 //     height: 71vh;

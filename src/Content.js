@@ -4,7 +4,7 @@ const contentCard = [
         title: 'Plantpedia',
         body: 'Plant database and plant care guides with subscription shop and chat function',
         image: 'https://res.cloudinary.com/di32yybrd/image/upload/v1633862098/portfolio/planta_hzrb2h.png',
-        tech: 'REACT, STYLED-COMPONENTS, CONTEXT API, CHAT ENGINE API, COMMERCE JS, STRIPE',
+        tech: 'REACT STYLED-COMPONENTS CONTEXT API CHAT ENGINE API COMMERCE JS STRIPE',
         // github: 'FiGithub',
         // demo: 'BsBoxArrowUpRight',
         linkgithub:'https://github.com/aegli84/Plantpedia-2.0',
