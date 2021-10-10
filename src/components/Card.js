@@ -4,32 +4,34 @@ import { FiGithub } from 'react-icons/fi';
 import { BsBoxArrowUpRight } from 'react-icons/bs';
 
 
+
 const Card = ({ item: {  title, body, image, tech, linkgithub, linkdemo } }) => {
+    
     return (
         <>
-        <CardContainer >
+        <CardContainer data-aos="zoom-in">
             <div>
                 <img src={image} alt=""/>
             </div>
-            <div>
+            <CardContent>
                 <h3>{title}</h3>
                 <p>{body}</p>
                 <h6>{tech}</h6>
-            </div>
-            <div>
+            <CardLink>
                 <Link 
                     to = {{pathname:{linkgithub}}} 
                     target={"_blank"} 
                     rel="noopener noreferrer">
-                    <FiGithub/>
+                    <FiGithub className='icon'/>
                 </Link>
                 <Link 
                     to = {{pathname:{linkdemo}}} 
                     target={"_blank"} 
                     rel="noopener noreferrer">
-                    <BsBoxArrowUpRight/>
+                    <BsBoxArrowUpRight className='icon'/>
                 </Link>
-            </div>
+            </CardLink>
+            </CardContent>
         </CardContainer>
         </>
     )
@@ -38,23 +40,53 @@ const Card = ({ item: {  title, body, image, tech, linkgithub, linkdemo } }) => 
 const CardContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
-    align-content: flex-start;
     justify-content: center;
-    width: 30%;
-    background-color: rgba(245, 245, 245, 0.829);
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.87);
     box-shadow: 1px 3px 32px -7px black;
     border-radius:10px;
     text-align: center;
-    /* margin: 40px 0;
-    padding: 60px; */
+    overflow: hidden;
     img {
-    width: 100%;
-    border-radius:10px;
-    padding: .2rem;
-  }
+        width: 100%;
+        border-radius:10px;
+        padding: .3rem;
+    }
     @media (max-width: 768px){
         width: 100%;
     }
     /* flex-direction: ${({ layout }) => layout || 'column'}; */
+`
+
+const CardContent = styled.div `
+    text-align: center;
+    h3 {
+        margin: 2.5rem 0;
+        padding: 0 .8rem;
+        font-size: 2rem;
+        color: #3d3f42;
+    }
+    p {
+        margin: 2.5rem 0;
+        padding: 1rem 1.5rem;
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: #343a40;
+    }
+    h6 {
+        margin:  0 1rem;
+        padding: 0 2rem 2rem 2rem;
+        font-size: .8rem;
+    }
+`
+const CardLink = styled.div `
+    .icon{
+        font-size: 2rem;
+        color: #343a40;
+        margin: 1rem 1rem 2rem 1rem;
+        &:hover{
+            color: purple;
+        }
+    }
 `
 export default Card

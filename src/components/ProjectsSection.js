@@ -10,28 +10,25 @@ const ProjectsSection = () => {
     })
     return (
         <>
-        <div >
             <H2>Projects</H2>
                 <ProjectContainer className = "cards" id="projects" > 
                 {contentCard.map((item, index) => (
-                <Card key={index} item={item} />
-            ))}
+                <Card key={index} item={item}/>
+                ))}
                 </ProjectContainer>
-        </div>
         </>
     )
 }
 
 
 const ProjectContainer = styled.div`
-    display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	align-content: space-around;
-    margin: 5rem;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 25px;
+    justify-content: center;
+    margin: 3rem;
     @media (max-width: 768px){
-        flex-direction: column;
+        grid-template-columns: auto;
         margin: 2rem;
     }
 `
