@@ -12,13 +12,8 @@ const ProjectsSection = () => {
         <>
             <H2>Projects</H2>
                 <ProjectContainer className = "cards" id="projects" > 
-                
-                    {contentCard.map((item, index) => (
-                    <Card key={index} item={item}/>
-                    
-                
-                
-            
+                    {contentCard.map((item) => (
+                    <Card key={item.id} item={item}/>
                     ))}
                 </ProjectContainer>
         </>
@@ -28,12 +23,15 @@ const ProjectsSection = () => {
 
 const ProjectContainer = styled.div`
     display: grid;
-    grid-template-columns: auto auto auto;
-    grid-gap: 25px;
-    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    
+    gap: 1rem;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
     margin: 3rem;
     @media (max-width: 768px){
-        grid-template-columns: auto;
+        
         margin: 2rem;
     }
 `
