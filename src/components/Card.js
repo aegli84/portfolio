@@ -138,6 +138,10 @@ const CardLink = styled.div `
         margin: .5em .7em 7em .4em;
         padding: .1em;
         float: right;
+        @media (max-width: 768px){
+            font-size: 2.5rem;
+            margin: .5em .4em 7em .4em;
+    }
         &:hover{
             color: rgba(255, 0, 255, 0.513);
             transition: all 0.5s ease;

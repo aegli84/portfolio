@@ -31,8 +31,9 @@ const ProjectContainer = styled.div`
     justify-content: space-around;
     margin: 3rem;
     @media (max-width: 768px){
-        
-        margin: 2rem;
+        grid-template-columns: auto;
+        gap: 3rem;
+        margin: .5rem;
     }
 `
 
