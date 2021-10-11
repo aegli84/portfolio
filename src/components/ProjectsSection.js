@@ -23,17 +23,13 @@ const ProjectsSection = () => {
 
 const ProjectContainer = styled.div`
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    
-    gap: 1rem;
-    align-items: center;
-    align-content: center;
-    justify-content: space-around;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 25px;
+    justify-content: center;
     margin: 3rem;
     @media (max-width: 768px){
         grid-template-columns: auto;
-        gap: 3rem;
-        margin: .5rem;
+        margin: 2rem;
     }
 `
 
