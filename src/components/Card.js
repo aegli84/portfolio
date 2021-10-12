@@ -46,15 +46,16 @@ const CardContainer = styled.div`
     justify-content: center;
     width: 100%;
     max-width: 960px;
-    background-color: rgba(255, 255, 255, 0.931);
+    background-color: rgba(255, 255, 255, 0.972);
     box-shadow: 1px 3px 32px -7px black;
     border-radius:10px;
     text-align: center;
     overflow: hidden;
     img {
-        width: 100%;
-        border-radius:10px;
-        padding: .3rem;
+        width: 97%;
+        border-radius:   10px;
+        margin-top: .7rem; 
+        box-shadow: 1px 3px 32px -7px black;
     }
     @media (max-width: 768px){
         width: 100%;
