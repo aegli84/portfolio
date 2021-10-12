@@ -60,7 +60,6 @@ const CardContainer = styled.div`
     @media (max-width: 768px){
         width: 100%;
     }
-
 `
 const Flex = styled.div `
     display: flex;
