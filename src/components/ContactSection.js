@@ -16,12 +16,11 @@ const ContactSection = () => {
         <P>Thanks! Your message has been sent!</P>
         </div>
     }
-
     return(
         <>
         <H2>Contact me</H2>
         <FormWrapper 
-            data-aos="zoom-in"
+            // data-aos="zoom-in"
             >
             <div className = "form" id="contact">
             <form onSubmit={handleSubmit}>
@@ -85,32 +84,15 @@ const ContactSection = () => {
 }
 
 const FormWrapper = styled.div `
-    height: 45vh;
-    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     text-align: center;
     align-items: center;
-    display: block;
-    justify-content: center;
-@media (max-width: 1502px){
-    margin-top: 1rem;
-    margin-bottom: 15rem;
-    height: 35vh;
-    } 
-@media (max-width: 768px){
-    margin-top: 10vh;  
-    padding: 7rem 2rem;
-    }
-@media (max-width: 480px){
-    margin-top: 3rem;  
-    margin-bottom: 17rem;
-    margin-left: 1.2rem;
-    padding: 1rem;
-    }
-
+    width: 100%;
     form {
-        max-width: 27%;
-        margin: auto;
-        text-align: left;
+        width: 35rem;
+        margin: 0 auto;
     div, span {
         font-family: 'Montserrat', sans-serif;
         font-size: 1rem; 
@@ -121,16 +103,16 @@ const FormWrapper = styled.div `
         color: red;
     }
     @media (max-width: 768px){
-        max-width: 75%;
+        width: 100%;
         }
     @media (max-width: 480px){
-        max-width: 82%;
+        width: 100%;
         }
     }     
     
     input{
         background: #081730b9;
-        margin-top: 3vh;
+        margin: .7rem 0;
         width: 28vw;
         padding: 1rem;
         align-items: left;
@@ -144,19 +126,15 @@ const FormWrapper = styled.div `
         border: 1px solid #2EBA8B;
         border-radius: .4rem;
         outline:none;
-        /* &:placeholder-shown {
-            padding: 0.8rem 0.5rem;
-        }  */
-
     @media (max-width: 768px){
         margin-top: 2.2rem;
+        padding: 1rem;
         width: 70vw; 
-        border-bottom: 2px solid lightgreen;
         font-size: 1.5rem; 
         }
     @media (max-width: 480px){
         margin-top: 1rem;
-        width: 70vw; 
+        width: 82vw; 
         font-size: 1.3rem; 
         }
     }
@@ -167,13 +145,11 @@ const FormWrapper = styled.div `
         font-size: 0.9rem;
         color: whitesmoke;
         cursor: pointer;
-        margin-top: 2vh; 
+        margin-top: 2rem; 
         margin-left: auto;
         margin-right:auto;
         width: 28vw;
-        border-left: 1.5px solid #495059;
-        border-right: 1.5px solid #495059;
-        border-top: 1.5px solid #495059;
+        border: 1.5px solid #495059;
         border-radius: .4rem;
         border: 1px solid #2EBA8B;
         outline:none; 
@@ -185,26 +161,22 @@ const FormWrapper = styled.div `
     @media (max-width: 768px){
         margin-top: 5rem;
         width: 70vw;
-        height: 15rem;
-        border-bottom: 2px solid lightgreen;
         font-size: 1.6rem; 
         }
     @media (max-width: 480px){
         margin-top: 4rem;
-        width: 70vw;
-        border-bottom: 2px solid lightgreen;
+        width: 82vw;
         font-size: 1.5rem;
         }
     }
     
 
     .button {
+        width: 10em;
         font-weight: bold;
         font-size: 1rem;
         padding: 1rem 2.5rem;
-        margin-top: 5vh;
-        margin-left: auto;
-        margin-right:auto;
+        margin: 2rem;
         cursor: pointer;
         border: 1px solid #2EBA8B;
         color: lightgrey;
@@ -218,15 +190,14 @@ const FormWrapper = styled.div `
     }
     @media (max-width: 768px){
         font-size: 1.7rem;
-            margin-left: 1.5vh; 
-            padding: 2rem;
-            width: 30%;
+        padding: 2rem 1rem;
+        width: 11em;
         }
         @media (max-width: 480px){
             font-size: 1.2rem;
             margin-left: 1rem; 
             padding: 1rem 2rem ;
-            width: 45%;
+            width: 10em;
         }
     } 
 `

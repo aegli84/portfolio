@@ -15,12 +15,8 @@ const FooterSection = () => {
 const Div = styled.div `
     display: flex;
     justify-content: center;
-    margin-bottom: 1rem;
+    margin: 1rem;
     text-align: center;
-
-@media (min-width: 320px) and (max-width: 1024px){
-        margin-bottom: 2rem;
-    }
 `
 const H4 = styled.h4`
     color: whitesmoke;
@@ -30,7 +26,6 @@ const H4 = styled.h4`
 
 @media (max-width: 480px){
         font-size: 1rem; 
-        
     }
 `
 

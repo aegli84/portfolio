@@ -1,21 +1,20 @@
 import styled from 'styled-components'
-// import { Link } from 'react-router-dom';
 import { FiGithub } from 'react-icons/fi';
 import { BsBoxArrowUpRight } from 'react-icons/bs';
 
 
 
 const Card = ({ item: {  title, body, image, tech, linkgithub, linkdemo } }) => {
-    // data-aos="zoom-in"
+    
     return (
         <>
-        <CardContainer >
+        <CardContainer data-aos="zoom-in">
             <div>
                 <img src={image} alt=""/>
             </div>
             <CardContent>
             <Flex>
-                <h3>{title}</h3>
+                    <h3>{title}</h3>
                 <CardLink>
                     <a 
                         href = {linkgithub} 
@@ -31,9 +30,10 @@ const Card = ({ item: {  title, body, image, tech, linkgithub, linkdemo } }) => 
                     </a>
                 </CardLink>
             </Flex>
-                <p>{body}</p>
-                <p className='tech'>{tech}</p>
-            
+                
+                    <p>{body}</p>
+                
+                <pre>{tech}</pre>
             </CardContent>
         </CardContainer>
         </>
@@ -55,7 +55,7 @@ const CardContainer = styled.div`
         width: 97%;
         border-radius:   10px;
         margin-top: .7rem; 
-        box-shadow: 1px 3px 32px -7px black;
+        box-shadow: 1px 3px 32px -1px black;
     }
     @media (max-width: 768px){
         width: 100%;
@@ -83,12 +83,24 @@ const CardContent = styled.div `
         font-size: 1.2rem;
         font-weight: 400;
         color: #343a40;
+        @media (max-width: 768px){
+            font-size: 1.8rem;
     }
-    .tech {
+    @media (max-width: 480px){
+            font-size: 1rem;
+    }
+    }
+    pre {
         margin: 1rem ;
         padding: 1rem;
-        font-size: .8rem;
+        font-size: 1rem;
         font-weight: 700;
+        @media (max-width: 768px){
+            font-size: 1.6rem;
+    }
+    @media (max-width: 480px){
+            font-size: 1.1rem;
+    }
     }
 `
 const CardLink = styled.div `
