@@ -6,7 +6,7 @@ const FooterSection = () => {
         <>
         <Connect/>
             <Div>
-                <H4>Made with ❤️ by Andreea Egli-Hehl 2021</H4>
+                <H4>Made in 🇩🇪 with ❤️ by Andreea Egli-Hehl 2021</H4>
             </Div>
         </>
     )

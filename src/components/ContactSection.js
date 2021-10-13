@@ -20,7 +20,7 @@ const ContactSection = () => {
         <>
         <H2>Contact me</H2>
         <FormWrapper 
-            // data-aos="zoom-in"
+            data-aos="zoom-in"
             >
             <div className = "form" id="contact">
             <form onSubmit={handleSubmit}>
@@ -154,23 +154,17 @@ const FormWrapper = styled.div `
         border: 1px solid #2EBA8B;
         outline:none; 
         padding: 1rem;
-        /* &:placeholder-shown {
-            padding: 0.5rem 0.5rem;
-        }  */
-
-    @media (max-width: 768px){
-        margin-top: 5rem;
-        width: 70vw;
-        font-size: 1.6rem; 
+        @media (max-width: 768px){
+            margin-top: 5rem;
+            width: 70vw;
+            font-size: 1.6rem; 
         }
-    @media (max-width: 480px){
-        margin-top: 4rem;
-        width: 82vw;
-        font-size: 1.5rem;
+        @media (max-width: 480px){
+            margin-top: 4rem;
+            width: 82vw;
+            font-size: 1.5rem;
         }
     }
-    
-
     .button {
         width: 10em;
         font-weight: bold;
@@ -186,12 +180,12 @@ const FormWrapper = styled.div `
         border-radius: 5rem;
         text-transform: uppercase;
     &:hover {
-        background-color:  rgba(255, 0, 255, 0.267);
+        background-color: rgba(255, 0, 255, 0.267);
     }
-    @media (max-width: 768px){
-        font-size: 1.7rem;
-        padding: 2rem 1rem;
-        width: 11em;
+        @media (max-width: 768px){
+            font-size: 1.7rem;
+            padding: 2rem 1rem;
+            width: 11em;
         }
         @media (max-width: 480px){
             font-size: 1.2rem;
@@ -219,7 +213,7 @@ const H2 = styled.h2 `
 `
 const P = styled.p`
     text-align: center;
-    color: lightgreen;
+    color: #3DC9A7;
     padding: 8rem 0rem 21rem ;
     font-weight: 300;
 `

@@ -20,7 +20,7 @@ const contentCard = [
         {
         id: 3,
         title: 'Mangiare',
-        body: "A simple recipe API search web app built in React with React hooks.  ",
+        body: "A simple recipe API search web app built in React with React hooks. Future version will feature login version and recipe saving. ",
         image: 'https://res.cloudinary.com/di32yybrd/image/upload/v1633861986/portfolio/mangi_avu257.png',
         tech: `REACT  STYLED-COMPONENTS  AXIOS  API`,
         linkgithub:'https://github.com/aegli84/Mangiare---recipe-search',
@@ -52,7 +52,8 @@ const contentCard = [
         tech: `REACT  CHAT ENGINE API  FIREBASE`,
         linkgithub:'https://github.com/aegli84',
         linkdemo: 'https://github.com/aegli84'
-        },        
+        },  
+                
     ]
     
     export default contentCard

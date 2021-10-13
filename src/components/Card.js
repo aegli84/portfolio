@@ -30,9 +30,7 @@ const Card = ({ item: {  title, body, image, tech, linkgithub, linkdemo } }) => 
                     </a>
                 </CardLink>
             </Flex>
-                
-                    <p>{body}</p>
-                
+                <p>{body}</p>
                 <pre>{tech}</pre>
             </CardContent>
         </CardContainer>
@@ -53,7 +51,7 @@ const CardContainer = styled.div`
     overflow: hidden;
     img {
         width: 97%;
-        border-radius:   10px;
+        border-radius: 10px;
         margin-top: .7rem; 
         box-shadow: 1px 3px 32px -1px black;
     }
@@ -85,10 +83,10 @@ const CardContent = styled.div `
         color: #343a40;
         @media (max-width: 768px){
             font-size: 1.8rem;
-    }
-    @media (max-width: 480px){
+        }
+        @media (max-width: 480px){
             font-size: 1rem;
-    }
+        }
     }
     pre {
         margin: 1rem ;
@@ -97,10 +95,10 @@ const CardContent = styled.div `
         font-weight: 700;
         @media (max-width: 768px){
             font-size: 1.6rem;
-    }
-    @media (max-width: 480px){
+        }
+        @media (max-width: 480px){
             font-size: 1.1rem;
-    }
+        }
     }
 `
 const CardLink = styled.div `
@@ -111,7 +109,7 @@ const CardLink = styled.div `
         margin: 2.5rem 2rem 1rem .5rem;
         @media (max-width: 411px){
             margin: .7rem 1rem 1rem 2rem;
-    }
+        }
         &:hover{
             color: rgba(255, 0, 255, 0.513);
             transition: all 0.5s ease;

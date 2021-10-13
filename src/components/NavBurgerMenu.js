@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 import { useState } from "react"
 import SideNav from './SideNav';
-
+import ScrollIntoView from 'react-scroll-into-view'
+import { NavHashLink as Link } from "react-router-hash-link";
 
 const BurgerMenu = () => {
 
@@ -9,7 +10,9 @@ const BurgerMenu = () => {
 
     return (
         <Nav>
-            <Logo >ae.</Logo>
+            <Logo ><ScrollIntoView selector= "#about">
+                    <Link id = "logo" to= "/about">ae.</Link>
+                </ScrollIntoView></Logo>
                 <Burger open={open} onClick={() => setOpen(!open)}>
                     <div />
                     <div />
@@ -71,19 +74,25 @@ const Burger = styled.div`
     }}
 }
 `
-const Logo = styled.div`
+const Logo = styled.h1`
     display: none;  
     @media (max-width: 768px) {
         display: block;
         font-weight: 800;
         font-size: 2.9rem;
-        color: whitesmoke;
-        margin-top: 4vh;
+        margin-top: 1rem;
         margin-left: 4rem;
+        text-decoration: none;
+        a {
+            text-decoration: none;
+            color: whitesmoke;
+        }
     } 
     @media (max-width: 480px) {
-        margin-top: 2vh;
-        
+        margin-top: 2rem;
+        a {
+            text-decoration: none;
+        }
     } 
 `
 export default BurgerMenu;

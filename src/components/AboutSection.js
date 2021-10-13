@@ -40,7 +40,6 @@ const AboutSection = () => {
                         alt = "andreea egli"/>
                 </div>
             </StyledAbout>
-            
             </div>
         </>
     );
