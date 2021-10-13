@@ -2,7 +2,7 @@ const contentCard = [
     {
         id: 1,
         title: 'Plantpedia',
-        body: 'Plant database and plant care guides with subscription shop and chat function ',
+        body: 'Plant database and plant care guides with subscription shop and chat function',
         image: 'https://res.cloudinary.com/di32yybrd/image/upload/v1633862098/portfolio/planta_hzrb2h.png',
         tech: `REACT  CHAT ENGINE API  COMMERCE JS  STRIPE`,
         linkgithub:'https://github.com/aegli84/Plantpedia-2.0',
@@ -11,7 +11,7 @@ const contentCard = [
         {
         id: 2,
         title: 'Neurocat',
-        body: "AI company marketing website. Simple with added particle background, with bi-color palette",
+        body: "AI company marketing website. Simple with added particle background and bi-color palette",
         image: 'https://res.cloudinary.com/di32yybrd/image/upload/v1633862212/portfolio/neuroca_uxwymc.png',
         tech: `REACT  STYLED-COMPONENTS  FRAMER MOTION`,
         linkgithub:'https://github.com/aegli84/neurocat-webpage-task',
@@ -20,18 +20,18 @@ const contentCard = [
         {
         id: 3,
         title: 'Mangiare',
-        body: "A simple recipe API search web app built in React with React hooks. Future version will feature login version and recipe saving. ",
+        body: "A simple recipe API search web app built in React with React hooks. Future version will feature login/register function and recipe saving",
         image: 'https://res.cloudinary.com/di32yybrd/image/upload/v1633861986/portfolio/mangi_avu257.png',
-        tech: `REACT  STYLED-COMPONENTS  AXIOS  API`,
+        tech: `REACT  STYLED-COMPONENTS  AXIOS  EDAMAM API`,
         linkgithub:'https://github.com/aegli84/Mangiare---recipe-search',
         linkdemo: 'https://mangiare-recipe-app.herokuapp.com/'
         },
         {
         id: 4,
         title: 'WebDev Portfolio',
-        body: "My personal portfolio. A long content page with a smooth scroll to section for a modern look and feel",
+        body: "My personal portfolio. A long content page with smooth scroll to section for a modern look and feel",
         image: 'https://res.cloudinary.com/di32yybrd/image/upload/v1632813042/portfolio/portfolio_lhlekh.png',
-        tech: `REACT  STYLED-COMPONENTS  AOS  ANIMATIONS`,
+        tech: `REACT  STYLED-COMPONENTS  AOS ANIMATIONS`,
         linkgithub:'https://github.com/aegli84/portfolio"',
         linkdemo: 'https://andreaegli.tech/'
         },
@@ -53,7 +53,6 @@ const contentCard = [
         linkgithub:'https://github.com/aegli84',
         linkdemo: 'https://github.com/aegli84'
         },  
-                
     ]
     
     export default contentCard

@@ -54,7 +54,7 @@ const StyledAbout = styled.div`
     padding: 5rem 8rem;
     color: whitesmoke;
     margin-bottom: 10vh;
-
+    
 @media (max-width: 768px) {
     height: 45vh;
     display: block;
@@ -109,6 +109,10 @@ const Img = styled.img`
     overflow: hidden;
     object-fit: cover;
     box-shadow: 1px 3px 32px -4px black;
+    @media (max-width: 1024px){
+        width: 20vh;
+        height: 20vh;
+    } 
 @media (max-width: 768px){
     display: none;
     } 
