@@ -2,7 +2,7 @@ import './wave.css'
 const Curly = () => {
     return (
         <>
-        <div className="wave"></div>
+            <div className="wave"></div>
         </>
     )
 }

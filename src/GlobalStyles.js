@@ -14,10 +14,11 @@ const GlobalStyle = createGlobalStyle `
         }
     } 
     body {
-        background: #081730;
+        background-color: #081730;
         font-family: 'Montserrat', sans-serif;
         overflow-x: hidden;
         width: 100%;
+        
     }
     h2 {
         font-weight: bold;

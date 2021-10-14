@@ -32,7 +32,6 @@ const A = styled.a`
     font-size: 1rem;
     padding: 1.2rem 2.5rem;
     margin-top: 5vh;
-    cursor: pointer;
     border: 1px solid #2EBA8B;
     color: lightgrey;
     transition: all 0.5s ease;
@@ -41,7 +40,7 @@ const A = styled.a`
     border-radius: 5rem;
     text-transform: uppercase;
     &:hover {
-        background-color:  rgba(255, 0, 255, 0.267);
+        background-color:  #3dc9a6d3;
         
         }
 @media (max-width: 1024px){

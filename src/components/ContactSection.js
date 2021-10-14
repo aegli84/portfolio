@@ -180,7 +180,7 @@ const FormWrapper = styled.div `
         border-radius: 5rem;
         text-transform: uppercase;
     &:hover {
-        background-color: rgba(255, 0, 255, 0.267);
+        background-color:  #3dc9a6d3;
     }
         @media (max-width: 768px){
             font-size: 1.7rem;

@@ -12,7 +12,6 @@ const AboutSection = () => {
     })
     return (
         <>
-            <Curly/>
             <div  
                 >
                 <StyledAbout>
@@ -40,6 +39,7 @@ const AboutSection = () => {
                         alt = "andreea egli"/>
                 </div>
             </StyledAbout>
+            <Curly/>
             </div>
         </>
     );
