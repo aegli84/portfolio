@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { NavHashLink as Link } from "react-router-hash-link";
 import ScrollIntoView from 'react-scroll-into-view';
 import { motion } from 'framer-motion';
-
+import { BsBoxArrowInUpRight } from 'react-icons/bs';
 
 const SideNav = (props) => {
     const { open, setOpen } = props;
@@ -12,33 +12,52 @@ const SideNav = (props) => {
             <Ul open={open}>
                 <motion.li whileTap={{scale: 1.1}}>
                     <ScrollIntoView  selector= "#about">
-                        <Link to="/about" onClick={() => setOpen(!open)}>About me</Link>
+                        <Link to="/about" 
+                            onClick={() => setOpen(!open)}>
+                            About me
+                        </Link>
                     </ScrollIntoView>
                 </motion.li>
                 <motion.li whileTap={{scale: 1.1}} >
                     <ScrollIntoView selector= "#skills">
-                        <Link to="/skills" onClick={() => setOpen(!open)}>Skills</Link>
+                        <Link to="/skills" 
+                            onClick={() => setOpen(!open)}>
+                            Skills
+                        </Link>
                     </ScrollIntoView>
                 </motion.li>
                 <motion.li whileTap={{scale: 1.1}} >
                     <ScrollIntoView selector= "#projects">
-                        <Link to="/projects" onClick={() => setOpen(!open)}>Projects</Link>
+                        <Link to="/projects" 
+                            onClick={() => setOpen(!open)}>
+                            Projects
+                        </Link>
                     </ScrollIntoView>
                 </motion.li>
                 <motion.li whileTap={{scale: 1.1}} >
                     <ScrollIntoView selector= "#contact">
-                        <Link to="/contact" onClick={() => setOpen(!open)}>Contact</Link>
+                        <Link to="/contact" 
+                            onClick={() => setOpen(!open)}>
+                            Contact
+                        </Link>
                     </ScrollIntoView>
                 </motion.li>
+                <motion.li whileTap={{scale: 1.1}} >
+                        <Link to={{pathname:"https://aegli.hashnode.dev/"}} 
+                            target={"_blank"} 
+                            rel="noopener noreferrer" 
+                            onClick={() => setOpen(!open)}>
+                            Blog
+                            <BsBoxArrowInUpRight className='icon'/>
+                        </Link>
+                </motion.li>
             </Ul>
+            
         </>
     )
 }
 
 const Ul = styled.ul`
-    /* list-style: none;
-    display: block;
-    flex-flow: row nowrap; */
     li {
         display: none;
     @media (max-width: 768px){
@@ -47,6 +66,7 @@ const Ul = styled.ul`
         }
         
     }
+    
 @media (max-width: 768px) {
     background-color: #081730;
     opacity: 1;
@@ -68,7 +88,12 @@ const Ul = styled.ul`
         line-height: 5rem;
         height: 4rem;
     }
-    
+    .icon {
+        font-size: 1.6rem;
+        color: whitesmoke;
+        margin-left: .5rem;
+        margin-bottom: .7rem;
+    }
 }`
 
 export default SideNav;

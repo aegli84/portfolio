@@ -30,7 +30,7 @@ const contentCard = [
         id: 4,
         title: 'WebDev Portfolio',
         body: "My personal portfolio. A long content page with smooth scroll to section for a modern look and feel",
-        image: 'https://res.cloudinary.com/di32yybrd/image/upload/v1632813042/portfolio/portfolio_lhlekh.png',
+        image: 'https://res.cloudinary.com/di32yybrd/image/upload/v1634487211/portfolio/Andreea_Egli_-_P_7_eixlyt.png',
         tech: `REACT  STYLED-COMPONENTS  AOS ANIMATIONS`,
         linkgithub:'https://github.com/aegli84/portfolio"',
         linkdemo: 'https://andreaegli.tech/'
@@ -39,7 +39,7 @@ const contentCard = [
         id: 5,
         title: 'Wunder - Todo List',
         body: "A classic and simple to-do list built with HTML, CSS and vanilla Javascript with a touch of light animations",
-        image: 'https://res.cloudinary.com/di32yybrd/image/upload/v1633864629/portfolio/to-do_z0helb.png',
+        image: 'https://res.cloudinary.com/di32yybrd/image/upload/v1634487361/portfolio/To_Do_List_fnxjde.png',
         tech: `HTML  CSS  JAVASCRIPT`,
         linkgithub:'https://github.com/aegli84/Todo-list',
         linkdemo: 'https://aegli84.github.io/Todo-list/'

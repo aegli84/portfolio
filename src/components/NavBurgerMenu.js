@@ -33,7 +33,7 @@ const Nav = styled.nav`
     justify-content: space-between;  
     background: #081730b9;
     overflow: hidden; 
-    padding: 1.2rem 0; 
+    padding: 1.2rem ; 
     position: fixed;
     top: 0;
     width: 100%;
@@ -48,7 +48,7 @@ const Burger = styled.div`
     height: 2.5rem;
     position: fixed;
     top: 2;
-    right: 5rem;
+    right: 3rem;
     z-index: 20;
     display: flex;
     justify-content: space-around;
