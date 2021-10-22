@@ -53,6 +53,24 @@ const contentCard = [
         linkgithub:'https://github.com/aegli84',
         linkdemo: 'https://github.com/aegli84'
         },  
+        {
+        id: 7,
+        title: 'cleverlohn - FinTech',
+        body: "Website re-design and implementation for a FinTech SaaS startup company in Berlin",
+        image: 'https://res.cloudinary.com/di32yybrd/image/upload/v1634908514/portfolio/Cleverlohn_2_oxmfr5.png',
+        tech: `REACT  STYLED-COMPONENTS  EMAILJS  i18next`,
+        linkgithub:'https://res.cloudinary.com/di32yybrd/image/upload/v1634909969/portfolio/From_this_1_v6zt2n.png',
+        linkdemo: 'Coming - soon'
+        }, 
+        // { 
+        // id: 7,
+        // title: 'cleverlohn - FinTech',
+        // body: "Website re-design and implementation for a FinTech SaaS startup company in Berlin",
+        // image: 'https://res.cloudinary.com/di32yybrd/image/upload/v1634908514/portfolio/Cleverlohn_2_oxmfr5.png',
+        // tech: `REACT  EMAILJS  i18next`,
+        // linkgithub:'Proprietary information - NDA',
+        // linkdemo: 'Coming - soon'
+        // }
     ]
     
     export default contentCard
