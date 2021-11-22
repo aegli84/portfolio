@@ -6,11 +6,11 @@ import git from '../assets/git.svg';
 import github from '../assets/github.svg';
 import html from '../assets/html.svg';
 import js from '../assets/js.svg';
-import mongodbd from '../assets/mongodbd.svg';
+import mongodb from '../assets/mongodb.svg';
 import react from '../assets/react.svg';
 import redux from '../assets/redux.svg';
 import sass from '../assets/sass.svg';
-import terminal from '../assets/terminal.svg';
+import termin from '../assets/termin.svg';
 import vscode from '../assets/vscode.svg';
 import styledc from '../assets/styledc.png'
 import styled from 'styled-components';
@@ -29,22 +29,22 @@ const SkillsSection = () => {
                 id="skills" 
                 >
                 <Text>Tech & tools</Text>
-                <Icons data-aos="zoom-in">
-                    <img src={html} alt="html" />
-                    <img src={css} alt="css" />
-                    <img src={bootstrap} alt="bootstrap" />
-                    <img src={sass} alt="sass" />
-                    <img src={js} alt="js" />
-                    <img src={react} alt="styledc" />
-                    <img src={styledc} alt="react" />
-                    <img src={mongodbd} alt="mongodb" />
-                    <img src={redux} alt="redux"/>
-                    <img src={git} alt="git" />
-                    <img src={github} alt="github" />
-                    <img src={vscode} alt="vscode" />
-                    <img src={terminal} alt="terminal" />
-                    <img src={figma} alt="figma" />
-                </Icons>
+                    <Icons data-aos="zoom-in">
+                        <img src={html} alt="html" title='html'/>
+                        <img src={css} alt="css" title='css'/>
+                        <img src={bootstrap} alt="bootstrap" title='bootstrap'/>
+                        <img src={sass} alt="sass" title='sass' />
+                        <img src={js} alt="javascript" title='javascript'/>
+                        <img src={react} alt="styledc" title='react' />
+                        <img src={styledc} alt="styled-components" title='styled-components'/>
+                        <img src={mongodb}  alt="mongodb" title='mongodb' />
+                        <img src={redux} alt="redux" title='redux'/>
+                        <img src={git} alt="git" title='git'/>
+                        <img src={github} alt="github" title='github'/>
+                        <img src={vscode} alt="vscode" title='vs code'/>
+                        <img src={termin} alt="terminal" title ='terminal'/>
+                        <img src={figma} alt="figma" title='figma' />
+                    </Icons>
         </DivWrapper>
         </>
     );
@@ -101,11 +101,16 @@ const Icons = styled.div`
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 1rem; 
     row-gap: 4rem;
-    img {
+    img  {
         margin-top: -1vh;
         padding: 1rem 2rem;
         width: 14vw;
     } 
+    .white-circle {
+        margin-top: -1vh;
+        padding: 1rem 2rem;
+        width: 14vw;
+    }
 }
 @media (max-width: 480px){
     grid-template-columns: 1fr 1fr 1fr;
@@ -116,6 +121,11 @@ const Icons = styled.div`
         padding: 1rem 2rem;
         width: 25vw;
     } 
+    .white-circle {
+        margin-top: -1vh;
+        padding: 1rem 2rem;
+        width: 25vw;
+    }
 }
 `
 export default SkillsSection;

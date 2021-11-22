@@ -39,7 +39,7 @@ const contentCard = [
         id: 5,
         title: 'Wunder - Todo List',
         body: "A classic and simple to-do list built with HTML, CSS and vanilla Javascript with a touch of light animations",
-        image: 'https://res.cloudinary.com/di32yybrd/image/upload/v1634487361/portfolio/To_Do_List_fnxjde.png',
+        image: 'https://res.cloudinary.com/di32yybrd/image/upload/v1634935961/portfolio/To_Do_List_2_jlpo60.png',
         tech: `HTML  CSS  JAVASCRIPT`,
         linkgithub:'https://github.com/aegli84/Todo-list',
         linkdemo: 'https://aegli84.github.io/Todo-list/'
@@ -47,8 +47,8 @@ const contentCard = [
         {
         id: 6,
         title: 'Chat WebApp',
-        body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, delectus. Lorem ipsum",
-        image: 'https://res.cloudinary.com/di32yybrd/image/upload/v1633864124/portfolio/chat_jxbp1f.png',
+        body: "A chat web app built in React with Chat Engine API and Firebase authentification. No more FB Messenger ;)",
+        image: 'https://res.cloudinary.com/di32yybrd/image/upload/v1636538012/portfolio/scrnli_11_10_2021_10-52-54_AM_ypbgs3.png',
         tech: `REACT  CHAT ENGINE API  FIREBASE`,
         linkgithub:'https://github.com/aegli84',
         linkdemo: 'https://github.com/aegli84'

@@ -4,36 +4,36 @@ import { BsBoxArrowUpRight } from 'react-icons/bs';
 
 
 
-const Card = ({ item: {  title, body, image, tech, linkgithub, linkdemo } }) => {
-    
+const Card = ({ item: { title, body, image, tech, linkgithub, linkdemo } }) => {
+
     return (
         <>
-        <CardContainer data-aos="zoom-in">
-            <div>
-                <img src={image} alt=""/>
-            </div>
-            <CardContent>
-            <Flex>
-                    <h3>{title}</h3>
-                <CardLink>
-                    <a 
-                        href = {linkgithub} 
-                        target={"_blank"} 
-                        rel="noopener noreferrer">
-                        <FiGithub className='icon'/>
-                    </a>
-                    <a 
-                        href = {linkdemo} 
-                        target={"_blank"} 
-                        rel="noopener noreferrer">
-                        <BsBoxArrowUpRight className='icon'/>
-                    </a>
-                </CardLink>
-            </Flex>
-                <p>{body}</p>
-                <pre>{tech}</pre>
-            </CardContent>
-        </CardContainer>
+            <CardContainer data-aos="zoom-in">
+                <div>
+                    <img src={image} alt="" />
+                </div>
+                <CardContent>
+                    <Flex>
+                        <h3>{title}</h3>
+                        <CardLink>
+                            <a
+                                href={linkgithub}
+                                target={"_blank"}
+                                rel="noopener noreferrer">
+                                <FiGithub className='icon' />
+                            </a>
+                            <a
+                                href={linkdemo}
+                                target={"_blank"}
+                                rel="noopener noreferrer">
+                                <BsBoxArrowUpRight className='icon' />
+                            </a>
+                        </CardLink>
+                    </Flex>
+                    <p>{body}</p>
+                    <pre>{tech}</pre>
+                </CardContent>
+            </CardContainer>
         </>
     )
 }
@@ -59,7 +59,7 @@ const CardContainer = styled.div`
         width: 100%;
     }
 `
-const Flex = styled.div `
+const Flex = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -67,7 +67,7 @@ const Flex = styled.div `
         flex-direction: column;
     }
 `
-const CardContent = styled.div `
+const CardContent = styled.div`
     text-align: left;
     h3 {
         margin: 1rem;
@@ -101,7 +101,7 @@ const CardContent = styled.div `
         }
     }
 `
-const CardLink = styled.div `
+const CardLink = styled.div`
 
     .icon{
         font-size: 2rem;
