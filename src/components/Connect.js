@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { SiHashnode } from 'react-icons/si';
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope, FaTwitterSquare } from 'react-icons/fa';
 
 
 
@@ -39,7 +39,13 @@ const Connect = () => {
                         rel="noopener noreferrer">
                             <SiHashnode className='icon' title='hashnode'/>
                     </Link>
-                    
+
+                    <Link 
+                        to = {{pathname:"https://twitter.com/AndreeaEgli"}} 
+                        target={"_blank"} 
+                        rel="noopener noreferrer">
+                            <FaTwitterSquare className='icon' title='twitter'/>
+                    </Link>
                 </Icons>
         </>
     );
