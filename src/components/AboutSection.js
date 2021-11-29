@@ -2,6 +2,7 @@ import React from 'react';
 import aeh from '../assets/aeh.jpg';
 import styled from 'styled-components';
 import Curly from './Curly' 
+import Connect from './Connect'
 import Resume from './Resume'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -12,8 +13,7 @@ const AboutSection = () => {
     })
     return (
         <>
-            <div  
-                >
+            
                 <StyledAbout>
                     <div className = "description" id="about" >
                         <div className = "title">
@@ -32,28 +32,31 @@ const AboutSection = () => {
                         <P data-aos="fade-up" >I'm very captivated by everything that has to do with front-end development but I'm also very fascinated by how things work behind the scenes in the back-end
                         </P>
                     <Resume />
+                    
                 </div>
-                <div  className = "image">
+                <div  className = "image-section">
                     <Img data-aos="fade-left"
                         src = {aeh} 
                         alt = "andreea egli"/>
+                        <Connect/>
                 </div>
+                
             </StyledAbout>
             <Curly/>
-            </div>
+            
         </>
     );
 };
 
 const StyledAbout = styled.div`
-    height: 95vh;
-    margin-top: 5vh;
+    height: 100vh;
+    margin-top: 1rem;
     display: flex;
     align-items: center;
     justify-content: space-around;
     padding: 5rem 8rem;
     color: whitesmoke;
-    margin-bottom: 10vh;
+    margin-bottom: 2vh;
     
 @media (max-width: 768px) {
     height: 45vh;
@@ -77,7 +80,7 @@ const HI = styled.h2 `
     font-family: 'Lato', sans-serif;
 `
 const P = styled.p`
-    margin-top: 1.5rem;
+    margin: 2.2rem 2rem 1rem 0rem;
     font-weight: 300;
     padding-right: 8rem;
     font-family: 'Montserrat', sans-serif;
@@ -104,6 +107,7 @@ const Img = styled.img`
     width: 40vh;
     height: 40vh;
     margin-right: 5rem;
+    margin-top: 7rem;
     position: relative;
     border-radius: 50%; 
     overflow: hidden;
@@ -122,7 +126,7 @@ const Img = styled.img`
 `
 const BigText = styled.div `
     /* overflow: hidden; */
-    text-shadow: 0  15px 7px #081730; 
+    text-shadow: 0 15px 7px #081730; 
 `
 export default AboutSection;
 

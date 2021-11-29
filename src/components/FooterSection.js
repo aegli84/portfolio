@@ -1,10 +1,9 @@
 import styled from 'styled-components'
-import Connect from './Connect'
+
 
 const FooterSection = () => {
     return (
         <>
-        <Connect/>
             <Div>
                 <H4>Made in 🇩🇪 with ❤️ by Andreea Egli-Hehl 2021</H4>
             </Div>
