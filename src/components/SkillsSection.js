@@ -54,6 +54,7 @@ const DivWrapper = styled.div `
     min-height: 90vh;
     margin-left: 15vh; 
     margin-right: 15vh;
+    margin-top: 10rem;
     text-align: center;
 
 @media (max-width: 768px){

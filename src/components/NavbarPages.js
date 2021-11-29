@@ -108,7 +108,7 @@ const NavContainer = styled.nav`
 
     li {
         margin-bottom: 0.5rem;
-        padding-left: 4rem;
+        padding-left: 5rem;
         position: relative;
     }
     .icon {

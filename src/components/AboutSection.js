@@ -50,7 +50,7 @@ const AboutSection = () => {
 
 const StyledAbout = styled.div`
     height: 100vh;
-    margin-top: 1rem;
+    margin-top: 2rem;
     display: flex;
     align-items: center;
     justify-content: space-around;
