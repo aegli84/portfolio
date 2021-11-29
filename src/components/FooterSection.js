@@ -14,7 +14,7 @@ const FooterSection = () => {
 const Div = styled.div `
     display: flex;
     justify-content: center;
-    margin: 1rem;
+    margin: 4rem 0 1rem 0;
     text-align: center;
 `
 const H4 = styled.h4`

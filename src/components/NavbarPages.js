@@ -74,7 +74,7 @@ const NavbarPages = () => {
 }
 
 const NavContainer = styled.nav`
-    min-height: 10vh;
+    min-height: 13vh;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
@@ -82,7 +82,7 @@ const NavContainer = styled.nav`
     backdrop-filter: blur( 3px );
     -webkit-backdrop-filter: blur( 3px );
     overflow: hidden; 
-    padding: 1rem 10rem;
+    padding: 2rem 10rem;
     position: fixed;
     top: 0;
     width: 100%;
@@ -95,7 +95,7 @@ const NavContainer = styled.nav`
         font-weight: 700;
         color: whitesmoke;
         text-decoration: none;
-        
+        font-size: 1.2rem;
     }
     ul {
         display: flex;
@@ -103,7 +103,7 @@ const NavContainer = styled.nav`
     }
     #logo {
         font-weight: 800;
-        font-size: 2.5rem;
+        font-size: 2.7rem;
     } 
 
     li {
