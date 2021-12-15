@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Connect from './Connect';
 import { useForm, ValidationError } from '@formspree/react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -19,6 +20,9 @@ const ContactSection = () => {
     return(
         <>
         <H2>Contact me</H2>
+            <DivCon>
+                <Connect/>
+            </DivCon>
         <FormWrapper 
             data-aos="zoom-in"
             >
@@ -82,6 +86,15 @@ const ContactSection = () => {
     </>
     )
 }
+
+const DivCon = styled.div`
+@media (max-width: 768px){
+    display: flex;
+    justify-content: center;
+    
+    }
+
+`
 
 const FormWrapper = styled.div `
     display: flex;

@@ -34,12 +34,12 @@ const AboutSection = () => {
                     <Resume />
                     
                 </div>
-                <div  className = "image-section">
+                <DivConn  className = "image-section">
                     <Img data-aos="fade-left"
                         src = {aeh} 
                         alt = "andreea egli"/>
-                        <Connect/>
-                </div>
+                    <Connect className="connect"/>
+                </DivConn>
                 
             </StyledAbout>
             <Curly/>
@@ -64,7 +64,9 @@ const StyledAbout = styled.div`
     text-align: center; 
     padding: 3rem;
     margin-top: 11rem;
+    
     }
+    
     
 @media (max-width: 480px){
     padding: 1rem;
@@ -123,6 +125,15 @@ const Img = styled.img`
 @media (max-width: 480px){
     display: none; 
     }
+`
+const DivConn = styled.div`
+@media (max-width: 768px){
+    display: none;
+    } 
+@media (max-width: 480px){
+    display: none; 
+    }
+
 `
 const BigText = styled.div `
     /* overflow: hidden; */

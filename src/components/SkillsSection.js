@@ -58,7 +58,7 @@ const DivWrapper = styled.div `
     text-align: center;
 
 @media (max-width: 768px){
-    margin: 0 5rem 5rem 5rem;
+    margin: 8rem 5rem 5rem 5rem;
     }  
 
 @media (max-width: 480px){

@@ -33,11 +33,16 @@ const Div = styled.div`
     justify-content: left;
     align-items: center;
     
-
+    @media (max-width: 768px) {
+        justify-content: center;
+        padding: 1.3rem 2rem; 
+        margin: 1rem;
+    }
 @media (max-width: 500px){
-        margin: 1rem 1rem 4rem 1rem;  
+        /* margin: 1rem 1rem 4rem 1rem;   */
         padding: 1.3rem 2rem; 
         font-size: 1.2rem;
+        justify-content: center;
         }
 `
 const A = styled.a`
@@ -59,11 +64,14 @@ const A = styled.a`
 @media (max-width: 1024px){
         margin: 0 1rem 3rem 1rem;   
         }
+    @media (max-width: 768px) {
+        justify-content: center;
+        margin-left: 2rem;
+    }
 @media (max-width: 500px){
-        margin: 1rem 1rem 5rem 1rem;  
-        padding: 1.3rem 2rem; 
-        font-size: 1.2rem;
-        }
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    }
 `
 const ButtonProjects = styled.button`
     font-weight: bold;
@@ -82,5 +90,16 @@ const ButtonProjects = styled.button`
         background-color:  #3dc9a6d3;
         transition: all 0.5s ease;
         }
+    @media (max-width: 768px) {
+        margin-bottom: 5rem;
+        margin-right: 2rem;
+    
+    }
+    @media (max-width: 500px){
+        margin-bottom: 4rem;
+        margin-right: 2rem;
+        font-size: 1.2rem;
+        width: 11em;
+    }
 `
 export default Resume;
