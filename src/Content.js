@@ -32,7 +32,7 @@ const contentCard = [
         body: "My personal portfolio. A long content page with smooth scroll to section for a modern look and feel",
         image: 'https://res.cloudinary.com/di32yybrd/image/upload/v1634487211/portfolio/Andreea_Egli_-_P_7_eixlyt.png',
         tech: `REACT  STYLED-COMPONENTS  AOS ANIMATIONS`,
-        linkgithub:'https://github.com/aegli84/portfolio"',
+        linkgithub:'https://github.com/aegli84/portfolio',
         linkdemo: 'https://andreaegli.tech/'
         },
         {
