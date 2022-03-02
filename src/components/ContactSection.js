@@ -20,9 +20,7 @@ const ContactSection = () => {
     return(
         <>
         <H2>Contact me</H2>
-            <DivCon>
-                <Connect/>
-            </DivCon>
+            
         <FormWrapper 
             data-aos="zoom-in"
             >
@@ -87,14 +85,8 @@ const ContactSection = () => {
     )
 }
 
-const DivCon = styled.div`
-@media (max-width: 768px){
-    display: flex;
-    justify-content: center;
-    
-    }
 
-`
+
 
 const FormWrapper = styled.div `
     display: flex;

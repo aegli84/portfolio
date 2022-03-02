@@ -10,6 +10,7 @@ import NavBurgerMenu from './components/NavBurgerMenu'
 import AnimatedCursor from "react-animated-cursor"
 //import Curly from './components/Curly' 
 
+
 function App() {
 
   return (

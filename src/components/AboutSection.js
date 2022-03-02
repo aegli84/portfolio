@@ -2,7 +2,6 @@ import React from 'react';
 import aeh from '../assets/aeh.jpg';
 import styled from 'styled-components';
 import Curly from './Curly' 
-import Connect from './Connect'
 import Resume from './Resume'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -34,12 +33,12 @@ const AboutSection = () => {
                     <Resume />
                     
                 </div>
-                <DivConn  className = "image-section">
+                <div  className = "image-section">
                     <Img data-aos="fade-left"
                         src = {aeh} 
                         alt = "andreea egli"/>
-                    <Connect className="connect"/>
-                </DivConn>
+                
+                </div>
                 
             </StyledAbout>
             <Curly/>
@@ -49,14 +48,14 @@ const AboutSection = () => {
 };
 
 const StyledAbout = styled.div`
-    height: 100vh;
-    margin-top: 2rem;
+    height: 95vh;
+    margin-top: 5vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
     padding: 5rem 8rem;
     color: whitesmoke;
-    margin-bottom: 2vh;
+    margin-bottom: 10vh;
     
 @media (max-width: 768px) {
     height: 45vh;
@@ -64,9 +63,7 @@ const StyledAbout = styled.div`
     text-align: center; 
     padding: 3rem;
     margin-top: 11rem;
-    
     }
-    
     
 @media (max-width: 480px){
     padding: 1rem;
@@ -82,11 +79,10 @@ const HI = styled.h2 `
     font-family: 'Lato', sans-serif;
 `
 const P = styled.p`
-    margin: 2.2rem 2rem 1rem 0rem;
+    margin-top: 1.5rem;
     font-weight: 300;
     padding-right: 8rem;
     font-family: 'Montserrat', sans-serif;
-
 @media (max-width: 768px){
     padding: 2rem;
     } 
@@ -109,7 +105,6 @@ const Img = styled.img`
     width: 40vh;
     height: 40vh;
     margin-right: 5rem;
-    margin-top: 7rem;
     position: relative;
     border-radius: 50%; 
     overflow: hidden;
@@ -126,18 +121,9 @@ const Img = styled.img`
     display: none; 
     }
 `
-const DivConn = styled.div`
-@media (max-width: 768px){
-    display: none;
-    } 
-@media (max-width: 480px){
-    display: none; 
-    }
-
-`
 const BigText = styled.div `
     /* overflow: hidden; */
-    text-shadow: 0 15px 7px #081730; 
+    text-shadow: 0  15px 7px #081730; 
 `
 export default AboutSection;
 

@@ -58,24 +58,16 @@ const Connect = () => {
 const Icons = styled.div`
     display: flex;
     flex-direction: row;
-    justify-content: left;
-    text-align: left;
-    margin: 5rem 0 3rem 0;
+    justify-content: center;
+    text-align: center;
+    margin: 2rem 4rem;
     .icon {
-        font-size: 3rem;
+        font-size: 2rem;
         color: whitesmoke;
-        margin: 1.1rem;
+        margin: 1.2rem;
         &:hover {
         color: #3DC9A7;
         transition: all 0.7s ease;
-        } 
-    @media (max-width: 768px){
-        font-size: 4.8rem;
-        margin: 0 3rem 3rem;
-        } 
-    @media (max-width: 480px){
-        font-size: 3.8rem;
-        margin: 0 2rem 2.5rem;
         } 
     }
     
@@ -83,15 +75,9 @@ const Icons = styled.div`
     font-size: 1.2rem;
     margin-top: 5rem;
     } 
-/* @media (max-width: 768px){
-    font-size: 2.8rem;
-    margin-top: 1rem;
     
-    } 
 @media (max-width: 480px){
-    font-size: 1.8rem;
-    margin-top: .5rem;
-    margin-bottom: 3rem;
-    }  */
+    font-size: 1.5rem;
+    } 
 `
 export default Connect;

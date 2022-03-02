@@ -54,13 +54,10 @@ const DivWrapper = styled.div `
     min-height: 90vh;
     margin-left: 15vh; 
     margin-right: 15vh;
-    margin-top: 10rem;
     text-align: center;
-
 @media (max-width: 768px){
-    margin: 8rem 5rem 5rem 5rem;
+    margin: 0 5rem 5rem 5rem;
     }  
-
 @media (max-width: 480px){
     margin-left: 5vh; 
     margin-right: 3vh;
@@ -73,20 +70,19 @@ const Text = styled.h2`
     font-weight: 900;
     color: whitesmoke;
     text-align: center;
-
 @media (max-width: 768px){
-    margin-top: 1rem;  
+    margin-top: 21rem;  
     margin-bottom: 10vh; 
     }
 @media (max-width: 480px){
-    margin-top: 2vh;
+    margin-top: 28vh;
     margin-bottom: 7vh;
     font-size: 3.5rem;
     } 
 `
 
 const Icons = styled.div`
-    height: 7vh;
+    height: 7vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 1em; 
@@ -95,17 +91,17 @@ const Icons = styled.div`
     align-items: center;
     img {
         margin-top: 1vh;
-        width: 5vw;
+        width: 5rem;
     }
         
 @media (max-width: 768px){
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 1rem; 
     row-gap: 4rem;
     img  {
         margin-top: -1vh;
         padding: 1rem 2rem;
-        width: 14vw;
+        width: 10rem;
     } 
     .white-circle {
         margin-top: -1vh;
